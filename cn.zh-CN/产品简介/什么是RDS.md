@@ -1,14 +1,14 @@
 # 什么是RDS {#concept_pc2_lv5_tdb .concept}
 
+阿里云关系型数据库（Relational Database Service，简称 RDS）是一种稳定可靠、可弹性伸缩的在线数据库服务。基于阿里云分布式文件系统和SSD盘高性能存储，RDS 支持 MySQL、SQL Server、PostgreSQL 和 PPAS（Postgre Plus Advanced Server，一种高度兼容 Oracle 的数据库）引擎，并且提供了容灾、备份、恢复、监控、迁移等方面的全套解决方案，彻底解决数据库运维的烦恼。
+
 ## 学习路径图 {#section_nnr_y4j_b2b .section}
 
 您可以通过 [RDS学习路径图](https://help.aliyun.com/learn/learningpath/rds.html) 快速了解 RDS的相关概念、基础操作、进阶操作等。
 
 ## RDS视频简介 {#section_xd4_y4j_b2b .section}
 
-[观看视频单击](http://cloud.video.taobao.com/play/u/3515244506/p/1/e/6/t/1/50144252809.mp4)
-
-阿里云关系型数据库（Relational Database Service，简称 RDS）是一种稳定可靠、可弹性伸缩的在线数据库服务。基于阿里云分布式文件系统和SSD盘高性能存储，RDS 支持 MySQL、SQL Server、PostgreSQL 和 PPAS（Postgre Plus Advanced Server，一种高度兼容 Oracle 的数据库）引擎，并且提供了容灾、备份、恢复、监控、迁移等方面的全套解决方案，彻底解决数据库运维的烦恼。
+[观看视频](http://cloud.video.taobao.com/play/u/3515244506/p/1/e/6/t/1/50144252809.mp4)
 
 ## 阿里云数据库 MySQL 版 {#section_zzt_5w5_tdb .section}
 
