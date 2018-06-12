@@ -19,7 +19,7 @@ Alibaba Cloud is responsible for ensuring the normal operation of RDS through ro
 **Related Topics**
 
 -   [High performance](intl.en-US/Product Introduction/Benefits/High performance.md#)
--   [High security](intl.en-US/Product Introduction/Benefits/High security.md#)
+-   [High Security](intl.en-US/Product Introduction/Benefits/High Security.md#)
 -   [High reliability](intl.en-US/Product Introduction/Benefits/High reliability.md#)
 -   [EN-US\_TP\_7778.md\#](intl.en-US/Product Introduction/Benefits/Comparison between ApsaraDB for RDS and local databases.md#)
 
