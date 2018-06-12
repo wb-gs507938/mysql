@@ -1,10 +1,10 @@
-# Modify the RDS instance maintenance time {#reference_f5b_pbf_12b .reference}
+# Modify the RDS instance maintenance time {#reference_gx3_2cf_12b .reference}
 
-## Description {#section_ops_ghv_12b .section}
+## Description {#section_l21_v32_12b .section}
 
 Modify the time for routine instance maintenance. You can set a period of time during which traffic is low. Alibaba Cloud performs routine maintenance within the maintenance period you have set so as to minimize impacts on your services.
 
-## Request parameters {#section_mpn_hhv_12b .section}
+## Request parameters {#section_qzx_w32_12b .section}
 
 |Name|Type|Required?|Description|
 |----|----|---------|-----------|
@@ -19,22 +19,22 @@ Modify the time for routine instance maintenance. You can set a period of time d
 
 |
 
-## Return parameters {#section_pbd_qhv_12b .section}
+## Return parameters {#section_rpk_z32_12b .section}
 
 |Name|Type|Description|
 |----|----|-----------|
 |<Public Return Parameters\>|-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
 
-## Request example {#section_qwj_rhv_12b .section}
+## Request example {#section_l4g_pj2_12b .section}
 
 ```
 https://rds.aliyuncs.com/?Action=ModifyDBInstanceMaintainTime
-&DBInstanceId=rdsaiiabnaiiabn
+& Dbinstanceid = rdsaiiabnaiiabn
 &MaintainTime=22:00Z-02:00Z
 &<Public Request Parameters>
 ```
 
-## Response example {#section_umq_shv_12b .section}
+## Response example {#section_xtg_rj2_12b .section}
 
 **XML format**
 
