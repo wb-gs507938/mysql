@@ -4,8 +4,7 @@
 
 获取用户某个实例在一段时间内的迁移上云任务记录，限制条件如下：
 
--   目前，仅支持SQL Server 2008 R2版本的实例。
-
+-   目前，仅适用于SQL Server实例。
 -   源文件必须是源数据库全量备份（FULL）文件。
 
 
@@ -17,8 +16,8 @@
 |DBInstanceId|String|是|RDS实例名，例如：rm-xetesting。|
 |StartTime|String|否|查询开始时间，格式如：2017-10-20T01:00Z。|
 |EndTime|String|否|查询结束时间，必须大于开始时间，格式如：2017-10-25T01:00Z。|
-|PageSize|Interger|否|每页记录数，可选值为30、50、100，默认值为30。|
-|PageNumber|Interger|否|获取第几页的数据。|
+|PageSize|Integer|否|每页记录数，可选值为30、50、100，默认值为30。|
+|PageNumber|Integer|否|获取第几页的数据。|
 
 ## 返回参数 {#section_a5x_zlh_12b .section}
 
