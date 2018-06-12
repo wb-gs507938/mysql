@@ -33,7 +33,7 @@ If no value is specified, both modes are returned.|
 
 |Name|Type|Description|
 |----|----|-----------|
-|<Public Return Parameters\>| |For more information, see [Public parameters](intl.en-US//Public parameters.md#).|
+|<Public Return Parameters\>| |For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
 |Databases|List<Database\>|Data composed of the databases.|
 |PageNumber|Integer|Page number.|
 |TotalRecordCount|Integer|Total number of records.|
