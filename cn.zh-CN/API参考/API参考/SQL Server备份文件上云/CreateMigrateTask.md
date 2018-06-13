@@ -4,8 +4,7 @@
 
 从OSS上的备份文件还原到RDS，限制条件如下：
 
--   目前，仅支持SQL Server 2008 R2版本的实例。
-
+-   目前，仅适用于SQL Server实例。
 -   源文件必须是源数据库全量备份（FULL）文件。
 
 
@@ -16,9 +15,8 @@
 |Action|String|是|系统规定参数，取值：CreateMigrateTask。|
 |DBInstanceId|String|是|实例ID。|
 |DBName|String|是|数据库名称。|
-|BackupMode|String|是|任务类型，目前始终取FULL值。取值如下：-   FULL：全量备份文件一次性迁入
--   DIFF：增量备份文件一次性迁入
--   LOG：增量备份文件多次迁入
+|BackupMode|String|是|任务类型，目前始终取FULL值。取值如下：-   FULL：表示全量备份文件，默认值为FULL。
+-   UPDF：表示增量文件，可以是差异备份文件或者日志文件。
 
 |
 |IsOnlineDB|String|是|是否将还原后的数据库带上线，以便用户可以访问，可选值为True和False，默认值为True。目前，这个值恒定为True。|
@@ -31,8 +29,15 @@
 -   IsOnlineDB=True时，该值有效。
 
 |
-|OSSUrls|String|是|备份文件所在OSS的共享URL地址（Encode编码后的URL）。当有多个备份文件地址时，每个URL之间使用`|`隔开，目前只能传入一个URL。|
-|OssObjectPositions|String|是|Oss的组成部分。取值：ss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:/autotest\_2008R2\_TestMigration\_FULL.bak；-   OSS Endpoint地址：oss-ap-southeast-1.aliyuncs.com；
+|OSSUrls|String|是|备份文件所在OSS的共享URL地址（Encode编码后的URL）。-   当有多个备份文件地址时，每个URL之间使用`|`隔开，目前只能传入一个URL。
+-   对于SQL Server 2008 R2版本，本参数为必须。
+
+|
+|OssObjectPositions|String|是|OSS的组成部分。对于SQL Server 2012及以上版本，本参数为必须。
+
+取值：ss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:/autotest\_2008R2\_TestMigration\_FULL.bak；
+
+-   OSS Endpoint地址：oss-ap-southeast-1.aliyuncs.com；
 -   OSS Bucket名字：rdsmssqlsingapore；
 -   OSS上的备份文件Key:/autotest\_2008R2\_TestMigration\_FULL.bak；默认为空（兼容2008）。
 
@@ -48,7 +53,7 @@
 |DBName|String|数据库名称。|
 |TaskId|String|任务ID。|
 |MigrateTaskId|String|迁移任务ID。|
-|BackupMode|String|任务类型，目前始终取FULL值。取值如下：-   FULL：全量备份文件一次性迁入
+|BackupMode|String|任务类型，目前始终取FULL值。取值如下：-   FULL：全量备份文件一次性迁入。
 -   UPDF：表示增量文件，可以是差异备份文件或者日志文件，默认值 UPDF。
 
 |
