@@ -27,8 +27,8 @@
 
  |
 |Category|String| -   Basic：单机基础版。
--   Standard：双机高可用版。
--   Enterprise：三节点企业版。
+-   HighAvailability：双机高可用版。
+-   Finance：金融版（三节点企业版）。
 
  |
 |InstanceNetworkType|String| -   Classic：经典网络。
@@ -58,7 +58,7 @@
 -   Intranet：内网
 
  |
-|DBInstanceStatus|String|实例状态，详见[实例状态表](cn.zh-CN/API参考/API参考/附表/实例状态表.md#)。|
+|DBInstanceStatus|String|实例状态，详见[实例状态表](intl.zh-CN/API参考/API参考/附表/实例状态表.md#)。|
 |DBInstanceDescription|String|实例备注。|
 |LockMode|String| -   Unlock：正常
 -   ManualLock：手动触发锁定
@@ -88,14 +88,14 @@
 
 |名称|类型|描述|
 |--|--|--|
-|<公共返回参数\>| |详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
+|<公共返回参数\>| |详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 |DBInstanceId|String|只读实例ID。|
 
 ## 返回参数 {#section_rpk_z32_12b .section}
 
 |名称|类型|描述|
 |--|--|--|
-|<公共返回参数\>|-|详情请参见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
+|<公共返回参数\>|-|详情请参见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 |Items|List<DBInstanceAttribute\>|-|
 
 ## 请求示例 {#section_l4g_pj2_12b .section}
