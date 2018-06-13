@@ -8,7 +8,7 @@
 
 ## RDS视频简介 {#section_xd4_y4j_b2b .section}
 
-[观看视频](http://cloud.video.taobao.com/play/u/3515244506/p/1/e/6/t/1/50144252809.mp4)
+
 
 ## 阿里云数据库 MySQL 版 {#section_zzt_5w5_tdb .section}
 
