@@ -23,7 +23,7 @@
 |--|--|----|--|
 |Action|String|是|系统规定参数，取值：DescribeDBInstancePerformance。|
 |DBInstanceId|String|是|实例名。|
-|Key|Integer|是|性能指标，多个用英文半角“,”分隔，见性能参数表。|
+|Key|String|是|性能指标，多个用英文半角“,”分隔，见性能参数表。|
 |StartTime|String|是|查询开始时间，格式如：2012-06-11T15:00Z。|
 |EndTime|String|是|查询结束时间，格式如：2012-06-11T15:00Z。|
 
@@ -31,7 +31,7 @@
 
 |名称|类型|描述|
 |--|--|--|
-|<公共返回参数\>|无|详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
+|<公共返回参数\>|无|详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 |DBInstanceId|String|实例名。|
 |Engine|String|数据库类型。|
 |StartTime|String|查询开始时间，格式：YYYY-MM-DD’T’HH:mmZ，如2011-05-30T03:29Z。|
