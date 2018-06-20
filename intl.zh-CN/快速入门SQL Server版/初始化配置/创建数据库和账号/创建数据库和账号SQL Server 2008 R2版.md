@@ -1,7 +1,5 @@
 # 创建数据库和账号SQL Server 2008 R2版 {#concept_n3n_1zz_vdb .concept}
 
-本文仅适用于SQL Server 2008 R2版本的实例。关于如何在SQL Server 2012版本的实例中创建数据库和账号，请参见文档[创建数据库和账号SQL Server 2012及以上版本](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012及以上版本.md#)。
-
 若要使用云数据库RDS，您需要在实例中创建数据库和账号。对于SQL Server 2008 R2版本的实例，您可以直接通过RDS控制台创建和管理实例的数据库和账号。本文将主要介绍在SQL Server 2008 R2版本的实例中创建数据库和账号的操作步骤。
 
 ## 背景信息 {#section_uv4_c11_wdb .section}
@@ -21,11 +19,11 @@
 2.  选择目标实例所在地域。
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在左侧导航栏中选择的**账号管理**，进入账号管理页面。
-5.  单击**创建账号**，如下图所示。
+5.  单击**创建账号**。
 
     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/2761_zh-CN.png)
 
-6.  输入要创建的账号信息，如下图所示。
+6.  输入要创建的账号信息。
 
     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/2762_zh-CN.png)
 
@@ -37,7 +35,7 @@
 
         1.  在未授权数据库栏中，选中要授权的数据库。
         2.  单击**授权**，将其添加数据库到已授权数据库栏中。
-        3.  对于每个数据库，您可以选择该账号所拥有的权限，可选择****读写****或者**只读**。若对于所有授权数据库，该账号都具有相同的权限，您可以批量设置，请单击**全部设读写**或**全部设只读**，如下图所示。
+        3.  对于每个数据库，您可以选择该账号所拥有的权限，可选择****读写****或者**只读**。若对于所有授权数据库，该账号都具有相同的权限，您可以批量设置，请单击**全部设读写**或**全部设只读**。
 
             ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/2763_zh-CN.png)
 
@@ -49,11 +47,11 @@
 
 7.  单击**确定**，账号创建完成。
 8.  在左侧导航栏中选择**数据库管理**，进入数据库管理页面。
-9.  单击**创建数据库**，如下图所示。
+9.  单击**创建数据库**。
 
     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/2764_zh-CN.png)
 
-10. 输入要创建的数据库信息，如下图所示。
+10. 输入要创建的数据库信息。
 
     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/2765_zh-CN.png)
 
