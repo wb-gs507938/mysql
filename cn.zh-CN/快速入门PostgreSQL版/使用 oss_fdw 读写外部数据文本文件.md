@@ -174,7 +174,7 @@ explain insert into ossexample select * from example;
 
 -   数据导入的性能和PostgreSQL集群的资源（CPU IO MEM MET）相关，也和OSS相关。
 
--   为保证数据导入的性能，请确保云数据库PostgreSQL与OSS所在Region相同，相关信息请参考[OSS endpiint 信息](https://help.aliyun.com/document_detail/oss/user_guide/oss_concept/endpoint.html)。
+-   为保证数据导入的性能，请确保云数据库PostgreSQL与OSS所在Region相同，相关信息请参考[OSS endpoint 信息](https://help.aliyun.com/document_detail/oss/user_guide/oss_concept/endpoint.html)。
 
 -   如果读取外表的SQL时触发 ERROR: oss endpoint userendpoint not in aliyun white list, 建议使用[阿里云各可用区公共 endpoint](https://help.aliyun.com/document_detail/31837.html)。如果问题仍无法解决，请通过工单反馈。
 
