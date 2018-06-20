@@ -9,7 +9,7 @@
 1.  通过初始帐号 myuser 建立有登录权限的用户。
 
     ```
-    CREATE USER newuser LOGIN PASSWORD'password';
+    CREATE USER newuser LOGIN PASSWORD 'password';
     ```
 
     参数说明如下;
@@ -50,7 +50,7 @@
 1.  通过初始帐号 myuser 建立有登录权限的用户。
 
     ```
-    CREATE USER newuser CREATEDB LOGIN PASSWORD'password';
+    CREATE USER newuser CREATEDB LOGIN PASSWORD 'password';
     ```
 
     参数说明如下;
