@@ -2,7 +2,7 @@
 
 ## Parameter optimization {#section_jl2_2y5_tdb .section}
 
-Alibaba Cloud has accumulated years of experience in production and optimization by gathering key opinions from top database experts in China and aggregating performance data on all the RDS instances.  DBA continuously manages RDS over its lifecycle to ensure that  RDS is running at the optimal performance.
+Alibaba Cloud has accumulated years of experience in production and optimization by gathering key opinions from top database experts in China and aggregating performance data on all the RDS instances.  DBA continuously manages RDS over its lifecycle to ensure that RDS is running at the optimal performance.
 
 ## SQL optimization {#section_kl2_2y5_tdb .section}
 
@@ -14,12 +14,12 @@ All servers used by RDS go through multiple levels of service verification by mu
 
 **Extended reading**
 
--   [Instance spec sheet](https://help.aliyun.com/document_detail/26312.html)
+-   [Instance type list](https://www.alibabacloud.com/help/doc-detail/26312.htm)
 
--   [Performance White Paper-mysql Edition](https://help.aliyun.com/document_detail/35264.html)
+-   [Performance White Paper \(RDS for MySQL\)](https://www.alibabacloud.com/help/doc-detail/35264.htm)
 
--   [Performance White Paper-SQL Server Edition](https://help.aliyun.com/document_detail/53640.html)
+-   [Performance White Paper \(RDS for SQL Server\)](https://www.alibabacloud.com/help/doc-detail/53640.htm)
 
--   [Considerations for comparing the performance of the ECS self-built database with the RDS](https://help.aliyun.com/document_detail/55823.html)
+-   [Precautions on comparing ECS user-created databases and ApsaraDB for RDS instances in terms of performance](https://www.alibabacloud.com/help/doc-detail/55823.htm)
 
 
