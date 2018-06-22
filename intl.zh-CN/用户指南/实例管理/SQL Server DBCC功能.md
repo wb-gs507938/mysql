@@ -16,47 +16,11 @@ RDS SQL Server 2012及以上版本支持DBCC的部分功能，您只需要使用
 
 1.  ```
 USE
-            master
+            masterGO—database engine edtionSELECT
+            SERVERPROPERTY(‘edition’)GO—create databaseCREATE DATABASE
+            testdbGODBCC tracestatus(-1)exec sp_rds_dbcc_trace 1222,1WAITFOR
+            DELAY ‘00:00:10’DBCC
+            tracestatus(-1)GO
 ```
 
-2.  `GO`
-3.  `--database engine edtion`
-4.  ```
-SELECT
-            SERVERPROPERTY('edition')
-```
-
-5.  `GO`
-6.  ```
---create
-            database
-```
-
-7.  ```
-CREATE DATABASE
-            testdb
-```
-
-8.  `GO`
-9.  10. ```
-DBCC
-            tracestatus(-1)
-```
-
-11. 12. ```
-exec
-            sp_rds_dbcc_trace 1222,1
-```
-
-13. 14. ```
-WAITFOR DELAY
-            '00:00:10'
-```
-
-15. 16. ```
-DBCC
-            tracestatus(-1)
-```
-
-17. `GO`
 
