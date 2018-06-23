@@ -38,11 +38,7 @@
 
 |名称|类型|是否必须|描述|
 |--|--|----|--|
-|Action|String|是|系统规定参数，取值：```
-ModifyParameter
-```
-
-。|
+|Action|String|是|系统规定参数，取值：`ModifyParameter`|
 |DBInstanceId|String|是|实例名。|
 |Parameters|String|是|参数及其值的JSON串，参数的值都是字符串类型，\{“auto\_increment”:”1”,“character\_set\_client”:”utf8”\}。|
 |Forcerestart|String|否|true：强制重启（若修改的参数当中，有需要重启的参数，则必须传入true，否则修改将不生效）；false：不强制重启。默认不强制重启。|
@@ -51,7 +47,7 @@ ModifyParameter
 
 |名称|类型|描述|
 |--|--|--|
-|<公共返回参数\>| |详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
+|<公共返回参数\>| |详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 
 ## 请求示例 {#section_l4g_pj2_12b .section}
 
