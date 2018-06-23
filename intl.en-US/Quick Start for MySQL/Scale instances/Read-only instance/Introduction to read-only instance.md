@@ -6,9 +6,9 @@ For a business that needs a lesser number of write requests but a greater number
 
 ## Overview {#section_iw3_zqc_zdb .section}
 
-A read-only instance is a read-only copy of the master instance. Changes in the master instance are also automatically synchronized to all relevant read-only instances through the native replication capability of MySQL. [Set network types](../../../../intl.en-US/User Guide/Network management/Set network types.md#)The read-only instance and the master instance must be in the same region, but they can be in the different zones. The following topology displays the positioning of the read-only instance.
+A read-only instance is a read-only copy of the master instance. Changes in the master instance are also automatically synchronized to all relevant read-only instances through the native replication capability of MySQL. The synchonrization works even if the master and read-only instances have different network types. The read-only instance and the master instance must be in the same region, but they can be in the different zones. The following topology displays the positioning of the read-only instance.
 
-![](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/cn/rds/1.0.112/assets/pdtd/rds_pdtd_00002.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/6089_en-US.png)
 
 ## Note {#section_jk2_tp5_vdb .section}
 
@@ -21,7 +21,7 @@ A read-only instance is a read-only copy of the master instance. Changes in the 
 
 The billing method of read-only instances is Pay-As-You-Go. For more information, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a3c0i.7938564.220486.8.10521d15K8Buqg#pricing).
 
-**Note:** For information about data retention policies for read-only instances, see [Set network types](../../../../intl.en-US/User Guide/Network management/Set network types.md#).
+**Note:** For information about data retention policies for read-only instances, see [Expiration and overdue payment](../../../../intl.en-US/Purchase Guide/Expiration and overdue payment.md).
 
 ## Features {#section_zx1_zp5_vdb .section}
 
@@ -58,10 +58,12 @@ Read-only instances have the following usage restrictions:
 
     -   After creating a read-only instance, the master instance does not support data recovery through the direct overwriting of instances using backup sets.
 
--   Data cannot be migrated to read-only instances.
+-   You cannot migrate data to read-only instances.
 
--   Read-only instances do not support creating or deleting databases.
+-   You cannot create or delete databases for read-only instances.
 
--   Read-only instances do not support creating or deleting account. Read-only instances do not support authorizing account or modifying account password.
+-   You cannot create or delete accounts for read-only instances.
+
+-   You cannot authorize accounts or modify account passwords for read-only instances.
 
 
