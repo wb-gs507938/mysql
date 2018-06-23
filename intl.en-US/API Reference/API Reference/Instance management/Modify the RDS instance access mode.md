@@ -14,7 +14,7 @@ Currently, two access modes are available for RDS:
 |Action|String|Yes|Required parameter. Value: ModifyDBInstanceConnectionMode.|
 |DBInstanceId|String|Yes|Instance ID.|
 |ConnectionMode|String|Yes| -   Performance: standard access mode.
--   : high security access mode.
+-   Safe: high security access mode.
 
  |
 
