@@ -14,7 +14,7 @@
 |Action|String|是|系统规定参数，取值为ModifyDBInstanceConnectionMode。|
 |DBInstanceId|String|是|实例名。|
 |ConnectionMode|String|是| -   Performance：标准访问模式
--   ：高安全访问模式
+-   Safe：高安全访问模式
 
  |
 
