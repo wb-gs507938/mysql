@@ -33,11 +33,7 @@ Query a summary of slow queries for a database under a user instance in a certai
 |TotalRecordCount|Integer|Total number of records.|
 |PageNumber|Integer|Page number.|
 |PageRecordCount|Integer|Number of SQL statements displayed on the current page.|
-|Items| ```
-List<SQLSlowLog>
-```
-
- | |
+|Items|`List<SQLSlowLog>`| |
 
 ## SQLSlowLog parameters for MySQL {#section_vgj_vc3_12b .section}
 
