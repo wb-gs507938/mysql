@@ -35,15 +35,11 @@
 
 |名称|类型|描述|
 |--|--|--|
-|<公共返回参数\>| |详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
+|<公共返回参数\>| |详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 |TotalRecordCount|Integer|Binlog文件总数。|
 |PageNumber|Integer|页码。|
 |PageRecordCount|Integer|本页BINLOG文件个数。|
-|Items| ```
-List<BinLogFile>
-```
-
- | |
+|Items|`List<BinLogFile>`| |
 
 ## BinLogFile参数 {#section_vgj_vc3_12b .section}
 
