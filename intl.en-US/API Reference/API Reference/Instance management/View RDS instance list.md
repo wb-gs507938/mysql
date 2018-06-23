@@ -21,8 +21,8 @@ If no value is specified, all types are returned.|
 -   Classic: classic instance.
 
 If no value is specified, both types are returned.|
-|ConnectionMode|String|No|-   Performance: standard access mode;
--   Safty: high security access mode.
+|ConnectionMode|String|No|-   Standard: standard access mode;
+-   Safe: high security access mode.
 
 If no value is specified, both modes are returned.|
 |Tags|String|No|The query is bound to an instance of the label in the form of a JSON incoming Value string, including tagkey and tagvalue, cannot be empty and tagvalue can be empty. Format example: \{"key1": "value1 "\}.|
@@ -61,7 +61,7 @@ If no value is specified, both modes are returned.|
 
  |
 |ConnectionMode|String| -   Performance: standard access mode
--   : high security access mode.
+-   Safe: high security access mode.
 
  |
 |RegionId|String|Region.|
@@ -97,7 +97,7 @@ If no value is specified, both modes are returned.|
 https://rds.aliyuncs.com/?Action=DescribeDBInstances
 &RegionId=cn-hangzhou
 &Engine=MySQL
-&<公共请求参数>
+&<Public request parameters>
 ```
 
 ## Response example {#section_xtg_rj2_12b .section}
