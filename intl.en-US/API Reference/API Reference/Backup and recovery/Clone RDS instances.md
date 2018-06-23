@@ -16,7 +16,7 @@ When creating a clone instance, the master instance must meet the following cond
 -   Data backup and log backup are enabled.
 -   To clone an instance by using a backup set, the master instance must have at least one backup set.
 
-    **Note:** To create a clone instance with a sub-account, ensure that you have authorized the sub-account. For more information, see [Authorization for RDS instances](https://www.alibabacloud.com/help/zh/doc-detail/58932.htm?spm=a2c63.p38356.a3.1.10a75f7dcY4IPE).
+    **Note:** To create a clone instance with a sub-account, ensure that you have authorized the sub-account. For more information, see [Authorization for RDS instances](https://www.alibabacloud.com/help/doc-detail/58932.htm?spm=a2c63.p38356.a3.1.10a75f7dcY4IPE).
 
 
 ## Request parameters {#section_qzx_w32_12b .section}
@@ -47,7 +47,7 @@ When creating a clone instance, the master instance must meet the following cond
 -   This parameter indicates the duration for purchase, which can be 1, 2, 3, or other numeric values as required.
 
 |
-|DBInstanceClass|String|No| -   Instance type. For more information, see[Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#)
+|DBInstanceClass|String|No| -   Instance type. For more information, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#)
 -   This parameter is optional. If it is not input, the new instance and the master instance are the same type.
 
  |
