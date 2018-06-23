@@ -63,7 +63,7 @@ https://rds.aliyuncs.com/?Action=DescribeBinlogFiles
 &DBInstanceId=riauvjz6zajfiq6ba1370329449201
 &StartTime=2011-06-11T15:00:00Z
 &EndTime=2013-06-05T15:00:00Z
-&<公共请求参数>
+&<Public request parameters>
 ```
 
 ## Response example {#section_xtg_rj2_12b .section}
