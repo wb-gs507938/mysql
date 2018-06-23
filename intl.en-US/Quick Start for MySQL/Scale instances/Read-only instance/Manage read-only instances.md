@@ -8,7 +8,7 @@ You can manage the read-only instances through the RDS console. Read-only instan
 2.  Select the region where the target read-only instance is located.
 3.  Click the ID of the target read-only instance to enter its management interface.
 
-    **Note:** On the Instance List page, the instance ID marked with an R indicates the read-only instance, as shown in the following figure.
+    **Note:** On the Instances page, the instance ID marked with an R indicates a read-only instance, as shown in the following figure.
 
     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7828/2634_en-US.png)
 
