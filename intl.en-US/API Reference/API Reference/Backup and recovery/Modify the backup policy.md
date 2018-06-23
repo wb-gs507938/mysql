@@ -21,9 +21,7 @@ Modify the backup policy. The RDS system periodically backs up instances accordi
 |
 |BackupRetentionPeriod|String|No|Retention days of the backup \(7 to 730 days\). The default value is 7 days.|
 |BackupLog|String|No|The default value is Enable. You can change it to Disabled.|
-|LogBackupRetentionPeriod|String|No| -   Log backup retention days \(it can be 7 to 730 days, and cannot be greater than the data backup retention days\). When you enable log backup, you can set the number of days that the log backup files are retained. Currently, only MySQL, PostgreSQL, and PPAS instances support this parameter.
-
- |
+|LogBackupRetentionPeriod|String|No|Log backup retention days \(it can be 7 to 730 days, and cannot be greater than the data backup retention days\). When you enable log backup, you can set the number of days that the log backup files are retained. Currently, only MySQL, PostgreSQL, and PPAS instances support this parameter.|
 
 ## Return parameters {#section_a5x_zlh_12b .section}
 
