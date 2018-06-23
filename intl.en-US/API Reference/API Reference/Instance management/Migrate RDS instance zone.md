@@ -18,7 +18,7 @@ Migrate an instance to another zone.  For example, if Instance 1 is currently l
 
 |Name|Type|Description|
 |----|----|-----------|
-|&<Public Request Parameters\>|-|For more information, see[Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
+|&<Public Request Parameters\>|-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
 
 ## Request example {#section_l4g_pj2_12b .section}
 
