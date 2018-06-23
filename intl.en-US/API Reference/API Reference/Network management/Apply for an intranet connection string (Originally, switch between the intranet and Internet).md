@@ -8,7 +8,7 @@ The following conditions must be met, otherwise the modification will fail:
 
 -   The instance is running.
 -   There are less than 20 switching times within 24 hours.
--   The [Set access mode](../../../../intl.en-US/User Guide/Network management/Set access mode.md#) and [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#) of an instance determine the address types.
+-   The [access mode](../../../../intl.en-US/User Guide/Network management/Set access mode.md#) and [instance type](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#) of an instance determine the address types.
 
     |Series|Version|Access mode|Connection address|
     |------|-------|-----------|------------------|
@@ -44,9 +44,9 @@ The following conditions must be met, otherwise the modification will fail:
 |----|----|--------|-----------|
 |Action|String|Yes|Required parameter. Value: SwitchDBInstanceNetType.|
 |DBInstanceId|String|Yes|Instance ID.|
-|ConnectionStringPrefix|String|Yes|Prefix for new user connections to the database. It must be checked for uniqueness.-   It may consist of lowercase letters, numbers, and underlines,
--   and must start with a letter
--   and have no more than 30 characters.
+|ConnectionStringPrefix|String|Yes|Prefix for new user connections to the database. It must be unique and meet the following requirements.-   Consist of lower-case letters, digits, and underscores;
+-   Start with a letter;
+-   Cannot exceed 30 characters.
 
 |
 |Port|Integer|No|Port ID. Value range: 3001-3999.|
