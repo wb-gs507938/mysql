@@ -23,7 +23,7 @@ Release an Internet connection string of an instance.
 ```
 https://rds.aliyuncs.com/?Action=DeleteDBInstance
 &DBInstanceId=rdsaiiabnaiiabn
-&<[公共请求参数]>
+&<[Public request parameters]>
 ```
 
 ## Response example {#section_xtg_rj2_12b .section}
