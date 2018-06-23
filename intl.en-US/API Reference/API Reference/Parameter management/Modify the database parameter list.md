@@ -38,11 +38,7 @@ If the parameter is invalid, the RDS returns Error Code 400 and the information 
 
 |Name|Type|Required?|Description|
 |----|----|---------|-----------|
-|Action|String|Yes|required parameter. Value:```
-ModifyParameter
-```
-
-.|
+|Action|String|Yes|required parameter. Value: `ModifyParameter`.|
 |DBInstanceId|String|Yes|Instance ID.|
 |Parameters|String|Yes|JSON string for the parameter and its value. The parameter value must be string-type. \{“auto\_increment\_increment”:”1”, “character\_set\_client”:”utf8”\}.|
 |Forcerestart|String|No|true: force restart \(true must be input when a parameter among parameters to be modified needs to be restarted; otherwise, the modification is invalid\). False: force restart disabled. The force restart is disabled by default.|
