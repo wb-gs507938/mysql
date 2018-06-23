@@ -20,8 +20,6 @@ This interface is used to show instance zone information and data replication st
 |SyncMode|String|-   Sync: Synchronous.
 -   Semi-sync: Semi-synchronous.
 -   Async: Asynchronous.
--   :
--   :
 
 For SQL Server 2012/2016 dual-machine high-availability version, the value is Sync or Async.|
 |HAMode|String| -   RPO: Data persistence is preferred.
@@ -41,7 +39,7 @@ For SQL Server 2012/2016 dual-machine high-availability version, the value is Sy
  |
 |RegionId|String|Data center.|
 |ZoneId|String|Zone.|
-|SyncStatus|String| -   NotAvailable:
+|SyncStatus|String| -   NotAvailable
 -   Syncing: synchronization in process, with a probability of data loss during a switchover.
 -   Synchronized: synchronization completed.
 -   NotSupport: unsupported engine type or version.
