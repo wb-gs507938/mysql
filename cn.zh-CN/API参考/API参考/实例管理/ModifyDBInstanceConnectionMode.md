@@ -13,7 +13,7 @@
 |--|--|----|--|
 |Action|String|是|系统规定参数，取值为ModifyDBInstanceConnectionMode。|
 |DBInstanceId|String|是|实例名。|
-|ConnectionMode|String|是| -   Performance：标准访问模式
+|ConnectionMode|String|是| -   Standard：标准访问模式
 -   Safe：高安全访问模式
 
  |
@@ -21,5 +21,5 @@
 ## 返回参数 {#section_rpk_z32_12b .section}
 
 |名称|类型|描述|
-|<公共返回参数\>|-|详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
+|<公共返回参数\>|-|详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 
