@@ -29,7 +29,7 @@
 
 -   实例的网络类型是经典网络。
 
--   实例所在可用区已有可用的VPC和交换机。关于创建VPC的步骤，请参见[创建VPC](https://help.aliyun.com/document_detail/53604.html)。关于创建交换机的步骤，请参见[创建交换机](https://help.aliyun.com/document_detail/53670.html)。
+-   实例所在可用区已有可用的VPC和交换机。关于创建VPC的步骤，请参见[创建VPC](https://www.alibabacloud.com/help/doc-detail/53604.htm)。关于创建交换机的步骤，请参见[创建交换机](https://www.alibabacloud.com/help/doc-detail/53670.htm)。
 
 
 ## 从经典网络平滑迁移至VPC {#section_cy4_px2_zdb .section}
