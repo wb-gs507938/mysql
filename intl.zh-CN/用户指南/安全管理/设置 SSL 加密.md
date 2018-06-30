@@ -45,7 +45,7 @@
         jdk.certpath.disabledAlgorithms=MD2, RSA keySize < 1024
         ```
 
-        若不修改jdk安全配置，会报如下错误。其它类似报错，一般也都由java安全配置导致。``
+        若不修改jdk安全配置，会报如下错误。其它类似报错，一般也都由java安全配置导致。
 
         ```
         javax.net.ssl.SSLHandshakeException: DHPublicKey does not comply to algorithm constraints
