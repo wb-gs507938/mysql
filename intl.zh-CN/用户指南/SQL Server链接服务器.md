@@ -39,9 +39,9 @@ DECLARE
 选择上图中的**Messages**标签页，即会出现如下信息：
 
 ```
-The linked server ‘my_link_server’ has set option ‘data access’ to ‘true’.
-The linked server ‘my_link_server’ has set option ‘rpc’ to ‘true’.
-The linked server ‘my_link_server’ has set option ‘rpc out’ to ‘true’.
-create link server ‘my_link_server’ successfully.
+The linked server 'my_link_server' has set option 'data access' to 'true'.
+The linked server 'my_link_server' has set option 'rpc' to 'true'.
+The linked server 'my_link_server' has set option 'rpc out' to 'true'.
+create link server 'my_link_server' successfully.
 ```
 
