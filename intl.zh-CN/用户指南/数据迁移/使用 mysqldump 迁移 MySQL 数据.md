@@ -8,7 +8,7 @@
 
 ## 前提条件 {#section_ats_k45_ydb .section}
 
--   已完成 RDS 实例数据库的准备，可参见 [申请外网地址](../cn.zh-CN/快速入门MySQL版/初始化配置/申请外网地址.md#)和 [MySQL 5.7高可用版/5.5/5.6创建数据库和账号](../cn.zh-CN/快速入门MySQL版/初始化配置/创建数据库和账号/MySQL 5.7高可用版/5.5/5.6创建数据库和账号.md#)。
+-   已对RDS 实例设置白名单，申请外网地址，以及创建数据库和账号。具体可参见[快速入门](intl.zh-CN/用户指南/快速入门.md)。
 -   已购买云服务器 ECS。
 
 ## 操作步骤 {#section_qhs_m45_ydb .section}
@@ -33,10 +33,6 @@
     ```
 
 2.  在本地数据库中给迁移账号授权。
-
-    ```
-    GRANT SELECT ON databasename.tablename TO 'username'@'host' WITH GRANT OPTION;
-    ```
 
     ```
     GRANT SELECT ON databasename.tablename TO 'username'@'host' WITH GRANT OPTION;
