@@ -54,7 +54,7 @@
 4.  在 备份恢复页面中选择 **备份设置**，单击 **编辑**。
 5.  在 备份设置页面设置备份规格，单击 **确定**。参数说明如下：
 
-     
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/4104_zh-CN.png)
 
     |参数|说明|
     |--|--|
@@ -79,7 +79,7 @@
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-     
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/4105_zh-CN.png)
 
     **说明：** 
 
