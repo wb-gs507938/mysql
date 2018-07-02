@@ -25,8 +25,6 @@
 
 ## 前提条件 {#section_rzd_nx2_zdb .section}
 
--   实例的访问模式为高安全模式，关于切换访问模式的步骤，请参见[设置访问模式](intl.zh-CN/用户指南/网络管理/设置访问模式.md#)。MySQL 5.7、SQL Server 2012和SQL Server 2016版本仅支持标准模式，在此访问模式下仍支持混访迁移网络类型的操作。
-
 -   实例的网络类型是经典网络。
 
 -   实例所在可用区已有可用的VPC和交换机。关于创建VPC的步骤，请参见[创建VPC](https://www.alibabacloud.com/help/doc-detail/53604.htm)。关于创建交换机的步骤，请参见[创建交换机](https://www.alibabacloud.com/help/doc-detail/53670.htm)。
