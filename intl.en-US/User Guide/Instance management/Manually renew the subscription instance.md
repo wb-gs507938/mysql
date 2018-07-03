@@ -15,8 +15,10 @@ A subscription instance must be renewed within 15 days of expiration. Subscripti
 
     **Note:** You can choose to change the configuration if needed.
 
-    ![](images/3028_en-US.png)
-
 6.  Read and confirm the terms of service, then select **I agree to Product Terms of Service and Service Level Notice**.
 7.  Click **Pay** and complete the payment process.
+
+## Related topic {#section_h4z_532_g2b .section}
+
+[Enable auto-renewal of the subscription instance](intl.en-US/User Guide/Instance management/Enable auto-renewal of the subscription instance.md)
 
