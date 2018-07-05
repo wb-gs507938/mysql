@@ -1,0 +1,66 @@
+# Set whitelist {#concept_pdr_k2f_vdb .concept}
+
+To ensure database security and stability, before you start using RDS instances, you must whitelist the IP addresses or IP address segments that need to access the database. We recommend that you periodically check and adjust your whitelists according to your requirements to maintain RDS security. This document provides the necessary information and procedure to set the whitelist.
+
+## Background information {#section_trp_m2f_vdb .section}
+
+You can access the RDS instances through the intranet, the Internet, or both of the intranet and Internet. For more information on the applicable scenarios of each connection type \(intranet and Internet\), see Background information of [Set intranet and Internet addresses](../../../../intl.en-US/User Guide/Network management/Set intranet and Internet addresses.md#).
+
+Before setting the connection type, you must add the IP addresses or IP segments of your application service or the ECS instance to the whitelist of RDS instance. When the whitelist is set, the system automatically generates the intranet address for the RDS instance. If you need an Internet address, see [Apply for an Internet address](intl.en-US/Quick Start for MySQL/Initial configuration/Apply for an Internet address.md#).
+
+**Note:** If you cannot connect to the RDS instance after adding the application service IP address to the whitelist, see [How to locate the local IP address using ApsaraDB for MySQL](https://www.alibabacloud.com/help/doc-detail/41754.htm) to obtain the actual IP address of the application service.
+
+## Attentions {#section_ljl_42f_vdb .section}
+
+-   The system automatically creates a **default** whitelist group for each newly created RDS instance. This default whitelist group can only be modified or cleared, but cannot be deleted.
+
+-   For each newly created RDS instance, the local loopback IP address 127.0.0.1 is added to the **default** whitelist group by default. This means that all the IP addresses or IP segments are prohibited to access this RDS instance. Therefore, you must delete 127.0.0.1 from the default whitelist group first, before you add other IP addresses or IP segments to the RDS whitelist.
+
+-   % or 0.0.0.0/0 indicates any IP address is allowed to access the RDS instance. This configuration greatly reduces the security of the database and is not recommended.
+
+
+## Procedure { .section}
+
+1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
+2.  Select the region where the target instance is located.
+3.  Click the name of the target instance to go to the **Basic Information** page.
+4.  Select **Security Controls** in the left-side navigation pane to visit the **Security Controls** page.
+5.  On the **Whitelist Settings** tab page, click **Modify** of the **default** whitelist group, as shown in the following figure.
+
+    **Note:** If you want to add a custom whitelist group to the RDS instance, you can click Clear of the default whitelist group to delete the IP address 127.0.0.1 first, and then click Add a Whitelist Group. The setting steps for a custom whitelist are similar to the following steps.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/1794_en-US.png)
+
+6.  On the **Modify Group** page, add the IP addresses or IP segments to access the RDS instance to **Whitelist** field. If you want to add the ECS intranet IP addresses, click **Upload ECS Intranet IP Address** and select the IP addresses according to the prompt window, as shown in the following figure.
+
+    **Note:** After you add a new IP address or IP address segment to the default group, the loopback address 127.0.0.1 is automatically deleted.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/1795_en-US.png)
+
+    Parameters description:
+
+    -   Group Name: it can contain 2 to 32 characters including lowercase letters, digits, or underscores \(\_\). The group name must start with a lowercase letter and end with a letter or digit. This name cannot be modified once the whitelist group is successfully created.
+
+    -   Whitelist: enter the custom IP addresses or IP segments that can access the RDS instance.
+
+        -   If you enter an IP segment, such as 10.10.10.0/24, it indicates that any IP address in the format of 10.10.10.X can access the RDS instance.
+
+        -   If you want to enter multiple IP addresses or IP segments, separate them by commas \(,\) \(do not add blank spaces\), such as 192.168.0.1,172.16.213.9.
+
+        -   For each whitelist group, up to 1,000 IP addresses or IP segments can be set for MySQL, PostgreSQL, and PPAS instances; and up to 800 can be set for SQL Server instances.
+
+    -   Upload ECS intranet IP Address: by clicking this button, you can select the intranet IP addresses of the ECS instances under the same account with the RDS instance, which is a quick method to add ECS intranet IP addresses.
+
+7.  Click **OK**.
+
+## Modify or delete the whitelist group {#section_bn2_fff_vdb .section}
+
+You can modify or delete the whitelist group according your business requirements. The detailed procedure is as follows:
+
+1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
+2.  Select the region where the target instance is located.
+3.  Click the name of the target instance to go to the **Basic Information** page.
+4.  Select **Security** in the left-side navigation pane.
+5.  On the **Whitelist Settings** tab page, click **Modify** or **Delete** button of the target whitelist group.
+6.  Click **OK** after you modify the IP addresses or IP segments. Or click **Confirm** if you are sure that it is the whitelist group to be deleted.
+
