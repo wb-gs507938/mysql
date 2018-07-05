@@ -2,6 +2,10 @@
 
 ApsaraDB for RDS \(Relational Database Service\) is a stable and reliable online database service, and it also supports elastic scaling function. Based on the Apsara distributed system and high-performance storage of ephemeral SSD, RDS supports MySQL, SQL Server, PostgreSQL, and PPAS \(highly compatible with Oracle\) engines. It offers a complete set of solutions for backup, recovery, monitoring, migration, disaster recovery, and troubleshooting database operation and maintenance.
 
+## Learning Path {#section_nnr_y4j_b2b .section}
+
+[RDS Learning Path](https://www.alibabacloud.com/getting-started/learningpath/rds) will walk you through getting started with RDS.
+
 ## ApsaraDB for MySQL {#section_zzt_5w5_tdb .section}
 
 MySQL is the world’s most popular open source database. As an important part of LAMP, a combination of open source software \(Linux + Apache + MySQL + Perl/PHP/Python\), MySQL is widely used in a variety of applications.
