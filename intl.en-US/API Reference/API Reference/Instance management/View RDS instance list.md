@@ -40,13 +40,13 @@ If no value is specified, both modes are returned.|
 |PageRecordCount|Integer|Number of DB instances on the current page.|
 |Items|List<DBInstance\>|Array composed of DB instances.|
 
-## Parameters for dbinstance {#section_ip3_142_12b .section}
+## Parameters for DBInstance {#section_ip3_142_12b .section}
 
-|DBInstance parameters|Type|Description|
-|---------------------|----|-----------|
+|Name|Type|Description|
+|----|----|-----------|
 |DBInstanceId|String|Instance ID.|
 |DBInstanceDescription|String|Instance description.|
-|Instance description.|String|Billing method. Value options:-   Postpaid: Pay-As-You-Go; 
+|PayType|String|Billing method. Value options:-   Postpaid: Pay-As-You-Go; 
 -   Prepaid: Subscription.
 
 |
