@@ -7,6 +7,7 @@ Modify the backup policy. The RDS system periodically backs up instances accordi
 ## Request parameters {#section_qzx_w32_12b .section}
 
 |Name|Type|Required|Description|
+|----|----|--------|-----------|
 |Action|String|Yes|Required parameter. Value: ModifyBackupPolicy.|
 |DBInstanceId|String|Yes|Instance ID.|
 |PreferredBackupTime|String|Yes|Backup time, in the format ofHH:mmZ- HH:mm Z.|
