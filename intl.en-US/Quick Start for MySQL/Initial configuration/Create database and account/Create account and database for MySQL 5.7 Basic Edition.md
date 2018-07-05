@@ -6,7 +6,7 @@ Before RDS can be used, a database and an account must be created for the RDS in
 
 ## Background information {#section_gzr_zzm_vdb .section}
 
--   Databases under a single instance share all the resources of this instance. Each instance supports one initial account, countless general accounts, and countless databases. You must create and manage the general accounts and databases through SQL statements. For more information, see [Commonly used SQL commands \(MySQL\)](https://www.alibabacloud.com/help/zh/doc-detail/43889.htm).
+-   Databases under a single instance share all the resources of this instance. Each instance supports one initial account, countless general accounts, and countless databases. You must create and manage the general accounts and databases through SQL statements. For more information, see [Commonly used SQL commands \(MySQL\)](https://www.alibabacloud.com/help/doc-detail/43889.htm).
 
 -   To migrate the local database to RDS, you must create the same database and account in RDS instance as those of the local database.
 
@@ -37,7 +37,7 @@ Before RDS can be used, a database and an account must be created for the RDS in
     6.  Click ****OK****.
     7.  In the RDS whitelist, add the IP address that needs to access the RDS instance. For more information, see [Set a whitelist](intl.en-US/Quick Start for MySQL/Initial configuration/Set a whitelist.md#).
     8.  Start the MySQL-Front client.
-    9.  In the Open Connection window, click **New**, as shown in the following figure.
+    9.  In the **Open Connection** window, click **New**, as shown in the following figure.
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7820/2575_en-US.png)
 
@@ -87,17 +87,14 @@ Before RDS can be used, a database and an account must be created for the RDS in
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7820/2581_en-US.png)
 
-    17. On the General tab page, enter the name and the password of the user, as shown in the following figure.
+    17. On the **General** tab page, enter the name and the password of the user, as shown in the following figure.
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7820/2582_en-US.png)
 
-    18. On the Rights tab page, click **New** to authorize the user, as shown in the following figure.
+    18. On the **Rights** tab page, click **New** to authorize the user, as shown in the following figure.
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7820/2583_en-US.png)
 
     19. Click **OK**. An account is created.
-    20. Double-click **Users**, and you can query all accounts under the instance, as shown in the following figure.
-
-        ![](images/2584_en-US.png)
-
+    20. Double-click **Users** to view all accounts under the instance.
 
