@@ -6,7 +6,7 @@ For a business that needs a lesser number of write requests but a greater number
 
 ## Overview {#section_iw3_zqc_zdb .section}
 
-A read-only instance is a read-only copy of the master instance. Changes in the master instance are also automatically synchronized to all relevant read-only instances through the native replication capability of MySQL. The synchonrization works even if the master and read-only instances have different network types. The read-only instance and the master instance must be in the same region, but they can be in the different zones. The following topology displays the positioning of the read-only instance.
+A read-only instance is a read-only copy of the master instance. Changes in the master instance are also automatically synchronized to all relevant read-only instances through the native replication capability of MySQL. The synchronization works even if the master and read-only instances have different network types. The read-only instance and the master instance must be in the same region, but they can be in the different zones. The following topology displays the positioning of the read-only instance.
 
 ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/6089_en-US.png)
 
