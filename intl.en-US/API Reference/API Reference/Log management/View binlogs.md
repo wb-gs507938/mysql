@@ -39,11 +39,7 @@ Query the binlog files of an instance \(only supports MySQL instance\), supporti
 |TotalRecordCount|Integer|Total number of binlog files.|
 |PageNumber|Integer|Page number.|
 |PageRecordCount|Integer|Number of binlog files displayed on the current page.|
-|Items| ```
-List<BinLogFile>
-```
-
- | |
+|Items|`List<BinLogFile>`| |
 
 ## BinLogFile parameters {#section_vgj_vc3_12b .section}
 
