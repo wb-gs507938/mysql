@@ -6,6 +6,7 @@ You can apply for a read/write splitting address in the high security mode for a
 
 The following conditions must be met, or the operation fails:
 
+-   The database proxy function is enabled for the instance.
 -   The master instance is running.
 
 -   No migration tasks is ongoing.
