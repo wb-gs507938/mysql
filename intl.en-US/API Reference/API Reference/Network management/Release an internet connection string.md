@@ -1,4 +1,4 @@
-# Release an internet connection string {#reference_vlq_hb3_12b .reference}
+# Release an Internet connection string {#reference_vlq_hb3_12b .reference}
 
 ## Description {#section_l21_v32_12b .section}
 
