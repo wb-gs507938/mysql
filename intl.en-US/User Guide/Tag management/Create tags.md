@@ -11,17 +11,18 @@ If you have a large number of instances, you can bind tags to facilitate classif
 
 ## Procedure {#section_ktf_hx4_ydb .section}
 
-1.  Log on to the [RDS Console](https://rds.console.aliyun.com/) and click **Instances** on the left.
+1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the target instance is located.
 3.  Add tags to the instances. There are two methods:
+
     -   Add tags to a single instance: Locate an instance, and click **More** \> **Edit tags** .
     -   Add tags to multiple instances: Select multiple instances, and click **Edit tags**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7971/4152_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7971/4152_en-US.png)
 
 4.  If you want to add a new tag, click **Create**. Enter the tag Keyand Value, and click **Confirm**.
 
-    **Note:** If you want use the existing tags, click **Available Tags**, select the tag key and tag value, and click Confirm.
+    **Note:** If you want use the existing tags, click **Available Tags**, select the tag key and tag value, and click **Confirm**.
 
     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7971/4153_en-US.png)
 
