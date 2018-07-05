@@ -60,7 +60,7 @@ If no value is specified, both modes are returned.|
 -   Classic: classic network;
 
  |
-|ConnectionMode|String| -   Performance: standard access mode
+|ConnectionMode|String| -   Standard: standard access mode
 -   Safe: high security access mode.
 
  |
