@@ -1,10 +1,10 @@
 # 全量备份数据上云SQL Server 2008 R2版 {#concept_swt_smw_ydb .concept}
 
-SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需要在自建数据库上利用微软官方备份功能备份好全量数据，再将备份文件上传到阿里云的[对象存储OSS](https://help.aliyun.com/document_detail/31817.html)上面，就可以通过RDS控制台一键将数据全量迁移至RDS的指定数据库中。该功能利用了微软官方的备份恢复方案，兼容性100%，加上OSS强大的能力，使数据上云效率非常高。本文将介绍本地数据上云的操作步骤。
+SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需要在自建数据库上利用微软官方备份功能备份好全量数据，再将备份文件上传到阿里云的[对象存储OSS](https://www.alibabacloud.com/help/zh/doc-detail/31817.htm?spm=a2c63.p38356.a3.2.439b6bdeE6Cpim)上面，就可以通过RDS控制台一键将数据全量迁移至RDS的指定数据库中。该功能利用了微软官方的备份恢复方案，兼容性100%，加上OSS强大的能力，使数据上云效率非常高。本文将介绍本地数据上云的操作步骤。
 
 ## 前提条件 {#section_z4d_hnw_ydb .section}
 
-已在RDS中创建目标数据库。关于如何创建数据库，请参见[创建数据库和账号SQL Server 2008 R2版](../cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md#)。
+已在RDS中创建目标数据库。关于如何创建数据库，请参见[创建数据库和账号SQL Server 2008 R2版](../../../../intl.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md#)。
 
 **说明：** RDS中的目标数据库名称可与要迁移的本地数据库名称相同。
 
@@ -18,9 +18,9 @@ SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需�
 
 -   将本地的数据备份文件上传到OSS时不产生任何额外费用。
 
--   当备份文件存储在OSS上时，需要额外支付OSS的存储费用，计费详情请参见[存储量](https://help.aliyun.com/document_detail/64302.html)。
+-   当备份文件存储在OSS上时，需要额外支付OSS的存储费用，计费详情请参[定价](https://www.alibabacloud.com/zh/product/oss?spm=a3c0i.7990255.247275.8.7a40749en97oY9#pricing)见。
 
--   将备份文件从OSS上面迁移至RDS时，若通过内网迁移，不产生任何额外费用；若通过外网迁移，则OSS会收取外网流出流量的费用，计费详情请参见[流量](https://help.aliyun.com/document_detail/64305.html)。
+-   将备份文件从OSS上面迁移至RDS时，若通过内网迁移，不产生任何额外费用；若通过外网迁移，则OSS会收取外网流出流量的费用，计费详情请参见[定价](https://www.alibabacloud.com/zh/product/oss?spm=a3c0i.7990255.247275.8.7a40749en97oY9#pricing)。
 
     **说明：** 只有当RDS实例和OSS的Bucket在同一地域时，二者才能内网互通。所以在上传备份文件时，请将文件上传到与目标RDS实例在同一地域的Bucket上面。
 
@@ -95,11 +95,11 @@ SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需�
 
 2.  将本地备份文件上传到OSS并获取文件的URL，详细步骤如下：
     1.  将备份文件上传到OSS上面，详细步骤如下：
-        -   关于上传小于5GB的单个文件的操作步骤，请参见[上传文件](https://help.aliyun.com/document_detail/31886.html)。
+        -   关于上传小于5GB的单个文件的操作步骤，请参见[上传文件](https://www.alibabacloud.com/help/doc-detail/31886.html)。
 
-        -   关于上传多个文件或大于5GB的单个文件的操作步骤，请参见[断点续传](https://help.aliyun.com/document_detail/31850.html)。若需要使用图形化的操作界面，请参见[ossbrowser](https://help.aliyun.com/document_detail/61872.html)。
+        -   关于上传多个文件或大于5GB的单个文件的操作步骤，请参见[断点续传](https://www.alibabacloud.com/help/doc-detail/31850.html)。若需要使用图形化的操作界面，请参见[ossbrowser](https://www.alibabacloud.com/help/doc-detail/61872.html)。
 
-    2.  在 [OSS控制台](https://oss.console.aliyun.com/)左侧的菜单栏中，选择备份文件所在的Bucket。
+    2.  在 [OSS 管理控制台](https://oss.console.aliyun.com/)左侧的菜单栏中，选择备份文件所在的Bucket。
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/4363_zh-CN.png)
 
@@ -116,7 +116,7 @@ SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需�
 
         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/4365_zh-CN.png)
 
-    7.  若要通过内网迁移数据，将备份文件URL中的Endpoint改成内网Endpoint。不同网络类型、不同地域所对应的内网Endpoint不同，详情请参见[访问域名和数据中心](https://help.aliyun.com/document_detail/31837.html)。
+    7.  若要通过内网迁移数据，将备份文件URL中的Endpoint改成内网Endpoint。不同网络类型、不同地域所对应的内网Endpoint不同，详情请参见[访问域名和数据中心](https://www.alibabacloud.com/help/doc-detail/31837.html)。
 
         例如，若备份文件的URL是
 
@@ -139,7 +139,7 @@ SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需�
         。
 
 3.  将备份文件从OSS迁移至RDS，详细步骤如下：
-    1.  登录[RDS控制台](https://rdsnew.console.aliyun.com/)。
+    1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
     2.  选择目标实例所在地域。
     3.  单击目标实例的ID，进入基本信息页面。
     4.  在左侧菜单栏中选择**数据库管理**，进入数据库管理页面。
@@ -158,7 +158,7 @@ SQL Server 2008 R2版本的实例支持便捷的数据上云操作，您只需�
     9.  单击**确定**。
     10. 在左侧菜单栏中选择**数据上云**，进入从OSS迁移备份文件至RDS上面的任务列表页面。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/4368_zh-CN.png)
+         
 
     11. 找到目标迁移任务，若任务状态为成功，则表示数据已成功迁移至RDS的数据库中。若迁移任务长时间没有变成成功状态，单击目标迁移任务后面的**查看文件详情**，即可查看任务没有成功的原因。解决完问题后，请重新执行上述所需要的步骤。
 
