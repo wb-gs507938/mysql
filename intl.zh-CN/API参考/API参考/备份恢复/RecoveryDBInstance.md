@@ -15,8 +15,16 @@
 |DBInstanceClass|String|否|新实例规格。|
 |DBInstanceStorage|String|否|新实例存储容量。|
 |DBInstanceDescription|String|否|新实例描述。|
-|PayType|String|否|新实例付费类型：Postpaid：后付费，按量付费；Prepaid：预付费，包年包月。|
-|InstanceNetworkType|String|否|新实例网络类型：Classic：经典网络；VPC：专有网络，VPC网络默认与主实例网络类型一致。|
+|PayType|String|否|新实例付费类型：-   Postpaid：后付费，按量付费。
+-   Prepaid：预付费，包年包月。
+
+|
+|InstanceNetworkType|String|否|新实例网络类型：-   Classic：经典网络。
+-   VPC：专有网络，VPC网络。
+
+默认与主实例网络类型一致。
+
+|
 |DbNames|String|是|要恢复的数据库名称，多个数据库名用英文逗号隔开。|
 |BackupId|String|否|备份集ID，可通过查询备份列表接口[DescribeBackups](intl.zh-CN/API参考/API参考/备份恢复/DescribeBackups.md#)获取；BackupId和RestoreTime两者至少传入一个。|
 |RestoreTime|String|否|用户指定备份保留周期内的任意时间点，例如2011-06-11T16:00:00Z；BackupId和RestoreTime两者至少传入一个。|
