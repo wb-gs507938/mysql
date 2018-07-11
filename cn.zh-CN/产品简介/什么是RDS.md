@@ -4,11 +4,7 @@
 
 ## 学习路径图 {#section_nnr_y4j_b2b .section}
 
-您可以通过[RDS学习路径图](https://help.aliyun.com/learn/learningpath/rds.html)快速了解 RDS的相关概念、基础操作、进阶操作等。
-
-## RDS视频简介 {#section_xd4_y4j_b2b .section}
-
-
+您可以通过[RDS学习路径图](https://www.alibabacloud.com/zh/getting-started/learningpath/rds)快速了解 RDS的相关概念、基础操作、进阶操作等。
 
 ## 阿里云数据库 MySQL 版 {#section_zzt_5w5_tdb .section}
 
