@@ -7,7 +7,7 @@
 -   RDS for SQL Server 2012/2016 Web版、企业版的基础系列（即单机版）
 -   RDS for SQL Server 2012/2016标准版、企业版的高可用系列（即双机版）
 
-关于RDS for SQL Server 2008 R2企业版的高可用系列的数据上云方法，请参考[全量备份数据上云SQL Server 2008 R2版](cn.zh-CN/用户指南/数据迁移/SQL Server备份数据上云/全量备份数据上云SQL Server 2008 R2版.md#)。
+关于RDS for SQL Server 2008 R2企业版的高可用系列的数据上云方法，请参考[全量备份数据上云SQL Server 2008 R2版](intl.zh-CN/用户指南/数据迁移/SQL Server备份数据上云/全量备份数据上云SQL Server 2008 R2版.md#)。
 
 ## 限制条件 {#section_pzt_zsj_zdb .section}
 
@@ -53,7 +53,7 @@
 
 **目标实例中不能存在同名的目标数据库**
 
-您无需先创建目标数据库。这一点和[全量备份数据上云SQL Server 2008 R2版](cn.zh-CN/用户指南/数据迁移/SQL Server备份数据上云/全量备份数据上云SQL Server 2008 R2版.md#)的要求相反。
+您无需先创建目标数据库。这一点和[全量备份数据上云SQL Server 2008 R2版](intl.zh-CN/用户指南/数据迁移/SQL Server备份数据上云/全量备份数据上云SQL Server 2008 R2版.md#)的要求相反。
 
 如果同名的数据库已经存在，请先备份该数据库，删除该数据库，再创建迁移任务。
 
@@ -61,7 +61,7 @@
 
 建议先通过 RDS 控制台创建目标实例的初始账号，如果已经存在初始账号，请跳过本步骤。如果目标实例中不存在初始账号，OSS备份数据上云任务也会成功，但是您无法访问该数据库，需要参照本文最后章节“常见的错误信息”才能解决。
 
-初始账号的创建方法，请参考[创建数据库和账号SQL Server 2012及以上版本](../cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012及以上版本.md#) 中的第1步至第7步。
+初始账号的创建方法，请参考[创建数据库和账号SQL Server 2012及以上版本](../../../../intl.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012及以上版本.md#) 中的第1步至第7步。
 
 **准备OSS Bucket**
 
@@ -70,9 +70,6 @@
 1.  登录阿里云[OSS控制台](https://oss.console.aliyun.com/)。
 2.  单击存储空间后面的加号**+**。
 3.  设置Bucket名称、地域、存储类型和读写权限，单击**确定**。（请确保与RDS for SQL Server实例位于相同地域，否则会导致后面的步骤中无法选中备份文件。）如下图所示。
-
-    ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1521534295143/1111.png)
-
 
 **运行DBCC CHECKDB**
 
@@ -141,14 +138,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 4.  在左侧菜单栏中选择**备份恢复**。
 5.  单击右上角**OSS备份数据恢复上云**。
 6.  如果您是第一次使用OSS备份数据恢复上云功能，需要给RDS官方服务账号授予访问OSS的权限：
-
     1.  单击数据导入向导第三项数据导入页面中的授权地址，如下图所示：
-
-        ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1521535258346/2222.png)
-
     2.  跳转到RAM授权页面，请单击**同意授权**，完成授权。
-    ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1525672054478/3333.png)
-
 7.  授权完毕后，在数据导入向导第三步数据导入页面设置如下参数，单击**确认**生成OSS备份数据上云任务。
 
     |配置项|说明|
@@ -157,14 +148,14 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     |OSS Bucket|选择备份文件所在的OSS Bucket。|
     |OSS子文件夹名|备份文件所在的子文件夹名字。|
     |OSS文件列表|单击右侧放大镜按钮，可以按照备份文件名前缀模糊查找，会展示文件名、文件大小和更新时间。请选择需要上云的备份文件。|
-    |上云方案|     -   打开数据库（只有一个全量备份文件）：全量上云，指用户仅有一个完全备份文件上云RDS for SQL Server的场景。本操作选择**打开数据库**。
-    -   不打开数据库（还有差异备份或日志文件）：增量上云，用户有全量备份文件和差异或者日志备份文件，增量上云RDS for SQL Server的场景。
+    |上云方案|     -   打开数据库（只有一个全量备份文件）：全量上云，指用户仅有一个完全备份文件上云RDS for SQL Server的场景。本操作选择**打开数据库**，此时CreateMigrateTask 中的`BackupMode=FULL`并且`IsOnlineDB = True`。
+    -   不打开数据库（还有差异备份或日志文件）：增量上云，用户有全量备份文件和差异或者日志备份文件，增量上云RDS for SQL Server的场景。默认选中，此时CreateMigrateTask 中的B`ackupMode=UPDF`并且`IsOnlineDB = False`。
  |
-    |一致性检查方式|     -   异步执行DBCC：在打开数据库的时候系统不做DBCC CheckDB，会在打开数据库任务结束以后，异步执行DBCC CheckDB操作，以此来节约打开数据库操作的时间开销（数据库比较大，DBCC CheckDB非常耗时），减少用户的业务停机时间。如果，您对业务停机时间要求非常敏感，且不关心DBCC CheckDB结果，建议使用异步执行DBCC。
-    -   同步执行DBCC：相对于异步执行DBCC，有的用户非常关心DBCC CheckDB的结果，以此来找出用户线下数据库数据一致性错误。此时，建议您选择同步执行DBCC，影响是会拉长打开数据库的时间。
+    |一致性检查方式|     -   异步执行DBCC：在打开数据库的时候系统不做DBCC CheckDB，会在打开数据库任务结束以后，异步执行DBCC CheckDB操作，以此来节约打开数据库操作的时间开销（数据库比较大，DBCC CheckDB非常耗时），减少用户的业务停机时间。如果，您对业务停机时间要求非常敏感，且不关心DBCC CheckDB结果，建议使用异步执行DBCC。此时CreateMigrateTask 中的`CheckDBMode=SyncExecuteDBCheck`
+    -   同步执行DBCC：相对于异步执行DBCC，有的用户非常关心DBCC CheckDB的结果，以此来找出用户线下数据库数据一致性错误。此时，建议您选择同步执行DBCC，影响是会拉长打开数据库的时间。默认选项，此时CreateMigrateTask 中的`CheckDBMode=AsyncExecuteDBCheck`
  |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/6114_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/6230_zh-CN.png)
 
     您可以不断单击刷新按钮，来查看数据上云任务最新状态。如果上云失败，请根据任务描述提示排查错误，可参考本文的常见错误部分。
 
@@ -174,8 +165,6 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 您也可以查看一段时间内的备份上云记录，具体操作如下：
 
 进入备份恢复页面，选择**备份上云恢复记录**，默认会展示最近一周的记录。当然，您同样可以修改时间范围来查看特定时间段内的上云恢复记录。
-
-![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1521535583466/5555.png)
 
 ## 常见错误 {#section_cgb_fgk_zdb .section}
 
@@ -245,11 +234,7 @@ OSS下载链接过期错误仅针对RDS for SQL Server 2008 R2高可用版本。
 
     -   方法一：将备份文件OSS共享链接地址的有效期设置为更大的值或者最大值18个小时，方法如下截图所示：
 
-        ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1521543410146/7777.png)
-
     -   方法二：将OSS上的数据库备份文件直接修改为**公共读**，方法如下图所示。
-
-        ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1521543430755/88888.png)
 
         **说明：** 修改为公共读的数据库备份文件，是永久可以下载的，所以存在安全风险，请用户在完成备份文件上云后，将该文件还原为**私有**属性。
 
@@ -280,11 +265,7 @@ OSS下载链接过期错误仅针对RDS for SQL Server 2008 R2高可用版本。
 
 -   解决方法：
 
-    1.  创建初始账号，具体操作请参考[创建数据库和账号SQL Server 2012及以上版本](../cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012及以上版本.md#)中的第1步至第7步。
-    2.  重置初始账号密码，具体操作请参考[重置密码](cn.zh-CN/用户指南/账号管理/重置密码.md#)。
+    1.  创建初始账号，具体操作请参考[创建数据库和账号SQL Server 2012及以上版本](../../../../intl.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012及以上版本.md#)中的第1步至第7步。
+    2.  重置初始账号密码，具体操作请参考[重置密码](intl.zh-CN/用户指南/账号管理/重置密码.md#)。
     3.  使用初始账号访问上云的数据库，也可以执行为其他用户授权等操作。
-
-**一张图读懂常见错误信息**
-
-![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/68310/cn_zh/1521537324524/6666.png)
 
