@@ -1,6 +1,6 @@
 # General introduction to product series {#concept_t5k_fkv_tdb .concept}
 
-Currently, RDS instances are divided into three series: Basic Edition, High-availability Edition and Finance Edition.  Different series support different engine types and instance types. See [Instance types](intl.en-US/Product Introduction/Instance types.md) for more information.
+Currently, RDS instances are divided into three series: Basic Edition, High-availability Edition and Finance Edition.  Different series support different engine types and instance types. See [Instance type overview](intl.en-US/Product Introduction/Instance types/Instance type overview.md) for more information.
 
 **Note:** Currently the Finance Edition is applicable only to the regions in China.
 
