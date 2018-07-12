@@ -2,7 +2,7 @@
 
 ## Overview {#section_nkl_hdh_wdb .section}
 
-ApsaraDB for Relational Database Service \(RDS\) is a stable and reliable online database service with auto-scaling capabilities. Based on Apsara’s distributed file system and high-performance storage of ephemeral SSD, RDS supports MySQL, SQL Server, PostgreSQL, and PPAS engines, and provides a complete set of solutions for disaster recovery, backup, restoration, monitoring, migration, and others. This helps you to operate and manage your own database. To learn about the benefits of RDS, see [Benefits](../../../../intl.en-US/Product Introduction/Benefits.md#).
+ApsaraDB for Relational Database Service \(RDS\) is a stable and reliable online database service with auto-scaling capabilities. Based on Apsara’s distributed file system and high-performance storage of ephemeral SSD, RDS supports MySQL, SQL Server, PostgreSQL, and PPAS engines, and provides a complete set of solutions for disaster recovery, backup, restoration, monitoring, migration, and others. This helps you to operate and manage your own database. To learn about the benefits of RDS, see [Benefits](../../../../intl.en-US/Product Introduction/Benefits/Cheap and ease-to-use.md#).
 
 This document describes RDS features and functions and further explains the procedure to configure RDS through the [RDS console](https://rds.console.aliyun.com/) . With the help of this information you can also manage the RDS through APIs and SDKs.
 
