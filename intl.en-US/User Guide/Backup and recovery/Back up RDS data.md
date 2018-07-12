@@ -2,7 +2,7 @@
 
 You can configure a backup policy to adjust the cycles of RDS data backup and log backup and as a result, RDS enables the auto-backup feature. You can also manually back up RDS data.
 
-Instance backup files occupy backup space. Charges are incurred if the used space exceeds the free quota. You must design a backup cycle appropriately to cater the service requirements based on the available backup space. For information on the free quota, see [\# View the free quota of the backup space](intl.en-US/User Guide/Backup and recovery/View the free quota of the backup space.md#). To view the charging standard for backup space usage, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing).
+Instance backup files occupy backup space. Charges are incurred if the used space exceeds the free quota. You must design a backup cycle appropriately to cater the service requirements based on the available backup space. For information on the free quota, see [View the free quota of the backup space](intl.en-US/User Guide/Backup and recovery/View the free quota of the backup space.md#). To view the charging standard for backup space usage, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing).
 
 ## Backup policies {#section_oyj_3k4_ydb .section}
 
