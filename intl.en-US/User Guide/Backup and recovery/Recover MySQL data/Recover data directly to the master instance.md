@@ -5,8 +5,8 @@
     **Note:** 
 
     -   This article is applicable only to MySQL instances. To recover data directly to a SQL server instance, see [Recover data directly to the master instance](intl.en-US/User Guide/Backup and recovery/Recover SQL Server/PPAS/PostgreSQL data/Recover data directly to the master instance.md)
-    -   If a read-only instance exists, the specified backup data cannot directly overwrite the original data of the master instance. You can only recover the data through a clone instance. For more information, see [Recovering from a temporary instance to a primary instance recovering from a clone instance to a primary instance](intl.en-US/User Guide/Backup and recovery/Recover MySQL data/Recovering from a clone or temporary instance to a primary instance.md).
-2.   Log on to the [RDSconsole](https://rds.console.aliyun.com/) . 
+    -   If a read-only instance exists, the specified backup data cannot directly overwrite the original data of the master instance. You can only recover the data through a clone instance. For more information, see [Recover from a clone instance to the master instance](intl.en-US/User Guide/Backup and recovery/Recover MySQL data/Recovering from a clone or temporary instance to a primary instance.md).
+2.   Log on to the [RDS console](https://rds.console.aliyun.com/) . 
 3.   Select the region where the target instance is located. 
 4.   Click the ID of the target instance to go to the Basic Information page. 
 5.   Select **Backup and Recovery** in the left-side menu. 
