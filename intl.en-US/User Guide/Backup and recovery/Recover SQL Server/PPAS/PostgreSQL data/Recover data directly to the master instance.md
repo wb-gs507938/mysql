@@ -2,9 +2,7 @@
 
 You can recover data directly to an instance, and the specified backup data overwrites the data of the instance, and the data generated after creation of the specified backup data is lost. We recommend that you create a temporary instance for data recovery and migration to guarantee higher security.
 
-**Note:** 
-
--   This method is only applicable to the database of SQL Server 2008 R2.
+**Note:** This method is only applicable to the database of SQL Server 2008 R2.
 
 ## Procedure {#section_ilr_kgn_ydb .section}
 
