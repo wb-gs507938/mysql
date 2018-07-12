@@ -2,7 +2,7 @@
 
 The [RDS console](http://rds.console.aliyun.com/?spm=5176.doc26126.2.3.Kca631) is a web application used to manage the RDS instances. The console has intuitive user interface, through which you can create instances, create databases, create accounts, set network, set connection, and so on. For the different instance types, the information displayed on the console is different.
 
-The RDS console is part of the Alibaba Cloud console. For information about common settings and basic operations on the Alibaba Cloud console, see [Alibaba Cloud console](https://www.alibabacloud.com/help/zh/doc-detail/47605.htm). This article describes the home page of the RDS console. The actual interface may vary slightly.
+The RDS console is part of the Alibaba Cloud console. For information about common settings and basic operations on the Alibaba Cloud console, see [Alibaba Cloud console](https://www.alibabacloud.com/help/doc-detail/47605.htm). This article describes the home page of the RDS console. The actual interface may vary slightly.
 
 Log on to the [RDS console](http://rds.console.aliyun.com/?spm=5176.doc26126.2.3.Kca631) to enter the **Instance List** page, which is the homepage of the RDS console, as shown in the following figure.
 
