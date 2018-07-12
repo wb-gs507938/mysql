@@ -42,9 +42,7 @@ The following table lists the available information and actions that can be perf
 |Zone Architecture Diagram|This area allows you to view the structural diagrams of the single zone and multi-zone instance.| |
 |Log management|Error Log|This area allows you to view SQL statements that are incorrectly run in the database within a month.|[Log management](https://www.alibabacloud.com/help/doc-detail/26203.htm)|
 |Slow SQL Log Details|This area allows you to view SQL statements whose running period exceeds one second in the database within a month, and deduplicate similar statements.|
-|Backup and Recovery|Backup List|This area allows you to view the data backup list, and download the backup data.| -   [Download RDS data and log backup](https://www.alibabacloud.com/help/doc-detail/26208.htm)
-
- |
+|Backup and Recovery|Backup List|This area allows you to view the data backup list, and download the backup data.|[Download RDS data and log backup](https://www.alibabacloud.com/help/doc-detail/26208.htm)|
 |Temporary instance|This area allows you to create temporary instances.|
 |Archive List|This area allows you to view the detailed list of archived logs, and download the archived logs.| |
 |Backup Settings|This area allows you to modify a backup policy and view the backup policies, such as the data backup retention time, backup cycle, and backup time.|[Back up RDS data](https://www.alibabacloud.com/help/doc-detail/26206.htm)|
