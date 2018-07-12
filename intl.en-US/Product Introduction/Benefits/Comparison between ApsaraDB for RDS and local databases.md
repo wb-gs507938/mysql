@@ -2,8 +2,8 @@
 
 ## Performance comparison {#section_ukk_wy5_tdb .section}
 
-| |ApsaraDB for RDS|Database services built on purchased servers|
-|--|----------------|--------------------------------------------|
+|Item|ApsaraDB for RDS|Database services built on purchased servers|
+|----|----------------|--------------------------------------------|
 |Service availability|99.95%|You are required to implement your own data protection, master-slave replication, and RAID.|
 |Data reliability|99.9999%|You are required to implement your own data protection, master-slave replication, and RAID.|
 |System security|Anti-DDoS, malicious traffic cleaning, timely repair of various database security vulnerabilities|You are required to do deployment at high costs and repair database security vulnerabilities independently.|
@@ -16,8 +16,8 @@
 
 ## Price comparison {#section_kkj_t1v_tdb .section}
 
-| |ApsaraDB for RDS|Database services built on purchased servers|
-|--|----------------|--------------------------------------------|
+|Item|ApsaraDB for RDS|Database services built on purchased servers|
+|----|----------------|--------------------------------------------|
 |Costs of hardware, spare parts and accessories|Take the following instance type as an example: An instance with memory of 1,200 MB and storage space of 50 GB \(IOPS is up to 600\) costs 2,040 RMB/year.| -   A minimum of 2 servers are required for the database cluster, and a single server whose IOPS is up to 600 costs approximately 6,000 RMB.
 -   An intranet switch is used to connect the front-end Web server \(an inexpensive 1U non-NMS switch costs about 1,000 RMB\). Later hardware damages and replacements take at least 30% of the cost.
 -   Hardware cost: \(6,000 × 2 + 1,000\) × 130% = 16,900 RMB
