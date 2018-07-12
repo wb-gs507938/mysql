@@ -1,19 +1,17 @@
 # Set parameters through RDS console {#concept_lfl_xmn_wdb .concept}
 
-RDS allows you to define some instance parameters. For more information about the parameters that can be configured, see Parameter Settings on the RDS console. This document describes how to modify parameters and view the modification history. For information about API operations, see API references.
+RDS allows you to define some instance parameters. For more information about the parameters that can be configured, see Parameter Settings on the RDS console. This document describes how to modify parameters and view the modification history on the RDS console. To perform these operations using APIs, see API references at the end of this article.
 
 **Note:** 
 
 -   PostgreSQL instances do not support user-defined parameters.
 
--   To set parameters for instances of SQL Server 2012 and later versions, use SQL commands. For more information, see [Use SQL commands to set parameters](https://help.aliyun.com/document_detail/61161.html).
+-   To set parameters for instances of SQL Server 2012 and later versions, use SQL commands. For more information, see [Use SQL commands to set parameters](intl.en-US/User Guide/Instance management/Set instance parameters/Use SQL commands to set parameters.md#).
 
 
 ## Background information {#section_kcg_dnn_wdb .section}
 
-RDS is compatible with the native database service, with similar parameter setting methods. You can configure parameters through the [RDS console](https://rds.console.aliyun.com/?spm=a2c63.p38356.a3.1.514e5c6dFW5iGI) by referring to this example, or by using the [ModifyParameter](https://help.aliyun.com/document_detail/26286.html) API.
-
-For a description of the database parameters, click the following link to view the official documents of the different database versions.
+For descriptions about the database parameters, see the following official documents:
 
 -   MySQL
 
@@ -31,11 +29,7 @@ For a description of the database parameters, click the following link to view t
 
 -   Configure parameters only within the permissible value ranges shown on the parameter settings page.
 
--   The instance must be restarted after modifying certain parameters. See the **Force Restart** parameter on the Parameters page to confirm if a restart is required. Before restarting, to avoid any interruption of production, you must guarantee the appropriate business arrangements. Restarting instances may have the following impact:
-
-    -   When you restart an instance, it automatically performs minor version upgrades \(for example, from MySQL 5.6.1 to 5.6.2\). After the upgrade, compatibility issues may occur and cause your business to be unavailable. Therefore, before you restart an instance, we recommend that you create a new instance and use it to perform a compatibility test. After making sure the new version will not cause problems, restart the instance.
-
-    -   In addition, a restart will disconnect the instance. Exercise caution to restart the instances.
+-   The instance must be restarted after modifying certain parameters. See the **Force Restart** parameter on the Parameters page to confirm if a restart is required. Before restarting, to avoid any interruption of production, you must guarantee the appropriate business arrangements. A restart will disconnect the instance. Exercise caution to restart the instances.
 
 
 ## Procedure {#section_wmp_lnn_wdb .section}
@@ -43,7 +37,7 @@ For a description of the database parameters, click the following link to view t
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/?spm=a2c63.p38356.a3.1.514e5c6dFW5iGI).
 2.  Select the region where the target instance is located.
 3.  Click the ID of the instance to visit the Basic Information page.
-4.  Select **Parameters** on the left-side navigation pane to access the Parameters page.
+4.  Select **Parameters** on the left-side navigation pane.
 5.  Select the **Modifiable Parameters** tab.
 6.  Select the parameter modification method.
     -   To modify a parameter
@@ -76,14 +70,14 @@ For a description of the database parameters, click the following link to view t
 
 ## API references {#section_jkb_znn_wdb .section}
 
--   [DescribeParameterTemplates](https://help.aliyun.com/document_detail/26284.html)
+-   [DescribeParameterTemplates](../../../../intl.en-US/API Reference/API Reference/Parameter management/View database parameter templates.md#)
 
--   [DescribeParameters](https://help.aliyun.com/document_detail/26285.html)
+-   [DescribeParameters](../../../../intl.en-US/API Reference/API Reference/Parameter management/View the list of currently running instance database parameters.md#)
 
--   [ModifyParameter](https://help.aliyun.com/document_detail/26286.html)
+-   [ModifyParameter](../../../../intl.en-US/API Reference/API Reference/Parameter management/Modify the database parameter list.md#)
 
 
 ## Best practices {#section_cfc_14n_wdb .section}
 
-[Parameter optimization for MySQL instances](https://help.aliyun.com/document_detail/63255.html)
+[Parameter optimization for MySQL instances](https://www.alibabacloud.com/help/doc-detail/63255.htm)
 
