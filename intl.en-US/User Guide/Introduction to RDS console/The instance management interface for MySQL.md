@@ -29,16 +29,16 @@ The following table lists the query information and executable operations suppor
  |
 |Resource Information|You can view the storage space and backup usage of an instance.| |
 |Account Management|Account List| You can do the following: View all accounts under an instance; Create accounts, master account, or initial account; Change the account password, delete an account, and modify the account permissions.| -   [Create account](https://www.alibabacloud.com/help/doc-detail/26186.htm)
--   [Create database and account for MySQL 5.5/5.6](https://www.alibabacloud.com/help/doc-detail/26129.htm)
--   [Create database and account for MySQL 5.7](https://www.alibabacloud.com/help/doc-detail/49015.htm)
--   [Create master account for MySQL 5.5/5.6](https://www.alibabacloud.com/help/doc-detail/26130.htm)
+-   [Create account and database for MySQL 5.7 High-availability Edition/5.5/5.6 instances](https://www.alibabacloud.com/help/doc-detail/26129.htm)
+-   [Create account and database for MySQL 5.7 Basic Edition](https://www.alibabacloud.com/help/doc-detail/49015.htm)
+-   [Create master account](https://www.alibabacloud.com/help/doc-detail/26130.htm)
 -   [Reset instance password](https://www.alibabacloud.com/help/doc-detail/26187.htm)
 -   [Change account permissions](https://www.alibabacloud.com/help/doc-detail/26188.htm)
 
  |
 |Service Account Privileges|When an Alibaba Cloud engineer provides technical support, you must authorize the engineer’s service account to view or modify the instance configurations and view the table structure, index, and SQL statements.|[Authorize a service account](https://www.alibabacloud.com/help/doc-detail/35152.htm)|
-|Database Management| | You can view the databases information under an instance, and create and delete databases.| -   [Create database and account for MySQL 5.5/5.6](https://www.alibabacloud.com/help/doc-detail/26129.htm)
--   [Create database and account for MySQL 5.7](https://www.alibabacloud.com/help/doc-detail/49015.htm)
+|Database Management| | You can view the databases information under an instance, and create and delete databases.| -   [Create account and database for MySQL 5.7 High-availability Edition/5.5/5.6 instances](https://www.alibabacloud.com/help/doc-detail/26129.htm)
+-   [Create account and database for MySQL 5.7 Basic Edition](https://www.alibabacloud.com/help/doc-detail/49015.htm)
 -   [Delete database](https://www.alibabacloud.com/help/doc-detail/26191.htm)
 
  |
