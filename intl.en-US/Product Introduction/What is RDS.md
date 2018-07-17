@@ -10,7 +10,7 @@ ApsaraDB for RDS \(Relational Database Service\) is a stable and reliable online
 
 MySQL is the world’s most popular open source database. As an important part of LAMP, a combination of open source software \(Linux + Apache + MySQL + Perl/PHP/Python\), MySQL is widely used in a variety of applications.
 
-In the Web 2.0 era, MySQL serves as the basis of the underlying architecture of the popular BBS software system Discuz and blogging platform WordPress. In the Web 3.0 era, leading Internet companies including Alibaba, Facebook, and Google have built their large-scale mature database clusters by taking advantage of the advanced flexibility of MySQL.
+In the Web 2.0 era, MySQL serves as the basis of the underlying architecture of the popular BBS software system Discuz! and blogging platform WordPress. In the Web 3.0 era, leading Internet companies including Alibaba, Facebook, and Google have built their large-scale mature database clusters by taking advantage of the advanced flexibility of MySQL.
 
 Based on Alibaba’s MySQL source code branch, ApsaraDB for MySQL proves to have excellent performance and throughput. It withstands the massive data traffic and large number of concurrent users during many November 11 \(Singles’ Day\) shopping festivals - the Chinese equivalent of Cyber Monday. ApsaraDB for MySQL also offers a range of advanced functions including optimized read/write splitting, data compression, and intelligent optimization.
 
