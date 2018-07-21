@@ -4,43 +4,44 @@
 
 ## 学习路径图 {#section_nnr_y4j_b2b .section}
 
-您可以通过[RDS学习路径图](https://www.alibabacloud.com/zh/getting-started/learningpath/rds)快速了解 RDS的相关概念、基础操作、进阶操作等。
+您可以通过[RDS学习路径图](https://help.aliyun.com/learn/learningpath/rds.html)快速了解 RDS的相关概念、基础操作、进阶操作等。
 
-## 阿里云数据库 MySQL 版 {#section_zzt_5w5_tdb .section}
+## RDS视频简介 {#section_xd4_y4j_b2b .section}
 
-MySQL 是全球最受欢迎的开源数据库，作为开源软件组合 LAMP（Linux + Apache + MySQL + Perl/PHP/Python）中的重要一环，广泛应用于各类应用。
 
-Web2.0 时代，风靡全网的社区论坛软件系统 Discuz 和博客平台 WordPress 均基于 MySQL 实现底层架构。Web3.0 时代，阿里巴巴、Facebook、Google 等大型互联网公司都采用更为灵活的 MySQL 构建了成熟的大规模数据库集群。
 
-阿里云数据库 MySQL 版基于 Alibaba 的 MySQL 源码分支，经过双 11 高并发、大数据量的考验，拥有优良的性能和吞吐量。除此之外，阿里云数据库 MySQL 版还拥有经过优化的读写分离、数据压缩、智能调优等高级功能。
+## 相关概念 {#section_gbt_pd1_42b .section}
 
-当前 RDS for MySQL 支持 5.5、5.6 和 5.7 版本。
+了解以下概念，将帮助您更好地选购RDS：
 
-## 阿里云数据库 SQL Server 版 {#section_qtr_ww5_tdb .section}
+-   实例：实例是虚拟化的数据库服务器。您可以在一个实例中创建和管理多个数据库。
+-   地域：地域是指物理的数据中心。一般情况下，RDS实例应该和ECS实例位于同一地域，以实现最高的访问性能。
+-   可用区：可用区是指在同一地域内，拥有独立电力和网络的物理区域。同一地域的不同可用区之间没有实质性区别。
+-   数据库引擎：RDS支持四种数据库引擎：MySQL、SQL Server、PostgreSQL、PPAS（Postgre Plus Advanced Server，高度兼容 Oracle数据库）。关于各个引擎的介绍，请参考[数据库引擎](../../../../cn.zh-CN/用户指南/快速入门.md)。
+-   网络类型：您可以选择将实例创建在经典网络或VPC中。专有网络VPC（Virtual Private Cloud）是阿里云上一种隔离的网络环境，安全性比传统的经典网络更高，建议您选择VPC。
+-   产品系列：分为基础版、高可用版、金融版。关于各个系列的介绍，请参考[产品系列概述](cn.zh-CN/产品简介/产品系列/产品系列概述.md)。
+-   规格类型：分为通用型、独享型、独享物理机型。关于各个规格类型的介绍，请参考[实例规格概述](cn.zh-CN/产品简介/实例规格/实例规格概述.md)。
+-   存储类型：分为SSD本地盘与SSD云盘。具体请参考[存储类型](cn.zh-CN/产品简介/存储类型.md)。
 
-SQL Server 是发行最早的商用数据库产品之一，作为 Windows 平台（IIS + .NET + SQL Server）中的重要一环，支撑着大量的企业应用。SQL Server 自带的 Management Studio 管理软件内置了大量图形工具和丰富的脚本编辑器。您通过可视化界面即可快速上手各种数据库操作。
+## 相关服务 {#section_r45_z21_42b .section}
 
-阿里云数据库 SQL Server 版不仅拥有高可用架构和任意时间点的数据恢复功能，强力支撑各种企业应用，同时也包含了微软的 License 费用，您无需再额外支出 License 费用。
+-   [ECS](../../../../cn.zh-CN/产品简介/什么是云服务器ECS.md)：ECS是云服务器，可以通过内网访问RDS，实现RDS的最佳性能。ECS搭配RDS是典型的业务访问架构。
+-   [Redis](../../../../cn.zh-CN/产品简介/什么是云数据库 Redis 版.md)：Redis提供持久化的内存数据库服务。当业务访问量较大时， ECS 、RDS和Redis的组合可以支持更多的读请求，同时减少响应时间。
+-   [MongoDB](../../../../cn.zh-CN/产品简介/什么是MongoDB云数据库.md)：提供稳定可靠、弹性伸缩、完全兼容MongoDB协议的数据库服务。
+-   [MaxCompute](../../../../cn.zh-CN/产品简介/什么是MaxCompute.md)：大数据计算服务MaxCompute（原名ODPS）是一种快速、完全托管的TB/PB级数据仓库解决方案，提供了完善的数据导入方案以及多种经典的分布式计算模型，能够快速地解决海量数据计算问题。
+-   [DTS](https://help.aliyun.com/document_detail/26592.html)：您可以使用数据传输服务DTS将本地数据库迁移到云上的RDS，以及实现RDS的异地容灾。
+-   [OSS](../../../../cn.zh-CN/产品简介/什么是对象存储 OSS.md)：对象存储服务OSS是阿里云提供的海量、安全、低成本、高可靠的云存储服务。
 
-当前 RDS for SQL Server 支持以下版本：
+## 如何使用RDS {#section_rgz_gg1_42b .section}
 
--   SQL Server 2008 R2 企业版
--   SQL Server 2012 Web版、标准版、企业版
--   SQL Server 2016 Web版、标准版、企业版
+您可以通过多种方式使用RDS：
 
-## 阿里云数据库 PostgreSQL 版 {#section_trb_yw5_tdb .section}
+-   控制台：提供可视化的Web界面，方便您管理RDS实例。您可以通过控制台进行实例创建、网络设置、数据库创建、账号创建等操作。
+-   API：您也可以通过调用API来管理RDS实例，控制台上的所有操作都可以通过调动API来实现。
+-   DMS：创建好RDS实例后，您可以通过DMS登录到RDS实例，在Web界面进行数据库开发工作。
+-   客户端：RDS兼容原生的数据库协议，您可以使用通用的数据库客户端工具访问RDS实例。
 
-PostgreSQL 是全球最先进的开源数据库。作为学院派关系型数据库管理系统的鼻祖，它的优点主要集中在对 SQL 规范的完整实现以及丰富多样的数据类型支持，包括JSON 数据、IP 数据和几何数据等，而这些数据类型大部分商业数据库都不支持。
+## RDS定价 {#section_kzx_jg1_42b .section}
 
-除了完美支持事务、子查询、多版本控制（MVCC）、数据完整性检查等特性外，阿里云数据库 PostgreSQL 版还集成了高可用和备份恢复等重要功能，减轻您的运维压力。
-
-当前 RDS for PostgreSQL 支持 9.4 版本。
-
-## 阿里云数据库 PPAS 版 {#section_lzj_zw5_tdb .section}
-
-PPAS（Postgres Plus Advanced Server）是一个稳定、安全且可扩展的企业级关系型数据库，基于全球最先进的开源数据库 PostgreSQL，并在性能、应用方案和兼容性等方面进行了增强，提供直接运行 Oracle 应用的能力。您可以在 PPAS 上稳定地运行各种企业应用，同时得到更高性价比的服务。
-
-阿里云数据库 PPAS 版集成了账号管理、资源监控、备份恢复和安全控制等功能，并将持续地更新完善。
-
-当前 RDS for PPAS 支持 9.3 版本。
+请参考[收费项目及计费方式](../../../../cn.zh-CN/产品定价/收费项目及计费方式.md)。
 
