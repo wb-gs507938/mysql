@@ -120,15 +120,15 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 **方法一：使用ossbrowser工具上传**
 
-推荐使用ossbrowser工具上传备份文件到OSS，具体请参考 [ossbrowser](https://help.aliyun.com/document_detail/61872.html)。
+推荐使用ossbrowser工具上传备份文件到OSS，具体请参考 [ossbrowser](https://www.alibabacloud.com/help/doc-detail/61872.html)。
 
 **方法二：使用OSS控制台上传**
 
-如果备份文件小于5GB，可以直接使用OSS控制台上传。具体请参考[使用OSS控制台上传](https://help.aliyun.com/document_detail/31886.html)。
+如果备份文件小于5GB，可以直接使用OSS控制台上传。具体请参考[使用OSS控制台上传](https://www.alibabacloud.com/help/doc-detail/31886.html)。
 
 **方法三：使用OSS API上传**
 
-如果您有全自动无人干预的上云需求，请使用OSS OpenAPI，通过断点续传的方式上传备份文件到OSS Bucket，具体请参考[断点续传](https://help.aliyun.com/document_detail/31850.html)。
+如果您有全自动无人干预的上云需求，请使用OSS OpenAPI，通过断点续传的方式上传备份文件到OSS Bucket，具体请参考[断点续传](https://www.alibabacloud.com/help/doc-detail/31850.html)。
 
 ## 创建数据上云任务 {#section_tmd_xfk_zdb .section}
 
