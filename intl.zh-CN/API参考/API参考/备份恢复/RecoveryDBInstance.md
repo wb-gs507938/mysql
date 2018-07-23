@@ -15,7 +15,7 @@
 |--|--|----|--|
 |Action|String|是|系统规定参数，取值为：RecoveryDBInstance。|
 |DBInstanceId|String|是|源实例ID。|
-|TargetDBInstanceId|String|是|目标实例名。|
+|TargetDBInstanceId|String|否|目标实例名。|
 |DBInstanceClass|String|否|新实例规格。|
 |DBInstanceStorage|String|否|新实例存储容量。|
 |DBInstanceDescription|String|否|新实例描述。|
@@ -35,7 +35,7 @@
 |VPCId|String|否|VPCId。|
 |VSwitchId|String|否|VSwitch Id，多个值用英文逗号“,”隔开。|
 |PrivateIpAddress|String|否|您可以指定VSwitchId下的VPCId，如果不输入，系统自动分配。|
-|usedTime|String|是|包年包月类型：-   若付费类型为Prepaid，则该入参必须传入；
+|usedTime|String|否|包年包月类型：-   若付费类型为Prepaid，则该入参必须传入；
 -   指定购买时长，可按需传入1、2、3等数值。
 
 |
