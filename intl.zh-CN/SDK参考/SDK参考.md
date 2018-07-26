@@ -1,6 +1,6 @@
 # SDK参考 {#concept_mjp_2sn_12b .concept}
 
-阿里云云数据库RDS（Relational Database Service）支持以下类型的SDK：
+阿里云关系型数据库RDS（Relational Database Service）支持以下类型的SDK：
 
 -   Java SDK
 -   Python SDK
