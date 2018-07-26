@@ -1,6 +1,11 @@
 # SDK参考 {#concept_mjp_2sn_12b .concept}
 
-## 最新版本下载地址 {#section_u1v_lsn_12b .section}
+阿里云云数据库RDS（Relational Database Service）支持以下类型的SDK：
 
-[SDK下载](https://www.alibabacloud.com/support/developer-resources#sdk)
+-   Java SDK
+-   Python SDK
+-   PHP SDK
+-   .NET SDK
+
+[SDK使用说明和下载地址](https://www.alibabacloud.com/support/developer-resources#sdk)
 
