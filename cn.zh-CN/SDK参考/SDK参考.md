@@ -6,6 +6,8 @@
 -   Python SDK
 -   PHP SDK
 -   .NET SDK
+-   C/C++ SDK
+-   Go SDK
 
-[SDK使用说明和下载地址](https://www.alibabacloud.com/support/developer-resources#sdk)
+进入[阿里云SDK页面](https://develop.aliyun.com/tools/sdk#/java)，选择SDK类型（如Python SDK），然后下载**阿里云关系型数据库**的SDK。
 
