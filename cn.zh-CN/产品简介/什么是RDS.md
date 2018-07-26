@@ -22,17 +22,22 @@
 
 -   [ECS](../../../../intl.zh-CN/产品简介/什么是云服务器ECS.md)：ECS是云服务器，可以通过内网访问RDS，实现RDS的最佳性能。ECS搭配RDS是典型的业务访问架构。
 -   [Redis](../../../../intl.zh-CN/产品简介/什么是云数据库 Redis 版.md)：Redis提供持久化的内存数据库服务。当业务访问量较大时， ECS 、RDS和Redis的组合可以支持更多的读请求，同时减少响应时间。
--   [MongoDB](../../../../intl.zh-CN/产品简介/什么是MongoDB云数据库.md)：提供稳定可靠、弹性伸缩、完全兼容MongoDB协议的数据库服务。
--   [MaxCompute](../../../../intl.zh-CN/产品简介/什么是MaxCompute.md)：大数据计算服务MaxCompute（原名ODPS）是一种快速、完全托管的TB/PB级数据仓库解决方案，提供了完善的数据导入方案以及多种经典的分布式计算模型，能够快速地解决海量数据计算问题。
+-   [MongoDB](../../../../intl.zh-CN/产品简介/什么是MongoDB云数据库.md)：提供稳定可靠、弹性伸缩、完全兼容MongoDB协议的数据库服务。数据结构多样时，可以选择将结构化数据存储在RDS，将非结构化数据存储在MongoDB，满足业务的多样化存储需求。
+-   [MaxCompute](../../../../intl.zh-CN/产品简介/什么是MaxCompute.md)：大数据计算服务MaxCompute（原名ODPS）是一种快速、完全托管的TB/PB级数据仓库解决方案，提供了完善的数据导入方案以及多种经典的分布式计算模型，能够快速地解决海量数据计算问题。通过数据集成服务，可将RDS数据导入MaxCompute，实现大规模的数据计算。
 -   [DTS](https://help.aliyun.com/document_detail/26592.html)：您可以使用数据传输服务DTS将本地数据库迁移到云上的RDS，以及实现RDS的异地容灾。
 -   [OSS](../../../../intl.zh-CN/产品简介/什么是对象存储 OSS.md)：对象存储服务OSS是阿里云提供的海量、安全、低成本、高可靠的云存储服务。
 
 ## 如何使用RDS {#section_rgz_gg1_42b .section}
 
-您可以通过多种方式使用RDS：
+您可以通过以下方式管理RDS实例，进行实例创建、网络设置、数据库创建、账号创建等操作。：
 
--   [控制台](https://rdsnew.console.aliyun.com)：提供可视化的Web界面，方便您管理RDS实例。您可以通过控制台进行实例创建、网络设置、数据库创建、账号创建等操作。
--   [API](../../../../intl.zh-CN/API参考/使用API/API概览.md)：您也可以通过调用API来管理RDS实例，控制台上所有的操作都可以通过调用API来实现。
+-   [控制台](https://rdsnew.console.aliyun.com)：提供图形化的Web界面，操作方便。
+-   CLI：控制台上所有的操作都可以通过CLI实现。
+-   [SDK](../../../../dita-oss-bucket/SP_60/DNMYSQ1844142/ZH-CN_TP_8191.dita)：控制台上所有的操作都可以通过SDK实现。
+-   [API](../../../../intl.zh-CN/API参考/使用API/API概览.md)：控制台上所有的操作都可以通过API实现。
+
+创建好RDS实例后，您可以通过以下方式访问RDS实例：
+
 -   客户端：RDS兼容原生的数据库协议，您可以使用通用的数据库客户端工具访问RDS实例。例如，MySQL-Front、SSMS（SQL Server Management Studio）、pgAdmin等。
 
 ## RDS定价 {#section_kzx_jg1_42b .section}
