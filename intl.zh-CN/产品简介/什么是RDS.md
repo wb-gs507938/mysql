@@ -29,11 +29,11 @@
 
 ## 如何使用RDS {#section_rgz_gg1_42b .section}
 
-您可以通过以下方式管理RDS实例，进行实例创建、网络设置、数据库创建、账号创建等操作。：
+您可以通过以下方式管理RDS实例，进行实例创建、网络设置、数据库创建、账号创建等操作：
 
 -   [控制台](https://rdsnew.console.aliyun.com)：提供图形化的Web界面，操作方便。
 -   CLI：控制台上所有的操作都可以通过CLI实现。
--   [SDK](../../../../dita-oss-bucket/SP_60/DNMYSQ1844142/ZH-CN_TP_8191.dita)：控制台上所有的操作都可以通过SDK实现。
+-   [SDK](../../../../intl.zh-CN/SDK参考/SDK参考.md)：控制台上所有的操作都可以通过SDK实现。
 -   [API](../../../../intl.zh-CN/API参考/使用API/API概览.md)：控制台上所有的操作都可以通过API实现。
 
 创建好RDS实例后，您可以通过以下方式访问RDS实例：
