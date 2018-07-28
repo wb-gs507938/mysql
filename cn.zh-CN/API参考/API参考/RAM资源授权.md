@@ -12,7 +12,11 @@
 
 |资源类型|授权策略中的资源描述方式|
 |----|------------|
-|dbinstance|acs:rds:$regionid:$accountid:dbinstance/$dbinstanceidacs:rds:$regionid:$accountid:dbinstance/acs:rds:::dbinstance/|
+|dbinstance|acs:rds:$regionid:$accountid:dbinstance/$dbinstanceidacs:rds:$regionid:$accountid:dbinstance/
+
+acs:rds:::dbinstance/
+
+|
 
 **参数说明：**
 
