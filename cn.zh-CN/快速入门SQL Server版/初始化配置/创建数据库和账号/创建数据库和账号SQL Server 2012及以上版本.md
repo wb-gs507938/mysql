@@ -1,8 +1,8 @@
 # 创建数据库和账号SQL Server 2012及以上版本 {#concept_is4_wb1_wdb .concept}
 
-**说明：** 本文仅适用于SQL Server 2012版本的实例。关于如何在SQL Server 2008 R2版本的实例中创建数据库和账号，请参见文档[创建数据库和账号SQL Server 2008 R2版](intl.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md#)。
+**说明：** 本文仅适用于SQL Server 2012和2016版本的实例。关于如何在SQL Server 2008 R2版本的实例中创建数据库和账号，请参见文档[创建数据库和账号SQL Server 2008 R2版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md#)。
 
-若要使用云数据库RDS，您需要在实例中创建数据库和账号。对于SQL Server 2012版本的实例，您需要通过RDS控制台创建一个初始账号，然后通过客户端创建和管理数据库。本文将以Microsoft SQL Server Management Studio（SSMS）17.1版本的客户端为例介绍如何在SQL Server 2012版本的实例中创建数据库和账号的操作步骤。
+若要使用云数据库RDS，您需要在实例中创建数据库和账号。对于SQL Server 2012和2016版本的实例，您需要通过RDS控制台创建一个初始账号，再通过DMS或客户端创建和管理数据库。
 
 ## 注意事项 {#section_nt2_tb1_wdb .section}
 
@@ -22,7 +22,7 @@
 5.  单击**创建初始账号**。
 6.  输入要创建的账号信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062771_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335595932771_zh-CN.png)
 
     参数说明：
 
@@ -33,64 +33,52 @@
     -   **确认密码**：输入与密码一致的字段，以确保密码正确输入。
 
 7.  单击**确定**。
-8.  将要访问RDS实例的IP地址加入RDS白名单中。关于如何设置白名单，请参见[设置白名单](../../../../intl.zh-CN/快速入门MySQL版/初始化配置/设置白名单.md#)。
-9.  启动Microsoft SQL Server Management Studio客户端。
-10. 新建连接信息，如下图所示。
+8.  单击页面右上角的**登录数据库**，进入[数据管理控制台](https://dms.console.aliyun.com/?token=549cf345-ac05-455c-b3f9-75eadae023fe#/dms/login)的快捷登录页面。
+9.  在快捷登录页面，检查阿里云数据库标签页面显示的连接地址和端口信息。若信息正确，填写数据库用户名和密码。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062775_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335595932773_zh-CN.png)
 
-    参数说明：
+    -   参数说明：
 
-    -   **服务器类型**：选择**数据库引擎**。
+        -   1：实例的连接地址和端口信息。
 
-    -   **服务器名称**：由RDS实例的内网或外网地址和端口号组成，网络地址与端口号之间用英文状态的逗号隔开，如`rm-bptest.sqlserver.rds.aliyuncs.com,3433`。查看RDS实例的内外网地址及端口信息的步骤如下：
+        -   2：要访问数据库的账号名称。
 
-        1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-        2.  选择目标实例所在地域。
-        3.  单击目标实例的ID，进入基本信息页面。
-        4.  在基本信息栏中，即可查看内外网地址及内外网端口信息。
+        -   3：上述账户所对应的密码。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062776_zh-CN.png)
+10. 单击**登录**。
 
-    -   **身份验证**：选择**SQL Server身份验证**。
+    **说明：** 若您希望浏览器记住该账号的密码，可以先勾选**记住密码**，然后再单击**登录**。
 
-    -   **登录名**：RDS实例的初始账号名称。
+11. 若出现将DMS服务器的IP段加入到RDS白名单中的提示，单击**设置白名单**，如下图所示。若需手动添加，请参见[设置白名单](../../../../cn.zh-CN/用户指南/安全管理/设置白名单.md#)。
 
-    -   **密码**：RDS实例的初始账号所对应的密码。
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335595932774_zh-CN.png)
 
-11. 单击**连接**。
-12. 右击**数据库**，选择**新建数据库**。
+12. 成功添加白名单后，单击**登录**。
+13. 成功登录RDS实例后，在页面上方的菜单栏中，选择**SQL操作** \> **SQL窗口** 。
+14. 在SQL窗口中输入如下命令，创建数据库。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062777_zh-CN.png)
+    ```
+    create database<database name>
+    ```
 
-13. 在新建数据库页面的数据库名称栏中输入要新建的数据库名称，单击**确定**。
+15. 单击**执行**，完成创建数据库。
+16. 在SQL窗口中输入如下命令，创建普通账号。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062778_zh-CN.png)
+    ```
+    CREATE LOGIN <login name> WITH PASSWORD = '<password>';
+    ```
 
-14. 数据库创建成功后，您可以在左边的目录树中找到新建的数据库。
+17. 单击**执行**，完成创建普通账号。
 
-    **说明：** 请不要在系统数据库中进行任何操作。
+    **说明：** 控制台上账号列表中不显示通过DMS T-SQL创建的普通账号，可以使用普通账号来登录DMS。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062779_zh-CN.png)
+18. 在SQL窗口中输入如下命令，创建数据库用户，并且关联刚创建的普通账号。
 
-15. 选择**安全性**，右击**登录名**，选择新建登录名，如下图所示，即可创建该实例下的普通账号。
+    ```
+    USE <database name>;
+    CREATE USER <user name> FOR LOGIN <login name>.
+    ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062780_zh-CN.png)
-
-16. 填写账号名称和密码，并选择账号的默认数据库。
-
-    **说明：** 身份验证请选择**SQL Server身份验证**，其他密码策略请根据需要自行调整。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062782_zh-CN.png)
-
-17. 单击**确定**。
-18. 普通账号创建完成后，您可以在左边的目录树中查看该新建账号。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062783_zh-CN.png)
-
-19. 双击该账号，即会开启该账号的登录属性页面。您可以在服务器角色页面对该账号授权并在用户映射页面绑定数据库。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15335191062784_zh-CN.png)
-
-20. 单击**确定**。
+19. 单击**执行**，完成数据库用户创建，至此普通账号就可以访问对应数据库。
 
