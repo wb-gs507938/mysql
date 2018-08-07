@@ -200,7 +200,7 @@ explain insert into ossexample select * from example;
 
 ## id和key隐藏 {#section_pmk_fjg_wdb .section}
 
-CREATE SERVER中的id和key信息如果不做任何处理，用户可以使用`select * from pg_foreign_server`看到明文信息，会暴露用户的id和key。我们通过对id和key进行对称加密实现对id和key的隐藏\(不同的实例使用不同的秘钥，最大限度保护用户信息\)，但无法使用类似GP一样的方法，增加一个数据类型，会导致老实例不兼容。
+CREATE SERVER中的id和key信息如果不做任何处理，用户可以使用`select * from pg_foreign_server`看到明文信息，会暴露用户的id和key。我们通过对id和key进行对称加密实现对id和key的隐藏\(不同的实例使用不同的密钥，最大限度保护用户信息\)，但无法使用类似GP一样的方法，增加一个数据类型，会导致老实例不兼容。
 
 最终的加密后的信息如下：
 
