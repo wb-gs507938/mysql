@@ -11,14 +11,27 @@ Similar to other fdw interfaces, oss\_fdw can encapsulate data stored on OSS \(e
 -   Currently, oss\_fdw can read and write the following file types in OSS: text/csv files and text/csv files in GZIP format.
 -   The value of each parameter needs to be quoted and does not contain any useless spaces.
 
-## Main parameters for CREATE SERVER {#section_smy_p3g_wdb .section}
+## CREATE SERVER parameters {#section_smy_p3g_wdb .section}
 
 -   ossendpoint: Address \(host\) used to access OSS from the intranet.
 -   id: OSS account ID.
 -   key: OSS account key.
 -   bucket: OSS bucket, assigned after an OSS account is created.
 
-## Auxiliary parameters for CREATE SERVER {#section_hhj_r3g_wdb .section}
+The following parameters are related to error tolerance in import and export modes. If network connectivity is bad, you can adjust these parameters to make the import and export successful.
+
+-   oss\_connect\_timeout: Connection timeout time, measured in seconds. Default value: 10s.
+
+-   oss\_dns\_cache\_timeout: DNS timeout time, measured in seconds. Default value: 60s.
+
+-   oss\_speed\_limit: Minimum tolerable rate. Default value: 1,024 Bytes/s \(1 Kbps\).
+
+-   oss\_speed\_time: Maximum tolerable time. Default value: 15s.
+
+
+If the default parameter values are used, a timeout error occurs when the transmission rate is smaller than 1 Kbps for 15 consecutive seconds.
+
+## CREATE FOREIGN TABLE parameters {#section_hhj_r3g_wdb .section}
 
 -   filepath: File name indicating a path on OSS.
 
@@ -36,6 +49,7 @@ Similar to other fdw interfaces, oss\_fdw can encapsulate data stored on OSS \(e
 
     -   All files \(excluding subfolders and files in subfolders\) in the virtual directory indicated by dir are matched and imported to a database.
 
+-   prefix: Prefix of the path of the data file. Regular expressions are not supported. You can set only one of the these parameters: prefix, filepath, and dir.
 -   format: File format, which can only be CSV currently.
 
 -   encoding: File data encoding format. Support the common PostgreSQL encoding formats, such as UTF-8.
@@ -78,21 +92,6 @@ oss\_flush\_block\_size and oss\_file\_max\_size are added to export mode.
 
 **Note:** oss\_flush\_block\_size and oss\_flush\_block\_size are invalid for the import mode.
 
-## Other general parameters for CREATE FOREIGN TABLE {#section_c12_v3g_wdb .section}
-
-The following parameters are related to error tolerance in import and export modes:
-
--   oss\_connect\_timeout: Connection timeout time, measured in seconds. Default value: 10s.
-
--   oss\_dns\_cache\_timeout: DNS timeout time, measured in seconds. Default value: 60s.
-
--   oss\_speed\_limit: Minimum tolerable rate. Default value: 1,024 Bytes/s \(1 Kbps\).
-
--   oss\_speed\_time: Maximum tolerable time. Default value: 15s.
-
-
-If the default parameter values are used, a timeout error occurs when the transmission rate is smaller than 1 Kbps for 15 consecutive seconds.
-
 ## Auxiliary function {#section_uw1_x3g_wdb .section}
 
 FUNCTION oss\_fdw\_list\_file \(relname text, schema text DEFAULT 'public'\)
@@ -112,7 +111,7 @@ select * from oss_fdw_list_file('t_oss');
 (3 rows)
 ```
 
-## Auxiliary parameters {#section_tn2_z3g_wdb .section}
+## Auxiliary feature {#section_tn2_z3g_wdb .section}
 
 oss\_fdw.rds\_read\_one\_file: In read mode, used to specify a file that matches the external table. Once it is set, the external table matches only one file that is set during data import.
 
