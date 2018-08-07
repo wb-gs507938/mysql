@@ -2,7 +2,9 @@
 
 ## Description {#section_l21_v32_12b .section}
 
-Query the binlog files of an instance \(only supports MySQL instance\), supporting querying by page. RDS provides binlog file downloads:
+**Note:** This interface applies only to MySQL and PostgreSQL instances that use local SSDs.
+
+Query the binlog files of an instance, supporting querying by page. RDS provides binlog file downloads.
 
 -   When the DownloadLink is NULL, this indicates that RDS has not provided a download URL.
 -   When DownloadLink is not NULL, you can use this URL to download the backup file through wget \(add double quotes\), a browser, or programming. The expiration time for this URL is LinkExpiredTime. Use it before the expiration time. If it has expired, you can see the following error code during the download:

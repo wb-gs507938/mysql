@@ -2,7 +2,9 @@
 
 ## 描述 {#section_l21_v32_12b .section}
 
-查询实例的BINLOG文件（仅MySQL数据库实例），支持分页。RDS提供Binlog文件下载。
+查询实例的BINLOG文件，支持分页。RDS提供Binlog文件下载。
+
+本接口仅适用于MySQL和PostgreSQL实例（基于本地SSD盘）。
 
 -   当DownloadLink为NULL时，表示RDS没有提供下载链接URL。
 -   当DownloadLink不为NULL时，用户可以根据此URL，通过wget（请加双引号）、浏览器、编写程序下载备份文件，此URL已设置过期时间LinkExpiredTime，请在过期时间之前使用。若过期，用户在下载时，将会出现如下错误码：
