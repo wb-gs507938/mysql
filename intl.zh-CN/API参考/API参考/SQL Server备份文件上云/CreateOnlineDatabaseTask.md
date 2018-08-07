@@ -13,7 +13,9 @@
 |**DBName**|String|是|数据库名|
 |**MigrateTaskId**|String|是|迁移任务ID|
 |**CheckDBMode**|String|是|打开数据库后一致性检查方法：-   SyncExecuteDBCheck：同步执行DB检查；
--   AsyncExecuteDBCheck：异步执行DB检查，默认值为AsyncExecuteDBCheck。兼容SQL Server 2008 R2版本。
+-   AsyncExecuteDBCheck：异步执行DB检查。
+
+默认值为AsyncExecuteDBCheck。兼容SQL Server 2008 R2版本。
 
  |
 
