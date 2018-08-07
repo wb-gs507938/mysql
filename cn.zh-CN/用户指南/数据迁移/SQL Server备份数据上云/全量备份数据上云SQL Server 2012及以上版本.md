@@ -120,15 +120,15 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 **方法一：使用ossbrowser工具上传**
 
-推荐使用ossbrowser工具上传备份文件到OSS，具体请参考 [ossbrowser](https://help.aliyun.com/document_detail/61872.html)。
+推荐使用ossbrowser工具上传备份文件到OSS，具体请参考 [ossbrowser](https://www.alibabacloud.com/help/doc-detail/61872.html)。
 
 **方法二：使用OSS控制台上传**
 
-如果备份文件小于5GB，可以直接使用OSS控制台上传。具体请参考[使用OSS控制台上传](https://help.aliyun.com/document_detail/31886.html)。
+如果备份文件小于5GB，可以直接使用OSS控制台上传。具体请参考[使用OSS控制台上传](https://www.alibabacloud.com/help/doc-detail/31886.html)。
 
 **方法三：使用OSS API上传**
 
-如果您有全自动无人干预的上云需求，请使用OSS OpenAPI，通过断点续传的方式上传备份文件到OSS Bucket，具体请参考[断点续传](https://help.aliyun.com/document_detail/31850.html)。
+如果您有全自动无人干预的上云需求，请使用OSS OpenAPI，通过断点续传的方式上传备份文件到OSS Bucket，具体请参考[断点续传](https://www.alibabacloud.com/help/doc-detail/31850.html)。
 
 ## 创建数据上云任务 {#section_tmd_xfk_zdb .section}
 
@@ -155,7 +155,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     -   同步执行DBCC：相对于异步执行DBCC，有的用户非常关心DBCC CheckDB的结果，以此来找出用户线下数据库数据一致性错误。此时，建议您选择同步执行DBCC，影响是会拉长打开数据库的时间。默认选项，此时CreateMigrateTask 中的`CheckDBMode=AsyncExecuteDBCheck`
  |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/6230_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/15336454866230_zh-CN.png)
 
     您可以不断单击刷新按钮，来查看数据上云任务最新状态。如果上云失败，请根据任务描述提示排查错误，可参考本文的常见错误部分。
 
@@ -177,8 +177,6 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 -   错误原因：为了保证用户RDS for SQL Server上数据的安全性，我们不予许RDS for SQL Server上已经存在同名数据库的上云操作。
 
 -   解决方法：如果用户确实需要对现有数据库的数据进行覆盖，请自行先备份已经存在的数据，然后删除数据库，最后再重新数据上云任务。
-
-    注意：为了最大限度保证用户数据库的安全性，请用户在删除数据库之前，使用RDS控制台对实例执行一次全量备份。
 
 
 **差异备份文件**
