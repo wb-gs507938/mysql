@@ -13,17 +13,14 @@ RDS allows you to define some instance parameters. For more information about th
 
 For descriptions about the database parameters, see the following official documents:
 
--   MySQL
+-   [MySQL 5.5](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html)
 
-    -   [MySQL 5.5](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html)
+-   [MySQL 5.6](http://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html)
 
-    -   [MySQL 5.6](http://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html)
+-   [MySQL 5.7](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html)
 
-    -   [MySQL 5.7](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html)
+-   [SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/server-configuration-options-sql-server?spm=a2c4g.11186623.2.7.OKffZj&view=sql-server-2017)
 
--   SQL Server
-
-    -   [SQL Server 2008 R2](https://msdn.microsoft.com/library/mt590198.aspx)
 
 ## Considerations {#section_mkp_gnn_wdb .section}
 
@@ -46,7 +43,7 @@ For descriptions about the database parameters, see the following official docum
         2.  In the dialog box window, enter the target value in the field marked as 1 and click **OK**.
         3.  Click **Submit modify** to confirm the setting, marked as 2 in the following figure.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7895/3045_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7895/15336377953045_en-US.png)
 
     -   To modify multiple parameters:
 
@@ -56,7 +53,7 @@ For descriptions about the database parameters, see the following official docum
         4.  In the Import Parameters window, paste the parameters to modify and the parameter values and click **OK**, marked as 3 and 4 in the following figure.
         5.  Confirm the parameter modification results in the parameter list and click **Submit modify**, marked as 5 in the following figure.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7895/3046_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7895/15336377953046_en-US.png)
 
 
 ## View the modification history {#section_fvg_vnn_wdb .section}
