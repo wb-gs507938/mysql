@@ -11,14 +11,23 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 -   目前oss\_fdw支持读取和写入OSS中文件的格式为：text/csv、gzip格式的text/csv文件。
 -   oss\_fdw各参数的值需使用’’引起来，且不含无用空格。
 
-## CREATE SERVER 主要参数 {#section_smy_p3g_wdb .section}
+## CREATE SERVER 参数 {#section_smy_p3g_wdb .section}
 
--   ossendpoint：是内网访问OSS的地址，也称之为host。
+-   ossendpoint：是内网访问OSS的地址，也称为host。
 -   id oss：账号id。
 -   key oss：账号key。
 -   bucket： OSSBucket，需要先创建OSS账号再设置该参数。
 
-## CREATE SERVER 辅助参数 {#section_hhj_r3g_wdb .section}
+针对导入模式和导出模式，提供下列容错相关参数。网络条件较差时，可以调整以下参数，以保障导入和导出成功。
+
+-   oss\_connect\_timeout：设置链接超时，单位秒，默认是10秒。
+-   oss\_dns\_cache\_timeout：设置DNS超时，单位秒，默认是60秒。
+-   oss\_speed\_limit：设置能容忍的最小速率，默认是1024，即1K。
+-   oss\_speed\_time：设置能容忍最小速率的最长时间，默认是15秒。
+
+如果使用了oss\_speed\_limit和oss\_speed\_time的默认值，表示如果连续15秒的传输速率小于1K，则超时。
+
+## CREATE FOREIGN TABLE参数 {#section_hhj_r3g_wdb .section}
 
 -   filepath： OSS中带路径的文件名。
 
@@ -36,6 +45,7 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 
     -   dir指定的虚拟文件目录中的所有文件（不包含子文件夹和子文件夹下的文件）都会被匹配和导入到数据库。
 
+-   prefix：指定数据文件对应路径名的前缀，不支持正则表达式，且与 filepath、dir 互斥，三者只能设置其中一个。
 -   format：指定文件的格式，目前只支持csv。
 
 -   encoding：文件中数据的编码格式，支持常见的pg编码，如utf8。
@@ -78,21 +88,6 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 
 **说明：** oss\_flush\_block\_size和oss\_flush\_block\_size两个参数对导入模式无效。
 
-## 其它CREATE FOREIGN TABLE 的通用参数 {#section_c12_v3g_wdb .section}
-
-针对导入模式和导出模式，提供下列容错相关参数，且这4个参数需要在server对象中指定：
-
--   oss\_connect\_timeout：设置链接超时，单位秒，默认是10秒。
-
--   oss\_dns\_cache\_timeout：设置DNS超时，单位秒，默认是60秒。
-
--   oss\_speed\_limit：控制能容忍的最小速率，默认是1024，即1K。
-
--   oss\_speed\_time：控制能容忍的最长时间，默认是15秒。
-
-
-如果使用了上述参数的默认值，表示如果连续15秒的传输速率小于1K，则超时。
-
 ## 辅助函数 {#section_uw1_x3g_wdb .section}
 
 FUNCTION oss\_fdw\_list\_file \(relname text, schema text DEFAULT ‘public’\)
@@ -112,7 +107,7 @@ select * from oss_fdw_list_file('t_oss');
 (3 rows)
 ```
 
-## 辅助参数 {#section_tn2_z3g_wdb .section}
+## 辅助功能 {#section_tn2_z3g_wdb .section}
 
 oss\_fdw.rds\_read\_one\_file：在读模式下，指定某个外表匹配的文件。设置后，该外部表在数据导入中只匹配被设置的一个文件。
 
@@ -174,9 +169,9 @@ explain insert into ossexample select * from example;
 
 -   数据导入的性能和PostgreSQL集群的资源（CPU IO MEM MET）相关，也和OSS相关。
 
--   为保证数据导入的性能，请确保云数据库PostgreSQL与OSS所在Region相同，相关信息请参考[OSS endpoint 信息](https://help.aliyun.com/document_detail/oss/user_guide/oss_concept/endpoint.html)。
+-   为保证数据导入的性能，请确保云数据库PostgreSQL与OSS所在Region相同，相关信息请参考[OSS endpoint 信息](https://www.alibabacloud.com/help/doc-detail/31834.htm)。
 
--   如果读取外表的SQL时触发 ERROR: oss endpoint userendpoint not in aliyun white list, 建议使用[阿里云各可用区公共 endpoint](https://help.aliyun.com/document_detail/31837.html)。如果问题仍无法解决，请通过工单反馈。
+-   如果读取外表的SQL时触发 ERROR: oss endpoint userendpoint not in aliyun white list, 建议使用[阿里云各可用区公共 endpoint](https://www.alibabacloud.com/help/doc-detail/31837.htm)。如果问题仍无法解决，请通过工单反馈。
 
 
 ## 错误处理 {#section_owy_djg_wdb .section}
@@ -194,13 +189,13 @@ explain insert into ossexample select * from example;
 
 请参考以下链接中的文档了解和处理各类错误，超时相关的错误可以使用oss\_ext相关参数处理。
 
--   [OSS help 页面](https://help.aliyun.com/product/8314910_oss.html)
+-   [OSS help 页面](https://www.alibabacloud.com/help/product/31815.htm)
 
 -   [PostgreSQL CREATE FOREIGN TABLE 手册](http://www.postgresql.org/docs/9.4/static/sql-createforeigntable.html)
 
--   [OSS 错误处理](https://help.aliyun.com/document_detail/32141.html)
+-   [OSS 错误处理](https://www.alibabacloud.com/help/doc-detail/32141.htm)
 
--   [OSS 错误响应](https://help.aliyun.com/document_detail/32005.html)
+-   [OSS 错误响应](https://www.alibabacloud.com/help/doc-detail/32005.htm)
 
 
 ## id和key隐藏 {#section_pmk_fjg_wdb .section}
