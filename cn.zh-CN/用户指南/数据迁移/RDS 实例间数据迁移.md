@@ -1,6 +1,6 @@
 # RDS 实例间数据迁移 {#concept_fxm_bhp_ydb .concept}
 
-由于实例地域更换或者其他原因，用户可以迁移原实例的数据到目标实例，实现业务平滑迁移。
+您可以迁移RDS实例的数据到其他RDS实例，实现业务平滑迁移。
 
-RDS 实例间的数据迁移请参见[RDS 实例间数据迁移](#)。
+具体请参见[RDS实例间的数据迁移](https://help.aliyun.com/document_detail/26626.html)。
 
