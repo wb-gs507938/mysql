@@ -12,7 +12,6 @@
 |[DescribeDBInstanceAttribute](cn.zh-CN/API参考/API参考/实例管理/DescribeDBInstanceAttribute.md#)|查看RDS实例详情|
 |[DescribeDBInstances](cn.zh-CN/API参考/API参考/实例管理/DescribeDBInstances.md#)|查看RDS实例列表|
 |[ModifyDBInstanceSpec](cn.zh-CN/API参考/API参考/实例管理/ModifyDBInstanceSpec.md#)|变更RDS实例规格|
-|[ModifyDBInstanceConnectionMode](cn.zh-CN/API参考/API参考/实例管理/ModifyDBInstanceConnectionMode.md#)|修改RDS实例访问模式|
 |[DescribeRegions](cn.zh-CN/API参考/API参考/实例管理/DescribeRegions.md#)|查询RDS地域和可用区信息|
 |[DescribeDBInstanceHAConfig](cn.zh-CN/API参考/API参考/实例管理/DescribeDBInstanceHAConfig.md#)|查询RDS可用区信息和数据复制状态|
 |[MigrateToOtherZone](cn.zh-CN/API参考/API参考/实例管理/MigrateToOtherZone.md#)|迁移RDS实例可用区|
@@ -22,7 +21,10 @@
 |[ModifyDBInstanceMaintainTime](cn.zh-CN/API参考/API参考/实例管理/ModifyDBInstanceMaintainTime.md#)|修改RDS实例可维护时间|
 |[ModifyDBInstanceHAConfig](cn.zh-CN/API参考/API参考/实例管理/ModifyDBInstanceHAConfig.md#)|修改实例的数据复制模式和高可用策略|
 |[SwitchDBInstanceHA](cn.zh-CN/API参考/API参考/实例管理/SwitchDBInstanceHA.md#)|切换RDS实例的主备|
+|[DescribeDBInstanceSwitchLog](cn.zh-CN/API参考/API参考/实例管理/DescribeDBInstanceSwitchLog.md#)|查看实例的主备切换日志|
 |[CreateReadOnlyDBInstance](cn.zh-CN/API参考/API参考/实例管理/CreateReadOnlyDBInstance.md#)|创建RDS只读实例|
+|[DestroyDBInstance](cn.zh-CN/API参考/API参考/实例管理/DestroyDBInstance.md#)|销毁RDS实例|
+|[ModifyDBInstanceDelayReplicationTime](cn.zh-CN/API参考/API参考/实例管理/ModifyDBInstanceDelayReplicationTime.md#)|修改只读实例延迟时间|
 
 ## CloudDBA数据库性能优化 {#section_aq4_nhl_zdb .section}
 
@@ -31,14 +33,17 @@
 |[CreateDiagnosticReport](cn.zh-CN/API参考/API参考/CloudDBA数据库性能优化/CreateDiagnosticReport.md#)|创建诊断报告|
 |[DescribeDiagnosticReportList](cn.zh-CN/API参考/API参考/CloudDBA数据库性能优化/DescribeDiagnosticReportList.md#)|获取诊断报告列表|
 
-## 读写分离 {#section_ptl_4hl_zdb .section}
+## 数据库代理 {#section_ptl_4hl_zdb .section}
 
 |API|描述|
 |---|--|
-|[AllocateReadWriteSplittingConnection](cn.zh-CN/API参考/API参考/读写分离/AllocateReadWriteSplittingConnection.md#)|申请读写分离地址|
-|[CalculateDBInstanceWeight](cn.zh-CN/API参考/API参考/读写分离/CalculateDBInstanceWeight.md#)|查询系统权重分配值|
-|[ModifyReadWriteSplittingConnection](cn.zh-CN/API参考/API参考/读写分离/ModifyReadWriteSplittingConnection.md#)|修改读写分离基本信息|
-|[ReleaseReadWriteSplittingConnection](cn.zh-CN/API参考/API参考/读写分离/ReleaseReadWriteSplittingConnection.md#)|释放读写分离地址|
+|[AllocateReadWriteSplittingConnection](cn.zh-CN/API参考/API参考/数据库代理/AllocateReadWriteSplittingConnection.md#)|申请读写分离地址|
+|[CalculateDBInstanceWeight](cn.zh-CN/API参考/API参考/数据库代理/CalculateDBInstanceWeight.md#)|查询系统权重分配值|
+|[ModifyReadWriteSplittingConnection](cn.zh-CN/API参考/API参考/数据库代理/ModifyReadWriteSplittingConnection.md#)|修改读写分离基本信息|
+|[ReleaseReadWriteSplittingConnection](cn.zh-CN/API参考/API参考/数据库代理/ReleaseReadWriteSplittingConnection.md#)|释放读写分离地址|
+|[ModifyDBInstanceConnectionMode](cn.zh-CN/API参考/API参考/数据库代理/ModifyDBInstanceConnectionMode.md#)|开启或关闭数据库代理|
+|[ModifyDBInstanceProxyConfiguration](cn.zh-CN/API参考/API参考/数据库代理/ModifyDBInstanceProxyConfiguration.md#)|设置数据库代理|
+|[ModifyDBInstanceProxyConfiguration](cn.zh-CN/API参考/API参考/数据库代理/ModifyDBInstanceProxyConfiguration.md#)|查看数据库代理|
 
 ## 数据库管理 {#section_btg_phl_zdb .section}
 
@@ -81,7 +86,7 @@
 |[AllocateInstancePublicConnection](cn.zh-CN/API参考/API参考/网络管理/AllocateInstancePublicConnection.md#)|申请实例的外网连接串|
 |[DescribeDBInstanceNetInfo](cn.zh-CN/API参考/API参考/网络管理/DescribeDBInstanceNetInfo.md#)|查看所有连接串|
 |[ModifyDBInstanceNetworkExpireTime](cn.zh-CN/API参考/API参考/网络管理/ModifyDBInstanceNetworkExpireTime.md#)|修改连接地址过期时间|
-|[ModifyDBInstanceConnectionString](cn.zh-CN/API参考/API参考/网络管理/ModifyDBInstanceConnectionString.md#)|修改连接串|
+|[ModifyDBInstanceConnectionString](cn.zh-CN/API参考/API参考/网络管理/ModifyDBInstanceConnectionString.md#)|修改实例连接串的端口和名字|
 |[ModifyDBInstanceNetworkType](cn.zh-CN/API参考/API参考/网络管理/ModifyDBInstanceNetworkType.md#)|修改RDS实例网络类型|
 |[ReleaseInstancePublicConnection](cn.zh-CN/API参考/API参考/网络管理/ReleaseInstancePublicConnection.md#)|释放实例的外网连接串。|
 |[SwitchDBInstanceNetType](cn.zh-CN/API参考/API参考/网络管理/SwitchDBInstanceNetType.md#)|申请内网连接串（原内外网切换）|
@@ -111,12 +116,15 @@
 |[ModifyBackupPolicy](cn.zh-CN/API参考/API参考/备份恢复/ModifyBackupPolicy.md#)|修改备份策略|
 |[RestoreDBInstance](cn.zh-CN/API参考/API参考/备份恢复/RestoreDBInstance.md#)|恢复备份集到实例|
 |[DeleteBackup](cn.zh-CN/API参考/API参考/备份恢复/DeleteBackup.md#)|删除数据备份文件|
+|[DescribeBackupTasks](cn.zh-CN/API参考/API参考/备份恢复/DescribeBackupTasks.md#)|查询实例的备份任务列表|
+|[RecoveryDBInstance](cn.zh-CN/API参考/API参考/备份恢复/RecoveryDBInstance.md#)|恢复数据库|
 
 ## SQL Server备份文件上云 {#section_kr4_5hl_zdb .section}
 
 |API|描述|
 |---|--|
 |[CreateMigrateTask](cn.zh-CN/API参考/API参考/SQL Server备份文件上云/CreateMigrateTask.md#)|创建数据上云任务|
+|[CreateOnlineDatabaseTask](cn.zh-CN/API参考/API参考/SQL Server备份文件上云/CreateOnlineDatabaseTask.md#)|打开数据库|
 |[DescribeMigrateTasks](cn.zh-CN/API参考/API参考/SQL Server备份文件上云/DescribeMigrateTasks.md#)|查询数据上云任务列表|
 |[DescribeOssDownloads](cn.zh-CN/API参考/API参考/SQL Server备份文件上云/DescribeOssDownloads.md#)|查看数据上云任务文件详情|
 
