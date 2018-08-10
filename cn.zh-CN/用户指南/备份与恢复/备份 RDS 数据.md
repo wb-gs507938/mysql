@@ -1,8 +1,8 @@
 # 备份 RDS 数据 {#concept_l1m_xgn_ydb .concept}
 
-您可以通过设置备份策略调整 RDS 数据备份和日志备份的周期来实现自动备份，也可以通过手动备份 RDS 数据。
+您可以通过设置备份策略调整RDS数据备份和日志备份的周期来实现自动备份，也可以通过手动备份RDS数据。
 
-实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](intl.zh-CN/用户指南/备份与恢复/查看备份空间免费额度.md#)。关于备份空间使用量的计费标准，请参见[云数据库 RDS 详细价格信息](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。
+实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，RDS支持您将备份文件转储至OSS，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](cn.zh-CN/用户指南/备份与恢复/查看备份空间免费额度.md#)。关于备份空间使用量的计费标准，请参见[云数据库 RDS 详细价格信息](https://www.aliyun.com/price/product#/rds/detail)。
 
 ## 备份策略 {#section_oyj_3k4_ydb .section}
 
@@ -22,9 +22,7 @@
  | -   Binlog （500MB/个）产生完后立即压缩上传，24 小时内删除本地文件。
 -   Binlog 文件会占用实例的磁盘容量。
 
-用户可以通过一键上传 Binlog
-
-将 Binlog 文件上传至 OSS，不影响实例的数据恢复功能，Binlog 也不再占用实例磁盘空间。
+用户可以通过[一键上传 Binlog](https://help.aliyun.com/document_detail/60546.html?spm=a2c4g.11186623.2.6.JGyUIA)功能（免费）将 Binlog 文件上传至 OSS，不影响实例的数据恢复功能，Binlog 也不再占用实例磁盘空间。
 
 
  |
@@ -45,13 +43,13 @@
 
 **说明：** 本例以MySQL 5.7 本地SSD盘（高可用版）为例。
 
-1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/) 。
+1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/?spm=a2c4g.11186623.2.7.JGyUIA)。
 2.  单击目标实例的ID，进入基本信息页面。
 3.  在菜单中选择 **备份恢复**。
 4.  在 备份恢复页面中选择 **备份设置**，单击 **编辑**。
 5.  在 备份设置页面设置备份规格，单击 **确定**。参数说明如下：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/4104_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15338913654104_zh-CN.png)
 
     |参数|说明|
     |--|--|
@@ -71,17 +69,17 @@
 
 **说明：** 本例以MySQL 5.7 本地SSD盘（高可用版）单库逻辑备份为例。
 
-1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/)。
+1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/?spm=a2c4g.11186623.2.7.JGyUIA)。
 2.  选择目标实例所在地域。
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/4105_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15338913654105_zh-CN.png)
 
     **说明：** 
 
-    -   备份方式、备份策略：各引擎支持的备份策略不同，请参见[备份策略](#section_oyj_3k4_ydb)。
-    -   单库备份时，选择左侧的数据库，单击**\>**将要备份的数据库加入列表。若您还没有数据库，请先[创建数据库](intl.zh-CN/用户指南/数据库管理/创建数据库.md#)。
+    -   备份方式、备份策略：各引擎支持的备份策略不同，请参见[备份策略](cn.zh-CN/用户指南/备份与恢复/备份 RDS 数据.md#section_oyj_3k4_ydb)。
+    -   单库备份时，选择左侧的数据库，单击**\>**将要备份的数据库加入列表。若您还没有数据库，请先[创建数据库](cn.zh-CN/用户指南/数据库管理/创建数据库.md#)。
 
 5.  设置好备份方式、备份策略，单击**确定**。
 
