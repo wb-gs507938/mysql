@@ -2,10 +2,10 @@
 
 您可以通过多种方式恢复RDS for SQL Server的数据。
 
--   [恢复到已有实例](#section_wbh_jlx_52b)
--   [恢复到全新实例](#section_l2n_r4x_52b)
--   [通过临时实例恢复到主实例](#section_ejq_2yz_52b)
--   [直接恢复到主实例](#section_xnj_yyz_52b)
+-   恢复到已有实例
+-   恢复到全新实例
+-   通过临时实例恢复到主实例
+-   直接恢复到主实例
 
 ## 恢复到已有实例 {#section_wbh_jlx_52b .section}
 
