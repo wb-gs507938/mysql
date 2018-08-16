@@ -1,6 +1,6 @@
 # SDK reference {#concept_mjp_2sn_12b .concept}
 
-Alibaba Cloud Relational Database Service \(RDS\) supports the following types of SDK:
+Alibaba Cloud Relational Database Service \(RDS\) supports the following types of SDKs:
 
 -   Java SDK
 -   Python SDK
