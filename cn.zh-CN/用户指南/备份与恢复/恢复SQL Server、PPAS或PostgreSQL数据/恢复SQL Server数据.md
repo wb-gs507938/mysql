@@ -2,7 +2,7 @@
 
 您可以通过多种方式恢复RDS for SQL Server的数据。
 
--   [恢复到已有实例](cn.zh-CN/用户指南/备份与恢复/恢复SQL Server、PPAS或PostgreSQL数据/恢复SQL Server数据.md#section_huifu)
+-   恢复到已有实例
 -   恢复到全新实例
 -   通过临时实例恢复到主实例
 -   直接恢复到主实例
@@ -11,7 +11,7 @@
 
 您可以将实例的全量备份集恢复到您已有的实例，包括当前实例本身。您可以恢复实例的所有数据库或者部分数据库。
 
-**说明：** 本功能适用于以下RDS for SQL Server实例：
+本功能适用于以下RDS for SQL Server实例：
 
 -   SQL Server 2012/2016企业版高可用系列
 -   SQL Server 2012/2016标准版高可用系列
@@ -55,7 +55,7 @@
 
 费用：需要新建实例，费用与新购实例相同。
 
-**说明：** 本功能适用于以下RDS for SQL Server实例：
+本功能适用于以下RDS for SQL Server实例：
 
 -   SQL Server 2012/2016企业版高可用系列
 -   SQL Server 2012/2016标准版高可用系列
