@@ -2,94 +2,97 @@
 
 ## Description {#section_l21_v32_12b .section}
 
-Show the instance list or the instance list authorized by RAM.
+This API is used to query the instance list or the instance list authorized by RAM.
 
 ## Request parameters {#section_qzx_w32_12b .section}
 
-|Name|Type|Required|Description|
-|----|----|--------|-----------|
+|Name|Type|Required or not|Description|
+|----|----|---------------|-----------|
 |Action|String|Yes|Required parameter. Value: DescribeDBInstances.|
 |RegionId|String|Yes|Instance region, viewed through theDescribeRegions.|
-|Engine|String|No|Database type. Value options: MySQL, SQLServer, PostgreSQL, and PPAS. If no value is specified, all types are returned.|
-|DBInstanceType|String|No|Instance type. Value options:-   Primary: primary instance;
--   Readonly: read-only instance;
--   Guard: disaster recovery instance;
--   Temp: temporary instance;
+|Engine|String|No|Database type. Value range: MySQL, SQLServer, PostgreSQL, and PPAS. If no value is specified, all types are returned.|
+|DBInstanceType|String|No|Instance type. Value range:-   Primary: primary instance
+-   Readonly: read-only instance
+-   Guard: disaster recovery instance
+-   Temp: temporary instance
 
 If no value is specified, all types are returned.|
-|InstanceNetworkType|String|No|The range of values is as follows:-   VPC: VPC instance;
--   Classic: classic instance.
+|InstanceNetworkType|String|No|Value range:-   VPC: VPC
+-   Classic: classic network
 
 If no value is specified, both types are returned.|
 |ConnectionMode|String|No|-   Standard: standard access mode;
 -   Safe: high security access mode.
 
 If no value is specified, both modes are returned.|
-|Tags|String|No|The query is bound to an instance of the label in the form of a JSON incoming Value string, including tagkey and tagvalue, cannot be empty and tagvalue can be empty. Format example: \{"key1": "value1 "\}.|
-|PageSize|Integer|No|Number of records on each page. Value options: 30, 50, and 100. Default value: 30.|
-|PageNumber|Integer|No|Page number, which must be greater than 0, but must not exceed the maximum Integer value. Default value: 1.|
+|Tags|String|No|Used to query instances bound to a specified tag.-   The format is JSON string, including TagKey and TagValue.
+-   TagKey cannot be empty but TagValue can, format example: \{"key1": "value1 "\}.
+
+|
+|PageSize|Integer|No|Number of records on each page. Value range: 30, 50, and 100. Default value: 30.|
+|PageNumber|Integer|No|Page number, which must be greater than 0, but cannot exceed the maximum integer value. Default value: 1.|
 
 ## Return parameters {#section_rpk_z32_12b .section}
 
 |Name|Type|Description|
 |----|----|-----------|
-|<Public Return Parameters\>| |For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
-|Databases|List<Database\>|Data composed of the databases.|
-|PageNumber|Integer|Page number.|
-|TotalRecordCount|Integer|Total number of records.|
-|PageRecordCount|Integer|Number of DB instances on the current page.|
-|Items|List<DBInstance\>|Array composed of DB instances.|
+|<Public Return Parameters\>|-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
+|Databases|List<Database\>|Data composed of databases|
+|PageNumber|Integer|Page number|
+|TotalRecordCount|Integer|Total number of records|
+|PageRecordCount|Integer|Number of DB instances on the current page|
+|Items|List<DBInstance\>|Arrays composed of DB instances|
 
 ## Parameters for DBInstance {#section_ip3_142_12b .section}
 
 |Name|Type|Description|
 |----|----|-----------|
-|DBInstanceId|String|Instance ID.|
-|DBInstanceDescription|String|Instance description.|
-|PayType|String|Billing method. Value options:-   Postpaid: Pay-As-You-Go; 
--   Prepaid: Subscription.
+|DBInstanceId|String|Instance ID|
+|DBInstanceDescription|String|Instance description|
+|PayType|String|Billing method. Value options:-   Postpaid: Pay-As-You-Go
+-   Prepaid: Subscription
 
 |
-|DBInstanceType|String| -   Primary: primary instance;
--   Readonly: read-only instance;
--   Guard: disaster recovery instance;
--   Temp: temporary instance.
+|DBInstanceType|String| -   Primary: primary instance
+-   Readonly: read-only instance
+-   Guard: disaster recovery instance
+-   Temp: temporary instance
 
  |
-|InstanceNetworkType|String| -   VPC: VPC network.
--   Classic: classic network;
+|InstanceNetworkType|String| -   VPC: VPC
+-   Classic: classic network
 
  |
 |ConnectionMode|String| -   Standard: standard access mode
--   Safe: high security access mode.
+-   Safe: high security access mode
 
  |
-|RegionId|String|Region.|
+|RegionId|String|Region ID|
 |Expiretime|String|Expiration time. Pay-As-You-Go instances never expire.|
-|DBInstanceStatus|String| For more information, see the Appendix.|
-|Engine|String|Database type.|
-|DBInstanceNetType|String| -   Internet: public network;
--   Intranet: private network.
+|DBInstanceStatus|String| For more information, see [Instance status table](https://www.alibabacloud.com/help/doc-detail/26315.htm?spm=a2c63.p38356.b99.343.4b3e572aoiKZab).|
+|Engine|String|Database type|
+|DBInstanceNetType|String| -   Internet: public network
+-   Intranet: private network
 
  |
-|LockMode|String| -   Unlock: normal;
--   ManualLock: locked when manually triggered;
--   LockByExpiration: automatically locked upon expiration;
--   LockByRestoration: automatically locked before instance rollback;
--   LockByDiskQuota: automatically locked when the instance space is full.
+|LockMode|String| -   Unlock: normal
+-   ManualLock: locked when manually triggered
+-   LockByExpiration: automatically locked upon expiration
+-   LockByRestoration: automatically locked before instance rollback
+-   LockByDiskQuota: automatically locked upon full instance space
 
  |
-|LockReason|String|Reason why an instance is locked.|
-|MasterInstanceId|String|ID of the primary instance. If this parameter is not returned \(that is, if it is null\), the current instance is a primary instance.|
-|GuardDBInstanceId|String|If a disaster recovery instance is attached to the current instance, the ID of the disaster recovery instance applies.|
-|TempDBInstanceId|String|If a temporary instance is attached to the current instance, the ID of the temporary instance applies.|
-|ReadOnlyDBInstanceId|List<ReadOnlyDBInstanceId\>|ID list of read-only instances attached to the primary instance.|
+|LockReason|String|Reason why an instance is locked|
+|MasterInstanceId|String|Primary instance ID. If this parameter is not returned \(that is, if it is null\), the current instance is a primary instance.|
+|GuardDBInstanceId|String|ID of a disaster recovery instance if it is attached to the current instance|
+|TempDBInstanceId|String|ID of a temporary instance if it is attached to the current instance|
+|ReadOnlyDBInstanceId|List<ReadOnlyDBInstanceId\>|ID list of read-only instances attached to the primary instance|
 
 ## ReadOnlyDBInstanceId parameters {#section_jxc_bp2_12b .section}
 
 |Name|Type|Description|
 |----|----|-----------|
-|ReadOnlyDBInstanceId|String| ID of a read-only instance.|
+|ReadOnlyDBInstanceId|String| ID of a read-only instance|
 
 ## Request example {#section_l4g_pj2_12b .section}
 
