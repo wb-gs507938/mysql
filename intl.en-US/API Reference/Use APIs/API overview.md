@@ -30,7 +30,7 @@
 |[EN-US\_TP\_8113.md\#](intl.en-US/API Reference/API Reference/Database management/Delete database.md#)|Delete a database.|
 |[EN-US\_TP\_8114.md\#](intl.en-US/API Reference/API Reference/Database management/View the database list.md#)|View the database list.|
 |[EN-US\_TP\_8115.md\#](intl.en-US/API Reference/API Reference/Database management/Modify database remarks.md#)|Modify database remarks.|
-|[EN-US\_TP\_8116.md\#](intl.en-US/API Reference/API Reference/Database management/Copy a database for SQL Server 2008 R2.md#)|Copy a database in SQL Server 2008 R2.|
+|[EN-US\_TP\_8116.md](intl.en-US/API Reference/API Reference/Database management/Copy a database for SQL Server 2008 R2.md)|Copy a database in SQL Server 2008 R2.|
 |[Copy databases between instances](intl.en-US/.md)|Copy databases between SQL Server 2012 and SQL Server 2016 instances.|
 
 ## RDS account management {#section_nbc_qhl_zdb .section}
