@@ -4,8 +4,8 @@ Database Assessment Expert（DAE）是一款用于对自建SQL Server数据库�
 
 ## 支持的自建数据库 {#section_fcb_lnw_y2b .section}
 
--   本地自建数据库
--   云虚拟机上的自建数据库
+-   本地自建SQL Server数据库
+-   云虚拟机上的自建SQL Server数据库
 
 ## 工具下载 {#section_r5m_kq5_y2b .section}
 
@@ -17,7 +17,7 @@ Database Assessment Expert（DAE）是一款用于对自建SQL Server数据库�
 2.  在左上角单击**新建连接**。
 3.  在弹出的对话框中，填写要迁移的SQL Server数据库服务器的地址以及验证方式。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153552918010703_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153553056110703_zh-CN.png)
 
 4.  单击**保存**。
 
@@ -25,7 +25,7 @@ Database Assessment Expert（DAE）是一款用于对自建SQL Server数据库�
 
 5.  单击**+**号展开数据库列表，选择要进行上云评估的数据库。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153552918010684_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153553056110684_zh-CN.png)
 
 6.  单击**上云评估**。
 7.  评估完成后，单击右下角的**生成报告**，将报告保存到您指定的路径。
