@@ -26,7 +26,7 @@ line 1
 
 返回结果：last\_bkid，即上条SQL（hit的上一条）发到哪个库的ID，这个ID是RDS每个实例的唯一标识，每个实例的ID唯一。详情如下图所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7923/4252_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7923/15364604604252_zh-CN.png)
 
 **说明：** 由于RDS的SQL负载是按批负载，现在是以每100条为最小单位，所以您可能看到第一次select在一个实例ID上执行，第二次还是在这个ID上执行，要执行100次之后才会发现到另外一个ID上执行了。可以通过写个简单的SQL文件来验证，如下面的a.sql所示：
 
