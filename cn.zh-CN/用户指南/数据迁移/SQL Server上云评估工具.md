@@ -1,6 +1,6 @@
 # SQL Server上云评估工具 {#concept_x1k_nsp_y2b .concept}
 
-SQL Server上云评估工具是一款用于对自建SQL Server数据库进行评估并给出上云评估报告的自动化工具，帮助您做好上云前的分析和准备工作。
+SQL Server上云评估工具Database Assessment Tool是一款用于对自建SQL Server数据库进行评估并给出上云评估报告的自动化工具，帮助您做好上云前的分析和准备工作。
 
 ## 支持的自建数据库 {#section_fcb_lnw_y2b .section}
 
@@ -9,7 +9,7 @@ SQL Server上云评估工具是一款用于对自建SQL Server数据库进行评
 
 ## 工具下载 {#section_r5m_kq5_y2b .section}
 
-[点此下载](https://aliyun-rds-dae-tool.oss-cn-hangzhou.aliyuncs.com/AliyunDAE.zip)上云评估工具。
+[点此下载](https://aliyun-rds-dae-tool.oss-cn-hangzhou.aliyuncs.com/AliyunDATForSQLServer.zip)上云评估工具。
 
 ## 开始评估 {#section_lmn_pq5_y2b .section}
 
@@ -17,7 +17,7 @@ SQL Server上云评估工具是一款用于对自建SQL Server数据库进行评
 2.  在左上角单击**新建连接**。
 3.  在弹出的对话框中，填写要迁移的SQL Server数据库服务器的地址以及验证方式。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153561787210703_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153666991810703_zh-CN.png)
 
 4.  单击**保存**。
 
@@ -25,7 +25,7 @@ SQL Server上云评估工具是一款用于对自建SQL Server数据库进行评
 
 5.  单击**+**号展开数据库列表，选择要进行上云评估的数据库。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153561787210684_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18826/153666991810684_zh-CN.png)
 
 6.  单击**上云评估**。
 7.  评估完成后，单击右下角的**生成报告**，将报告保存到您指定的路径。
@@ -51,5 +51,5 @@ SQL Server上云评估工具是一款用于对自建SQL Server数据库进行评
     RDS不支持这些功能，您可以使用报告中提供的替代性措施。
 
 
-[点此查看评估报告示例](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/89311/cn_zh/1535530906905/上云评估报告示例.html)
+[点此查看评估报告示例](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/89311/cn_zh/1536669647578/sample_report.html)
 
