@@ -6,7 +6,7 @@ Public request parameters refer to the request parameters that every interface m
 
 |Name|Type|Required or not|Description|
 |----|----|---------------|-----------|
-|Format|String|No|Type of the returned value. Values: JSON and XML. Default value: XML.|
+|Format|String|No|Type of the returned value. Values: JSON and XML. Default value: JSON.|
 |Version|String|Yes|API version number. Format: YYYY-MM-DD \(date\). The current version number is 2016-11-01.|
 |AccessKeyId|String|Yes|Secret key ID issued by Alibaba for user access|
 |Signature|String|Yes|Signature result string. For more information about the signature calculation method, see [Signature](intl.en-US/API Reference/Use APIs/Signature.md#).|
