@@ -104,6 +104,21 @@
 
 |Series|Version|Type|Type code|CPU/Memory|Maximum number of connections|Maximum IOPS|Storage capacity|
 |------|-------|----|---------|----------|-----------------------------|------------|----------------|
+|Basic Edition|10|Common instances|pg.n1.micro.1|1-core 1 GB|100|min\{1200 + 30 x storage space, 20000\}|20 GB-20,00 GB|
+|pg.n2.small.1|1-core 2 GB|200|
+|pg.n2.medium.1|2-core 4 GB|400|
+|pg.n4.medium.1|2-core 8 GB|800|
+|pg.n2.large.1|4-core 8 GB|800|
+|pg.n4.large.1|4-core 16 GB|1,600|
+|pg.n2.xlarge.1|8-core 16 GB|1,600|
+|pg.n4.xlarge.1|8-core 32 GB|3,200|
+|pg.n2.2xlarge.1|16-core 32 GB|3,200|
+|pg.n4.2xlarge.1|16-core 64 GB|6,400|
+|pg.n8.2xlarge.1|16-core 128 GB|10,000|
+|pg.n4.4xlarge.1|32-core 128 GB|12,800|
+|pg.n8.4xlarge.1|32-core 256 GB|20,000|
+|pg.n4.8xlarge.1|56-core 224 GB|22,000|
+|pg.n8.8xlarge.1|56-core 480 GB|48,000|
 |High-availability Edition|9.4|Common instances|rds.pg.t1.small|1-core 1 GB|100|600|5 GB - 2,000 GB|
 |rds.pg.s1.small|1-core 2 GB|200|1,000|
 |rds.pg.s2.large|2-core 4 GB|400|2,000|
