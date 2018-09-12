@@ -10,17 +10,13 @@
 
 **前提条件**
 
-阿里云数据库使用开源软件 Xtrabackup 2.0.6 对 MySQL 数据库进行全量物理备份。用户需要下载该软件，并使用该软件进行数据恢复。Xtrabackup 官方网站为：[http://www.percona.com/](http://www.percona.com/)，请下载与您操作系统版本对应的 Xtrabackup 版本。例如：下载 RHEL6/x86\_64 版本，并使用 rpm 命令进行安装。
-
-```
-sudo rpm -ivh percona-xtrabackup-2.0.6-521.rhel6.x86_64.rpm
-```
+操作系统中已安装数据恢复工具Percona XtraBackup。MySQL 5.6及之前的版本需要安装 Percona XtraBackup 2.3。MySQL 5.7版本需要安装 Percona XtraBackup 2.4。可以从Percona XtraBackup官网下载安装，安装指导请参见官方文档 [Percona XtraBackup 2.3](https://www.percona.com/doc/percona-xtrabackup/2.3/installation.html?spm=a2c4g.11186623.2.4.53095cf8JeLIpU)、[Percona XtraBackup 2.4](https://www.percona.com/doc/percona-xtrabackup/2.4/installation.html?spm=0.0.0.0.4YVMLJ)。
 
 **操作步骤**
 
 本例以本地服务器为 RHEL6/x64 系统，备份文件存储路径为 */home/mysql/* 为例。
 
-1.  下载云数据库 **物理备份文件** 并上传至目标服务器。备份文件获取方法请参见 [下载数据备份和日志备份](cn.zh-CN/用户指南/备份与恢复/下载数据备份和日志备份.md#)。如果目标服务器可以访问源实例，您也可以使用 `wget "url"` 下载备份文件。其中 *url* 为备份文件下载地址。
+1.  下载云数据库 **物理备份文件** 并上传至目标服务器。备份文件获取方法请参见 [下载数据备份和日志备份](intl.zh-CN/用户指南/备份与恢复/下载数据备份和日志备份.md#)。如果目标服务器可以访问源实例，您也可以使用 `wget "url"` 下载备份文件。其中 *url* 为备份文件下载地址。
 2.  切换路径到备份文件所在路径。
 
     ```
@@ -140,7 +136,7 @@ sudo rpm -ivh percona-xtrabackup-2.0.6-521.rhel6.x86_64.rpm
 
 **操作步骤**
 
-1.  下载云数据库 **逻辑备份文件** 并上传至目标服务器。备份文件获取方法请参见 [下载数据备份和日志备份](cn.zh-CN/用户指南/备份与恢复/下载数据备份和日志备份.md#)。如果目标服务器可以访问源实例，您也可以使用`wegt "url"` 下载备份文件。其中 *url* 为备份文件下载地址。
+1.  下载云数据库 **逻辑备份文件** 并上传至目标服务器。备份文件获取方法请参见 [下载数据备份和日志备份](intl.zh-CN/用户指南/备份与恢复/下载数据备份和日志备份.md#)。如果目标服务器可以访问源实例，您也可以使用`wegt "url"` 下载备份文件。其中 *url* 为备份文件下载地址。
 2.  切换路径到备份文件所在路径。
 
     ```
