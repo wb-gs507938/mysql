@@ -27,7 +27,7 @@ DTS 数据迁移支持 PPAS 的结构迁移和全量迁移。
 
 ## 前提条件 {#section_gsw_x5v_ydb .section}
 
-已完成 RDS 实例数据库的准备，可参见[设置内外网地址](cn.zh-CN/用户指南/网络管理/设置内外网地址.md#)和 [创建数据库和账号](../cn.zh-CN/快速入门PPAS版/初始化配置/创建数据库和账号.md#)。
+已完成 RDS 实例数据库的准备，可参见[设置连接地址](cn.zh-CN/用户指南/数据库连接/设置连接地址.md#)和 [创建数据库和账号](../../../../cn.zh-CN/快速入门PPAS版/初始化配置/创建数据库和账号.md#)。
 
 ## 操作步骤 {#section_y1v_y5v_ydb .section}
 
@@ -80,15 +80,15 @@ DTS 数据迁移支持 PPAS 的结构迁移和全量迁移。
 
 1.  在 [RDS 管理控制台](https://rds.console.aliyun.com/) 上单击 **迁移数据库**，进入 [DTS](http://dts.console.aliyun.com/)，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4276_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968854276_zh-CN.png)
 
 2.  单击 **创建在线迁移任务**，进入创建迁移任务页面，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4277_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968854277_zh-CN.png)
 
 3.  输入任务名称、本地数据库信息和目标数据库信息，单击 **授权白名单并进入下一步**，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4278_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968864278_zh-CN.png)
 
     -   任务名称：自定义任务名称，可以保持默认值
     -   源库信息
@@ -112,8 +112,7 @@ DTS 数据迁移支持 PPAS 的结构迁移和全量迁移。
     -   选择结构迁移时，如果目标 RDS 实例的数据库 mydatabase 中，不存在跟本地数据库迁移账号同名的 Schema，那么 DTS 会自动创建同名 Schema， 且 Schema 的 Owner 为迁移账号。
     -   数据迁移只会将本地数据库的数据（结构）复制一份到目标数据库，并不会对本地数据库数据（结构）造成影响。
     -   数据迁移过程中，不支持 DDL 操作，如进行 DDL 操作可能导致迁移失败。
-    -   DTS 增量迁移的时间最长支持 15 天，如果超过 15 天不停止任务，系统资源可能被回收。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4279_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968864279_zh-CN.png)
 
     如果要修改迁移对象在目标数据库上的名字，可以在 *已选择* 列表右侧单击 **编辑**，修改已选择的对象名称，如上图4所示。
 
@@ -121,16 +120,16 @@ DTS 数据迁移支持 PPAS 的结构迁移和全量迁移。
 
 5.  系统显示预检查结果，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4280_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968864280_zh-CN.png)
 
 6.  单击 检测结果 为失败的检测项后的**!**，查看失败详细信息，根据失败详细信息完成错误排查。
 7.  错误排查完毕后，在迁移任务列表页面，选择当前迁移任务，单击**启动**，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4281_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968864281_zh-CN.png)
 
 8.  系统预检查通过后，单击**确定**，自动进行迁移任务，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/4282_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7978/15368968864282_zh-CN.png)
 
 
 ## 后续操作 {#section_vdk_4vv_ydb .section}
