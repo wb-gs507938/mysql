@@ -7,7 +7,7 @@
 -   New features:
     -   Supports the High-availability Edition.
     -   Supports the [database proxy](https://www.alibabacloud.com/help/doc-detail/72253.htm) function.
-    -   Supports [EN-US\_TP\_7947.md\#](intl.en-US/User Guide/Security/SQL audit.md#).
+    -   Supports [SQL audit](intl.en-US/User Guide/Security/SQL audit.md#).
     -   Enhanced protection for instances that are generating snapshots.
 
 ## MySQL 5.6 {#section_d3k_zxk_n2b .section}
