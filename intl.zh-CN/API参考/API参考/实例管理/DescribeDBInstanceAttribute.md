@@ -9,80 +9,120 @@
 |名称|类型|是否必须|描述|
 |--|--|----|--|
 |Action|String|是|系统规定参数，取值为DescribeDBInstanceAttribute。|
-|DBInstanceId|String|是|实例名，可以一次输入多个，以英文半角“,”分隔；最多传入30个。|
+|DBInstanceId|String|是|实例ID，可以一次输入多个，以英文“,”分隔；最多传入30个。|
+|ResourceGroupId|String|否|资源组ID。|
 
 **DBInstanceAttribute的参数**
 
 |名称|类型|描述|
 |--|--|--|
-|DBInstanceId|String|实例名。|
-|PayType|String| -   Postpaid：按量付费
--   Prepaid：包年包月
+|DBInstanceId|String|实例ID。|
+|PayType|String|实例付费方式：-   Postpaid：按量付费；
+-   Prepaid：包年包月。
 
- |
-|DBInstanceType|String| -   Primary：主实例。
--   Readonly：只读实例。
--   Guard：灾备实例。
+|
+|DBInstanceType|String|实例类型：-   Primary：主实例；
+-   Readonly：只读实例；
+-   Guard：灾备实例；
 -   Temp：临时实例。
 
- |
-|Category|String| -   Basic：单机基础版。
--   HighAvailability：双机高可用版。
--   Finance：金融版（三节点企业版）。
+|
+|Category|String|实例系列：-   Basic：基础版；
+-   HighAvailability：高可用版；
+-   Finance：金融版。
 
- |
-|InstanceNetworkType|String| -   Classic：经典网络。
--   VPC：VPC网络
+|
+|InstanceNetworkType|String|实例的网络类：-   Classic：经典网络；
+-   VPC：VPC网络。
 
- |
-|ConnectionMode|String| -   Performance：标准访问模式。
+|
+|ConnectionMode|String|实例的访问模式：-   Performance：标准访问模式；
 -   Safty：高安全访问模式
 
- |
+|
 |RegionId|String|地域。|
 |ZoneId|String|可用区。|
 |ConnectionString|String|连接地址。|
-|Port|String|应用访问端口。|
+|Port|String|端口号。|
 |Engine|String|数据库类型。|
 |EngineVersion|String|数据库版本。|
-|DBInstanceClassType|String|实例规格族：-   s：共享型
--   x：通用型
--   d：独享套餐
--   h：独占物理机
+|DBInstanceClassType|String|实例规格族：-   s：共享型；
+-   x：通用型；
+-   d：独享套餐；
+-   h：独占物理机。
 
 |
-|DBInstanceClass|String|实例规格。|
 |DBInstanceMemory|Long|实例内存，单位：M。|
 |DBInstanceStorage|Integer|实例存储空间，单位：GB。|
-|DBInstanceNetType|String| -   Internet：外网
--   Intranet：内网
+|DBInstanceNetType|String|网络连接方式：-   Internet：外网；
+-   Intranet：内网。
 
- |
+|
 |DBInstanceStatus|String|实例状态，详见[实例状态表](intl.zh-CN/API参考/API参考/附表/实例状态表.md#)。|
 |DBInstanceDescription|String|实例备注。|
-|LockMode|String| -   Unlock：正常
--   ManualLock：手动触发锁定
--   LockByExpiration：实例过期自动锁定
--   LockByRestoration：实例回滚前的自动锁定
--   LockByDiskQuota：实例空间满自动锁定
+|LockMode|String|实例锁定模式：-   Unlock：正常；
+-   ManualLock：手动触发锁定；
+-   LockByExpiration：实例过期自动锁定；
+-   LockByRestoration：实例回滚前的自动锁定；
+-   LockByDiskQuota：实例空间满自动锁定。
 
- |
-|LockReason|String|被锁定的原因。|
+|
+|LockReason|String|实例被锁定的原因。|
+|VpcId|String|VPC ID。|
+|VSwitchId|String|VSwitch ID。|
+|ResourceGroupId|String|资源组ID。|
 |DBMaxQuantity|Integer|一个实例下可创建最大数据库数量。|
 |AccountMaxQuantity|Integer|可创建账号的最大数量。|
 |CreationTime|String|创建时间，格式：YYYY-MM-DD’T’hh:mm:ssZ，如2011-05-30T12:11:4Z。|
-|ExpireTime|String|到期时间，按量付费实例无到期时间。|
+|ExpireTime|String|实例到期时间，按量付费实例无到期时间。|
 |MaintainTime|String|实例可维护时间，如：00:00Z-02:00Z，表示0点到2点可进行例行维护。|
 |AvailabilityValue|String|查询当年可用性实例可用性状态，单位：百分比。|
 |MaxIOPS|Integer|最大IO请求次数，即IOPS。|
 |MaxConnections|Integer|最大实例并发连接数。|
+|DBInstanceCPU|String|实例CPU。|
 |MasterInstanceId|String|主实例的ID，如果没有返回此参数（即为null）则该实例是主实例。|
-|IncrementSourceDBInstanceId|String|增量数据来源的实例ID，如灾备实例的增量数据来源是主实例。只读实例的增量数据来源是主实例，主实例的增量数据涟源是NULL。|
+|IncrementSourceDBInstanceId|String|增量数据来源的实例ID，如：-   灾备实例的增量数据来源是主实例。
+-   只读实例的增量数据来源是主实例。
+-   主实例的增量数据来源是NULL。
+
+|
 |GuardDBInstanceId|String|该实例如果挂载灾备实例，即为备实例的ID。|
 |TempDBInstanceId|String|该实例如果挂载临时实例，即为临时实例ID。|
 |ReadOnlyDBInstanceIds|List<OnlyDBInstanceId\>|主实例下挂载的只读实例ID列表。|
-|SecurityIPList|String|已废弃，见DescribeDBInstanceIPArrayList接口。|
-|AdvancedFeatures|String|该参数目前只对SQL Server类型的实例有效，获取高级特性值，多个值之间用英文逗号“,”隔开，现返回值如下：- LinkedServer - DistributeTransaction|
+|SecurityIPList|String|已废弃，详情请参见[DescribeDBInstanceIPArrayList](intl.zh-CN/API参考/API参考/安全管理/DescribeDBInstanceIPArrayList.md#)接口。|
+|DBInstanceDiskUsed|String|实例存储空间使用量，单位：B。|
+|GuardDBInstanceName|String|灾备实例名称，NULL表示无灾备实例。|
+|AdvancedFeatures|String|该参数目前只对SQL Server类型的实例有效，获取高级特性值，多个值之间用英文逗号“,”隔开，返回值如下：- LinkedServer - DistributeTransaction。|
+|AccountType|String|账号类型：-   Normal：普通账号；
+-   Super：超级账号；
+-   Mix：混合账号。
+
+|
+|CanTempUpgrade|String|实例是否支持临时升级：-   true：支持；
+-   false：不支持。
+
+|
+|TempUpgradeTimeStart|String|实例临时升级的开始时间，格式：YYYY-MM-DD’T’hh:mm:ssZ，如2011-05-30T12:11:4Z。|
+|TempUpgradeTimeEnd|String|实例临时升级的结束时间，格式：YYYY-MM-DD’T’hh:mm:ssZ，如2011-05-30T12:11:4Z。|
+|TempUpgradeRecoveryTime|String|实例恢复时间，格式：YYYY-MM-DD’T’hh:mm:ssZ，如2011-05-30T12:11:4Z。|
+|TempUpgradeRecoveryClass|String|恢复规格。|
+|TempUpgradeRecoveryCpu|String|恢复CPU。|
+|TempUpgradeRecoveryMemory|String|恢复内存。|
+|TempUpgradeRecoveryMaxIOPS|String|恢复最大IO请求次数。|
+|TempUpgradeRecoveryMaxConnections|String|恢复并发连接数。|
+|ReadDelayTime|String|只读实例对主实例的延迟时间，该参数仅对只读实例有效，单位为S。**说明：** 实例刚创建或实例异常时该值可能为NULL
+
+|
+|ReplicateId|String|灾备通道。|
+|SupportUpgradeAccountType|String|账号是否支持临时升级：-   Yes：支持；
+-   No：不支持。
+
+ |
+|SupportCreateSuperAccount|String|账号是否支持创建超级账号：-   Yes：支持；
+-   No：不支持。
+
+|
+|ReadonlyInstanceSQLDelayedTime|String|只读实例延迟复制时间，只读实例延迟ReadonlyInstanceSQLDelayedTime的时间后再同步主实例数据，单位：秒。|
 
 **ReadOnlyDBInstanceId**
 
@@ -191,7 +231,7 @@ https://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
         "MaintainTime": "", 
         "DBInstanceClass": "rds.mys2.small", 
         "SecurityIPList": "11.11.11.11", 
-        "Port": "3306"
+        "Port": "3306",
         "AdvancedFeatures": "LinkedServer,DistributeTransaction"
       }
     ]
