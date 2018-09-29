@@ -247,7 +247,7 @@ DECLARE
 @user_name sysname = N'ay15' ,
 @password nvarchar(128) = N'******',
 @source_user_name sysname = N'test',
-@source_password nvarchar(128) = N'******'
+@source_password nvarchar(128) = N'******',
 @link_server_options xml
 = N'
             <rds_linked_server>
