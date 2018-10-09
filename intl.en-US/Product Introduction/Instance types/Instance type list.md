@@ -84,8 +84,7 @@
 |mssql.x4.large.w1|4-core 16 GB|
 |mssql.x4.xlarge.w1|8-core 32 GB|
 |mssql.x4.2xlarge.w1|16-core 64 GB|
-|High-availability Edition|2008 R2 Enterprise|Common instances|rds.mssql.s1.small|1-core 2 GB|600|1,000|10 GB - 2,000 GB|
-|rds.mssql.s2.large|2-core 4 GB|1,200|2,000|
+|High-availability Edition|2008 R2 Enterprise|Common instances|rds.mssql.s2.large|2-core 4 GB|1,200|2,000|10 GB - 2,000 GB|
 |rds.mssql.s2.xlarge|2-core 8 GB|2,000|4,000|
 |rds.mssql.s3.large|4-core, 8 GB|2,000|5,000|
 |rds.mssql.m1.medium|4-core 16 GB|4,000|7,000|
@@ -176,6 +175,7 @@ The following table lists the historical instance types of RDS for SQL Server. T
 
 |Type code|Number of CPU cores|Memory|Maximum number of connections|Maximum IOPS|
 |---------|-------------------|------|-----------------------------|------------|
+|rds.mssql.s1.small|1|2GB|600|1,000|
 |rds.mss1.small|6|1,000 MB|100|500|
 |rds.mss1.mid|8|2,000 MB|200|1,000|
 |rds.mss1.standard|9|4,000 MB|400|2,000|
