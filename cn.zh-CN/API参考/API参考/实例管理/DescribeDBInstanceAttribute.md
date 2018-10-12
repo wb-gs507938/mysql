@@ -12,6 +12,13 @@
 |DBInstanceId|String|是|实例ID，可以一次输入多个，以英文“,”分隔；最多传入30个。|
 |ResourceGroupId|String|否|资源组ID。|
 
+## 返回参数 {#section_rpk_z32_12b .section}
+
+|名称|类型|描述|
+|--|--|--|
+|<公共返回参数\>|-|详情请参见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
+|Items|List<DBInstanceAttribute\>|-|
+
 **DBInstanceAttribute的参数**
 
 |名称|类型|描述|
@@ -130,13 +137,6 @@
 |--|--|--|
 |<公共返回参数\>| |详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
 |DBInstanceId|String|只读实例ID。|
-
-## 返回参数 {#section_rpk_z32_12b .section}
-
-|名称|类型|描述|
-|--|--|--|
-|<公共返回参数\>|-|详情请参见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
-|Items|List<DBInstanceAttribute\>|-|
 
 ## 请求示例 {#section_l4g_pj2_12b .section}
 
