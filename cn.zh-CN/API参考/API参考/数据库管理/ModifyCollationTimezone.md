@@ -6,9 +6,9 @@
 
 |名称|类型|是否必须|描述|
 |--|--|----|--|
-|Action|String|是|要执行的操作，取值：ModifyCollationTimezone
+|Action|String|是| 要执行的操作，取值：ModifyCollationTimezone
 
-。|
+ |
 |DBInstanceId|String|是|实例ID。|
 |Collation|String|否|要修改成的系统字符集排序规则，为空表示不修改。系统字符集排序规则与时区必须修改其中至少一个。
 
