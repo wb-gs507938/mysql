@@ -11,6 +11,13 @@ This API is used to query detailed attributes of a specified instance.
 |Action|String|Yes|Required parameter. Value: DescribeDBInstanceAttribute.|
 |DBInstanceId|String|Yes|Instance ID. Up to 30 IDs can be entered at a time, which are separated by commas \(,\).|
 
+## Return parameters {#section_rpk_z32_12b .section}
+
+|Name|Type|Description|
+|----|----|-----------|
+|<Public Return Parameters\>|-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
+|Items|List<DBInstanceAttribute\>|-|
+
 **Parameter of DBInstanceAttribute**
 
 |Name|Type|Description|
@@ -90,13 +97,6 @@ This API is used to query detailed attributes of a specified instance.
 |----|----|-----------|
 |<Public return parameters\> |-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
 |DBInstanceId|String|ID of a read-only instance|
-
-## Return parameters {#section_rpk_z32_12b .section}
-
-|Name|Type|Description|
-|----|----|-----------|
-|<Public Return Parameters\>|-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
-|Items|List<DBInstanceAttribute\>|-|
 
 ## Request example {#section_l4g_pj2_12b .section}
 
