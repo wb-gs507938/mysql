@@ -1,6 +1,18 @@
 # ModifyCollationTimezone {#concept_uff_hks_cfb .concept}
 
-修改系统库的字符集排序规则和时区。系统库包括master、msdb、tempdb和model。
+对于RDS for SQL Server 2012或以上版本的实例，您可以修改系统库的字符集排序规则和时区。系统库包括master、msdb、tempdb和model。
+
+-   默认的字符集排序规则：Chinese\_PRC\_CI\_AS
+-   默认的时区：China Standard Time
+
+## 前提条件 {#section_uxp_lwp_cfb .section}
+
+-   实例类型为RDS for SQL Server 2012或以上版本。
+-   实例中没有任何用户数据库（即您创建的数据库，非系统数据库）。
+
+## 注意事项 {#section_mdb_fdj_dfb .section}
+
+修改期间，实例将处于不可用状态。修改时区需要大约1分钟，修改字符集排序规则需要2到10分钟。
 
 ## 请求参数 {#section_qzx_w32_12b .section}
 
