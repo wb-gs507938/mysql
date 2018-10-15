@@ -111,9 +111,7 @@
 |--|--|--|
 |<公共返回参数\>| |详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
 |DBInstanceId|String|实例ID。|
-|ModifyResult|String|修改结果：-   Success
--   Failed
-
-|
-|ResultMemo|String|修改结果的描述（若有），如错误信息。|
+|TaskId|String|任务ID。|
+|Timezone|String|时区。|
+|Collation|String|系统字符集排序规则。|
 
