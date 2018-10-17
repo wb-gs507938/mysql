@@ -103,7 +103,7 @@
 
 |Series|Version|Type|Type code|CPU/Memory|Maximum number of connections|Maximum IOPS|Storage capacity|
 |------|-------|----|---------|----------|-----------------------------|------------|----------------|
-|Basic Edition|10|Common instances|pg.n1.micro.1|1-core 1 GB|100|min\{1200 + 30 x storage space, 20000\}|20 GB-20,00 GB|
+|Basic Edition|10|Common instances|pg.n1.micro.1|1-core 1 GB|100|min\{1200 + 30 x storage space, 20000\}|20 GB-2,000 GB|
 |pg.n2.small.1|1-core 2 GB|200|
 |pg.n2.medium.1|2-core 4 GB|400|
 |pg.n4.medium.1|2-core 8 GB|800|
