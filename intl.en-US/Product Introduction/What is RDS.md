@@ -8,7 +8,7 @@ ApsaraDB for RDS \(Relational Database Service\) is a stable, reliable, and auto
 
 ## RDS for MySQL {#section_zzt_5w5_tdb .section}
 
-MySQL is the world’s most popular open source database. As an important part of LAMP and a combination of open source software \(Linux + Apache + MySQL + Perl/PHP/Python\), MySQL is widely used in a variety of applications.
+MySQL is the world’s most popular open source database. As an important part of LAMP, a combination of open source software \(Linux + Apache + MySQL + Perl/PHP/Python\), MySQL is widely used in a variety of applications.
 
 In the Web 2.0 era, MySQL serves as the basis of the underlying architecture of the popular BBS software system Discuz! and blogging platform WordPress. In the Web 3.0 era, leading Internet companies including Alibaba, Facebook, and Google have all taken advantage of the flexibility of MySQL to build their large-scale mature database clusters.
 
