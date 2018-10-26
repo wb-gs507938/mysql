@@ -36,7 +36,7 @@
 |[ReleaseReadWriteSplittingConnection](intl.zh-CN/API参考/API参考/数据库代理/ReleaseReadWriteSplittingConnection.md#)|释放读写分离地址|
 |[ModifyDBInstanceConnectionMode](intl.zh-CN/API参考/API参考/数据库代理/ModifyDBInstanceConnectionMode.md#)|开启或关闭数据库代理|
 |[ModifyDBInstanceProxyConfiguration](intl.zh-CN/API参考/API参考/数据库代理/ModifyDBInstanceProxyConfiguration.md#)|设置数据库代理|
-|[ModifyDBInstanceProxyConfiguration](intl.zh-CN/API参考/API参考/数据库代理/ModifyDBInstanceProxyConfiguration.md#)|查看数据库代理|
+|[DescribeDBInstanceProxyConfiguration](intl.zh-CN/API参考/API参考/数据库代理/DescribeDBInstanceProxyConfiguration.md)|查看数据库代理|
 
 ## 数据库管理 {#section_btg_phl_zdb .section}
 
