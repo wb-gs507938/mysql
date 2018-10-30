@@ -1,6 +1,6 @@
 # 使用 oss\_fdw 读写外部数据文本文件 {#concept_d23_m3g_wdb .concept}
 
-阿里云支持通过oss\_fdw插件将oss中的数据加载到PostgreSQL和PPAS数据库中，也支持将PostgreSQL和PPAS数据库中的数据写入OSS中。
+阿里云支持通过oss\_fdw插件将OSS中的数据加载到PostgreSQL和PPAS数据库中，也支持将PostgreSQL和PPAS数据库中的数据写入OSS中。
 
 ## oss\_fdw 参数 {#section_cvf_43g_wdb .section}
 
@@ -9,7 +9,7 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 **说明：** 
 
 -   目前oss\_fdw支持读取和写入OSS中文件的格式为：text/csv、gzip格式的text/csv文件。
--   oss\_fdw各参数的值需使用’’引起来，且不含无用空格。
+-   oss\_fdw各参数的值需使用双引号（""）引起来，且不含无用空格。
 
 ## CREATE SERVER 参数 {#section_smy_p3g_wdb .section}
 
@@ -39,7 +39,7 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 
         例如，filepath、filepath.1、filepath.2、filepath.3、filepath.5 ，前4个文件会被匹配和导入，但是 filepath.5将无法导入。
 
--   dir：OSS中的虚拟文件目录.
+-   dir：OSS中的虚拟文件目录。
 
     -   dir需要以/结尾。
 
@@ -125,8 +125,8 @@ select * from oss_fdw_list_file('t_oss');
 ## oss\_fdw用例 {#section_pgb_bjg_wdb .section}
 
 ```
-# 创建插件
-create extension oss_fdw;
+# PostgreSQL 创建插件
+create extension oss_fdw;  ---对于PPAS，则执行select rds_manage_extension('create','oss_fdw');
 # 创建 server 
 CREATE SERVER ossserver FOREIGN DATA WRAPPER oss_fdw OPTIONS 
      (host 'oss-cn-hangzhou.aliyuncs.com' ， id 'xxx'， key 'xxx'，bucket 'mybucket');
