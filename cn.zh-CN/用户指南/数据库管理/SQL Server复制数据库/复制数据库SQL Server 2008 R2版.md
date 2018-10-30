@@ -12,13 +12,13 @@
 ## 操作步骤 {#section_egc_1mq_wdb .section}
 
 1.  登录[RDS管理控制台](https://rdsnew.console.aliyun.com/console/index#/rdsList/)。
-2.  选择目标实例所在地域。
-3.  单击目标实例的ID，进入基本信息页面。
-4.  选择左侧菜单栏中的**数据库管理**，进入数据库管理页面。
+2.  在页面左上角，选择实例所在地域。
+3.  找到目标实例，单击实例ID。
+4.  在左侧菜单栏中单击**数据库管理**。
 5.  单击**复制数据库**。
 6.  填写新建数据库的信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7938/3112_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7938/15408898233112_zh-CN.png)
 
     **参数说明：**
 
