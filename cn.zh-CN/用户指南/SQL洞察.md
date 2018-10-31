@@ -20,29 +20,29 @@
 -   **SQL审计日志**：记录对数据库执行的所有操作。通过审计日志记录，您可以对数据库进行故障分析、行为分析、安全审计等操作。
 -   **增强搜索**：可以按照数据库、用户、客户端IP、线程ID、执行时长、扫描行数等进行多维度检索，并支持导出和下载搜索结果。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407013817_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572213817_zh-CN.png)
 
 -   **SQL分析**：新增SQL分析功能，可以对指定时间段的SQL日志进行可视化交互式分析，找出异常SQL，定位性能问题。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113818_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572213818_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113819_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313819_zh-CN.png)
 
 -   **降低成本**：采用新的列式存储和压缩技术，大幅降低了SQL日志存储空间，平均可帮您节省大约60%的成本。SQL洞察功能的单价为¥0.008/GB，按小时扣费。
 
 ## 开通SQL洞察 {#section_g4n_21b_mfb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-2.  选择实例所在地域。
-3.  单击实例的ID。
-4.  在左侧导航栏中，选择**SQL洞察**。
+2.  在页面左上角，选择实例所在地域。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**立即开通**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113750_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313750_zh-CN.png)
 
 6.  选择SQL审计日志的保存时长。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113755_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313755_zh-CN.png)
 
     -   **7天免费试用**：仅当该实例没有开通过SQL审计或SQL洞察功能时，才可以选择此选项。
 
@@ -53,16 +53,16 @@
 ## 修改SQL日志的存储时长 {#section_sgz_q13_mfb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-2.  选择实例所在地域。
-3.  单击实例的ID。
-4.  在左侧导航栏中，选择**SQL洞察**。
+2.  在页面左上角，选择实例所在地域。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**服务设置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113804_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313804_zh-CN.png)
 
 6.  修改存储时长。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113805_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313805_zh-CN.png)
 
 
 ## 关闭SQL洞察 {#section_f4b_sb3_mfb .section}
@@ -72,24 +72,24 @@
 SQL洞察功能关闭后，SQL审计日志会被清空。请将SQL审计日志导出并保存至本地后，再关闭SQL洞察功能。
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-2.  选择实例所在地域。
-3.  单击实例的ID。
-4.  在左侧导航栏中，选择**SQL洞察**。
+2.  在页面左上角，选择实例所在地域。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**导出**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113823_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313823_zh-CN.png)
 
 6.  在弹出的对话框中，单击**确定**。
 7.  导出完成后，在**导出列表**中，下载已导出的文件并妥善保存。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113831_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313831_zh-CN.png)
 
 8.  单击**服务设置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407113804_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572313804_zh-CN.png)
 
 9.  关闭SQL洞察的开关。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/153977407213807_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154097572413807_zh-CN.png)
 
 
