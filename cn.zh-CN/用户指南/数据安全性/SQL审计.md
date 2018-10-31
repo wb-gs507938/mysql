@@ -2,7 +2,10 @@
 
 您可以通过RDS的SQL审计功能查看SQL明细、定期审计SQL。开通SQL审计功能后，实例性能不会受到影响。
 
-**说明：** RDS for SQL Server 2012/2016以及MariaDB TX实例暂不支持SQL审计功能。
+**说明：** 
+
+-   RDS for SQL Server 2012/2016以及MariaDB TX实例暂不支持SQL审计功能。
+-   开启SQL审计功能之前的记录无法查看到。
 
 ## SQL审计与Binlog日志的区别 {#section_uyq_kr4_ydb .section}
 
@@ -21,15 +24,17 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 ## 开启SQL审计 {#section_bwj_nr4_ydb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-2.  选择目标实例所在地域。
-3.  单击目标实例的ID。
-4.  在左侧导航栏中，选择**数据安全性**。
-5.  选择**SQL审计**标签页，单击**开启SQL审计**，如下图所示。
+2.  在页面左上角，选择实例所在地域。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**数据安全性**。
+5.  选择**SQL审计**页签，单击**开启SQL审计**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/15396848264138_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154095056021214_zh-CN.png)
 
 6.  在弹出的确认框中单击**确定**。
-7.  开启SQL审计后，您可以通过时间、DB、User、关键字等条件查询SQL信息。
+
+    开启SQL审计后，您可以通过时间、DB、User、关键字等条件查询SQL信息。
+
 
 ## 关闭SQL审计 {#section_o4j_sr4_ydb .section}
 
@@ -38,14 +43,14 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 **说明：** SQL审计功能关闭后，包括历史审计内容在内的SQL审计记录会被清空。请将SQL审计内容导出并妥善保存至本地后，再关闭SQL审计功能。
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-2.  选择目标实例所在地域。
-3.  单击目标实例的ID。
-4.  在左侧导航栏中，选择**数据安全性**。
-5.  选择**SQL审计**标签页，单击**导出文件**，如下图所示。
+2.  在页面左上角，选择实例所在地域。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**数据安全性**。
+5.  选择**SQL审计**页签，单击**导出文件**，将SQL审计内容导出并妥善保存至本地。
+6.  导出文件后单击**关闭SQL审计**。
 
     ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/26197/cn_zh/1516174510024/%E5%85%B3%E9%97%ADSQL%E5%AE%A1%E8%AE%A1.png)
 
-6.  将SQL审计内容导出并妥善保存至本地后，单击**关闭SQL审计**。
 7.  在弹出的确认框中，单击**确定**。
 
 ## 相关文档 {#section_z4k_xr4_ydb .section}
