@@ -10,7 +10,7 @@
 
 例如，某一公司要将经典网络迁移至VPC时，若选用混访的迁移方式，在混访期内，一部分应用通过VPC访问数据库，一部分应用仍通过原经典网络的内网地址访问数据库，等所有应用都可以通过VPC访问数据库时，就可以将原经典网络的内网地址释放掉，如下图所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7944/15387558164743_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7944/15409584234743_zh-CN.png)
 
 ## 功能限制 {#section_tzs_y1y_wdb .section}
 
@@ -24,21 +24,21 @@
 
 -   实例的网络类型是经典网络。
 
--   实例所在可用区已有可用的VPC和交换机。关于创建VPC和交换机的操作，请参见[管理专有网络](../../../../intl.zh-CN/用户指南/管理专有网络.md)。
+-   实例所在可用区已有可用的VPC和交换机。关于创建VPC和交换机的操作，请参见[管理专有网络](../../../../cn.zh-CN/用户指南/管理专有网络.md)。
 
 
 ## 从经典网络迁移至VPC {#section_cy4_px2_zdb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
-3.  单击目标实例的ID。
-4.  在左侧导航栏中选择**数据库连接**。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**数据库连接**。
 5.  单击**切换为专有网络**。
 6.  在弹出的对话框中，选择VPC和交换机，以及是否保留经典网络地址。
-    -   选择VPC。建议选择您的ECS实例所在的VPC，否则ECS实例与RDS实例无法通过内网互通（除非在两个VPC之间创建[高速通道](../../../../intl.zh-CN/快速入门（新版）/同账号VPC互连.md)或[VPN网关](../../../../intl.zh-CN/IPsec-VPN入门/配置VPC到VPC连接.md)）。
-    -   选择交换机。如果选择的VPC中没有交换机（如下图），请创建与实例在同一可用区的交换机。具体操作请参见[管理交换机](../../../../intl.zh-CN/用户指南/管理交换机.md)。
+    -   选择VPC。建议选择您的ECS实例所在的VPC，否则ECS实例与RDS实例无法通过内网互通（除非在两个VPC之间创建[高速通道](../../../../cn.zh-CN/快速入门（新版）/同账号VPC互连.md)或[VPN网关](../../../../cn.zh-CN/IPsec-VPN入门/配置VPC到VPC连接.md)）。
+    -   选择交换机。如果选择的VPC中没有交换机（如下图），请创建与实例在同一可用区的交换机。具体操作请参见[管理交换机](../../../../cn.zh-CN/用户指南/管理交换机.md)。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7943/15387558163260_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7944/154095842321237_zh-CN.png)
 
     -   选择是否勾选**保留经典网络**，具体说明如下表所述。
 
@@ -47,25 +47,25 @@
         |不勾选|不保留经典网络地址，原经典网络地址变为VPC地址。
 
 如果不保留经典网络地址，则切换网络类型时，RDS实例会发生一次30秒的闪断，而且经典网络的ECS对该RDS实例的内网访问会立即断开。|
-        |勾选| 保留经典网络地址，同时生成一个新的VPC地址（如下图）。表示使用[混访模式](intl.zh-CN/用户指南/数据库连接/经典网络平滑迁移到VPC的混访方案.md#)，即RDS可以同时被经典网络和VPC的ECS通过内网访问。
+        |勾选| 保留经典网络地址，同时生成一个新的VPC地址（如下图）。表示使用[混访模式](cn.zh-CN/用户指南/数据库连接/经典网络平滑迁移到VPC的混访方案.md#)，即RDS可以同时被经典网络和VPC的ECS通过内网访问。
 
  如果保留经典网络地址，则切换网络类型时，RDS实例不会发生闪断，而且经典网络的ECS对该RDS实例的内网访问也不会断开，直到经典网络地址到期才断开。
 
  在经典网络地址到期前，请将VPC地址配置到VPC的ECS中，以实现业务平滑迁移到VPC。在经典网络地址到期前的7天，系统会每天给您账号绑定的手机发送短信提醒。
 
- ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7943/153875581612639_zh-CN.png)
+ ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7943/154095842312639_zh-CN.png)
 
- 更多介绍请参见[经典网络平滑迁移到VPC的混访方案](intl.zh-CN/用户指南/数据库连接/经典网络平滑迁移到VPC的混访方案.md#)。
+ 更多介绍请参见[经典网络平滑迁移到VPC的混访方案](cn.zh-CN/用户指南/数据库连接/经典网络平滑迁移到VPC的混访方案.md#)。
 
  |
 
 7.  将VPC的ECS内网IP地址添加到RDS实例的**专有网络白名单分组**（如下图），使得ECS可以通过内网访问RDS。如果没有专有网络的分组，请新建分组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7943/153875581612638_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7943/154095842412638_zh-CN.png)
 
 8.  -   如果选择了保留经典网络地址，请在经典网络地址到期前，将RDS的VPC地址配置到VPC的ECS中。
 -   如果选择了不保留经典网络地址，那么切换网络类型后，经典网络的ECS对该RDS实例的内网访问会立即断开。请将RDS的VPC地址配置到VPC的ECS中。
-    **说明：** 如果要使经典网络中的ECS通过内网连接到VPC的RDS，您可以使用[ClassicLink](../../../../intl.zh-CN/用户指南/ClassicLink/ClassicLink概述.md)，或者将ECS[切换到VPC网络](../../../../intl.zh-CN/最佳实践/经典网络迁移到VPC/单ECS迁移示例.md)。
+    **说明：** 如果要使经典网络中的ECS通过内网连接到VPC的RDS，您可以使用[ClassicLink](../../../../cn.zh-CN/用户指南/ClassicLink/ClassicLink概述.md)，或者将ECS[切换到VPC网络](../../../../cn.zh-CN/最佳实践/经典网络迁移到VPC/ECS实例迁移.md)。
 
 
 ## 修改原经典网络内网地址的过期时间 {#section_pwp_wx2_zdb .section}
@@ -76,11 +76,11 @@
 
 1.  登录[RDS 管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
-3.  单击目标实例的ID。
-4.  在左侧导航栏中，选择**数据库连接**。
-5.  在实例连接标签页中，单击**修改过期时间**，如下图所示。
+3.  找到目标实例，单击实例ID。
+4.  在左侧导航栏中单击**数据库连接**。
+5.  在实例连接页签，单击**修改过期时间**，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7944/15387558164748_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7944/15409584244748_zh-CN.png)
 
 6.  在修改过期时间的确认页面，选择过期时间，单击**确定**。
 
