@@ -2,16 +2,16 @@
 
 查询RDS实例的日志备份文件，包括文件的下载链接。
 
-**说明：** 仅适用于SQL Server实例。
+**说明：** 仅适用于RDS for SQL Server实例。
 
 ## 请求参数 {#section_bvb_kwj_n2b .section}
 
 |名称|类型|是否必须|描述|
 |--|--|----|--|
-|Action|String|是|系统规定参数，取值：DescribeLogBackupFiles|
-|DBInstanceId|String|是|实例ID|
-|StartTime|String|是|查询开始时间。格式：yyyy-MM-dd’T’HH:mm:ssZ|
-|EndTime|String|是|查询结束时间。格式：yyyy-MM-dd’T’HH:mm:ssZ。必须晚于查询开始时间。
+|Action|String|是|系统规定参数。取值：DescribeLogBackupFiles|
+|DBInstanceId|String|是|实例ID。|
+|StartTime|String|是|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm*Z，例如2018-10-31T08:40Z|
+|EndTime|String|是|查询结束时间。格式：*yyyy-MM-dd*T*HH:mm*Z，例如2018-10-31T08:40Z必须晚于查询开始时间。
 
 |
 |PageSize|Integer|否|每页最多显示的日志文件个数。取值：-   30
