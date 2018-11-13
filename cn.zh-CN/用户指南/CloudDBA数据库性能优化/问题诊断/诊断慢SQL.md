@@ -4,9 +4,15 @@
 
 ## 前提条件 {#section_uyn_rvn_wdb .section}
 
--   实例是公共云华北1、华北2、华东1、华东2、华南1地域的MySQL类型的实例。
--   实例版本是MySQL 5.5或者MySQL5.6。
--   共享型实例不支持CloudDBA。
+目前仅如下版本实例支持此功能：
+
+-   MySQL 5.7 高可用版
+-   MySQL 5.6版
+-   MySQL 5.5 高可用版
+-   PostgreSQL 10.0版
+-   PPAS 10.0版
+
+**说明：** 共享型实例不支持CloudDBA。
 
 ## 操作步骤 {#section_cqs_svn_wdb .section}
 
@@ -19,20 +25,20 @@
 
     **说明：** 目前，系统只支持显示最近1个月内的慢SQL数据。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/3062_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/15421018273062_zh-CN.png)
 
 7.  若实例中有慢SQL，图示中会显示慢SQL产生的时间点和个数。单击图示中的慢SQL信息，其下方的列表中会显示慢SQL详情，如下图所示。
 
     **说明：** 将鼠标悬浮在某一时间点上，即可查看该时间点时的慢SQL个数。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/3063_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/15421018273063_zh-CN.png)
 
 8.  单击sql\_text栏中的慢SQL语句，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/3064_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/15421018273064_zh-CN.png)
 
 9.  单击**SQL优化建议**，即可查看系统给出的优化建议，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/3065_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7906/15421018273065_zh-CN.png)
 
 
