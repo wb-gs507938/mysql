@@ -8,5 +8,9 @@
 
 ## 从腾讯云数据库迁移到阿里云RDS {#section_ycp_rvm_qfb .section}
 
-[使用DTS从腾讯云云数据库迁移MySQL到阿里云RDS](https://help.aliyun.com/document_detail/52904.html)
+[腾讯云MySQL数据库迁移到阿里云](cn.zh-CN/用户指南/数据迁移/腾讯云MySQL数据库迁移到阿里云.md#)
+
+## 从谷歌云数据库迁移到阿里云RDS {#section_pqf_435_vfb .section}
+
+[Google Cloud SQL的MySQL数据库迁移到阿里云](cn.zh-CN/用户指南/数据迁移/Google Cloud SQL的MySQL数据库迁移到阿里云.md#)
 
