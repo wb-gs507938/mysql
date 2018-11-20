@@ -1,6 +1,6 @@
 # 什么是RDS {#concept_pc2_lv5_tdb .concept}
 
-阿里云关系型数据库（Relational Database Service，简称RDS）是一种稳定可靠、可弹性伸缩的在线数据库服务。基于阿里云分布式文件系统和SSD盘高性能存储，RDS支持MySQL、SQL Server、PostgreSQL和PPAS（Postgre Plus Advanced Server，高度兼容Oracle数据库）引擎，并且提供了容灾、备份、恢复、监控、迁移等方面的全套解决方案，彻底解决数据库运维的烦恼。
+阿里云关系型数据库（Relational Database Service，简称RDS）是一种稳定可靠、可弹性伸缩的在线数据库服务。基于阿里云分布式文件系统和SSD盘高性能存储，RDS支持MySQL、SQL Server、PostgreSQL、PPAS（Postgre Plus Advanced Server，高度兼容Oracle数据库）和MariaDB引擎，并且提供了容灾、备份、恢复、监控、迁移等方面的全套解决方案，彻底解决数据库运维的烦恼。
 
 ## 学习路径图 {#section_nnr_y4j_b2b .section}
 
@@ -17,7 +17,7 @@
 -   实例：实例是虚拟化的数据库服务器。您可以在一个实例中创建和管理多个数据库。
 -   地域：地域是指物理的数据中心。一般情况下，RDS实例应该和ECS实例位于同一地域，以实现最高的访问性能。
 -   可用区：可用区是指在某个地域内拥有独立电力和网络的物理区域。同一地域的不同可用区之间没有实质性区别。
--   数据库引擎：RDS支持四种数据库引擎：MySQL、SQL Server、PostgreSQL、PPAS（Postgre Plus Advanced Server，高度兼容Oracle数据库）。关于各个引擎的介绍，请参见[数据库引擎](../../../../cn.zh-CN/用户指南/快速入门.md)。
+-   数据库引擎：RDS支持多种数据库引擎：MySQL、SQL Server、PostgreSQL、PPAS（Postgre Plus Advanced Server，高度兼容Oracle数据库）和MariaDB。关于各个引擎的介绍，请参见[数据库引擎](../../../../cn.zh-CN/用户指南/快速入门.md)。
 -   网络类型：您可以选择将实例创建在经典网络或VPC中。专有网络VPC（Virtual Private Cloud）是阿里云上一种隔离的网络环境，安全性比传统的经典网络更高，建议您选择VPC。
 -   产品系列：分为基础版、高可用版、金融版。关于各个系列的介绍，请参见[产品系列概述](cn.zh-CN/产品简介/产品系列/产品系列概述.md)。
 -   规格族：分为通用型、独享型、独占物理机型。关于各个规格族的介绍，请参见[实例规格族](cn.zh-CN/产品简介/实例规格/实例规格族.md)。
@@ -48,5 +48,5 @@
 
 ## RDS定价 {#section_kzx_jg1_42b .section}
 
-请参见[收费项目及计费方式](../../../../cn.zh-CN/产品定价/收费项目及计费方式.md)。
+请参见[收费项目及计费方式](../../../../cn.zh-CN/产品定价/计费方式与收费项.md)。
 
