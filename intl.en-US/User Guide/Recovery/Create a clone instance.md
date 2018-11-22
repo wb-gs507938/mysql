@@ -1,6 +1,6 @@
 # Create a clone instance {#concept_vrh_qp4_ydb .concept}
 
-To restore data of an instance \(such as Instance A\), you can restore the data to a clone instance, verify the data on the clone instance, and transfer the data you need from the clone instance to the master instance \(Instance A\). This article describes how to restore data to a clone instance by creating a clone instance. The restored data includes instance data and settings. Clone instances are managed and billed in the same way as the master instance. For information about the cost of instances, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a3c0i.7960336.224002.20.6cf85179HAnBQE#pricing).
+To restore historical data of an instance \(such as Instance A\), you can restore the data to a clone instance, verify the data on the clone instance, and transfer the data you need from the clone instance to the master instance \(Instance A\). This article describes how to restore data to a clone instance by creating a clone instance. The restored data includes instance data and settings. Clone instances are managed and billed in the same way as the master instance. For information about the cost of instances For more information, see the Pricing page.
 
 **Note:** Currently, the following RDS versions support clone instances:
 
@@ -25,12 +25,12 @@ The master instance must meet the following conditions:
 -   Data backup and log backup are enabled.
 -   If the clone instance is to be created from a backup set, the master instance must have at least one backup set.
 
-    **Note:** To use a sub-account to create a clone instance, ensure that the sub-account has added authorization policies for the clone instance. For details about how to authorize, see [Authorization for RDS instances](https://www.alibabacloud.com/help/doc-detail/58932.htm?spm=a2c63.p38356.b99.65.795d3badOuJNdg).
+    **Note:** To use a sub-account to create a clone instance, ensure that the sub-account has added authorization policies for the clone instance. For details about how to authorize, see [Authorization for RDS instances](https://partners-intl.aliyun.com/help/doc-detail/58932.htm).
 
 
 ## Procedure {#section_est_dp4_ydb .section}
 
-1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
+1.  Log on to the [RDS console](https://partners-intl.console.aliyun.com/#/rds).
 2.  Select the region where the target instance is located.
 3.  Click the ID of the target instance to go to the **Basic Information** page.
 4.  In the left-size navigation pane, click **Backup and Recovery**.
@@ -38,7 +38,7 @@ The master instance must meet the following conditions:
 6.  Select a payment method: **Subscription** or **Pay-As-You-Go**.
 7.  Configure the clone instance.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/15428891454137_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/15428894594137_en-US.png)
 
     Parameter descriptions:
 
@@ -47,7 +47,7 @@ The master instance must meet the following conditions:
     |Restore Type|Restore data by time or by backup set.|
     |Restored At|This parameter is available if **Restore Type** is set to **By Time**. You can set the parameter to any point in time.|
     |Backup ID|This parameter is available if **Restore Type** is set to **By Backup ID**. Select a backup set.|
-    |Edition, Zone, Type, Capacity, Network Type, and Duration|For descriptions of these parameters, see [Create an instance](../../../../intl.en-US/Quick Start for MySQL/Create an instance.md#).|
+    |Edition, Zone, Type, Capacity, Network Type, and Duration|For descriptions of these parameters, see [Create an instance](../../../../reseller.en-US/Quick Start for MySQL/Create an instance.md#).|
     |Quantity|You can create up to five clone instances in one order.|
 
 8.  Click **Buy Now**.
