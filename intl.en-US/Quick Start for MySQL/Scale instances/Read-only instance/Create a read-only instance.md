@@ -5,7 +5,7 @@ You can create read-only instances to process massive read requests sent to the 
 ## Attention {#section_dbp_zq5_vdb .section}
 
 -   Currently the following instances support read-only instances:
-    -   MySQL 5.7 High-Availability Edition \(based on SSDs\)
+    -   MySQL 5.7 High-Availability Edition \(based on local SSDs\)
     -   MySQL 5.6
     -   SQL Server 2017
 -   Quantity of read-only instances
@@ -26,7 +26,7 @@ You can create read-only instances to process massive read requests sent to the 
 3.  Click the ID of the target instance to visit the Basic Information page.
 4.  In the **Instance Distribution** area, click **Add Read-only Instance**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7827/15429626216172_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7827/15431079006172_en-US.png)
 
 5.  On the purchasing page, choose the configuration of the read-only instance, and then click **Buy Now**.
 
@@ -38,6 +38,6 @@ You can create read-only instances to process massive read requests sent to the 
 6.  Select **Product Terms of Service and Service Level Notice and Terms of Use**, and then click **Pay Now**.
 7.  After creating the read-only instance, you can view it on the Instances page, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7827/15429626222617_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7827/15431079002617_en-US.png)
 
 
