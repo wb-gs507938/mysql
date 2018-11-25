@@ -15,7 +15,7 @@ Before RDS can be used, a database and an account must be created for the RDS in
 
 ## Create an initial account {#section_csh_fph_wfb .section}
 
-1.  Log in to the [RDS管理控制台](https://rds.console.aliyun.com/)。
+1.  Log in to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region of the target instance.
 3.  Click the ID of the instance.
 4.  In the left-side navigation pane, select **Accounts** to visit the **Accounts** page.
