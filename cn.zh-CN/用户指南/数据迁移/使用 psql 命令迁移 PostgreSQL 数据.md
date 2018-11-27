@@ -8,7 +8,7 @@ PostgreSQL 支持逻辑备份。我们使用 pg\_dump 逻辑备份功能，导�
 
 ## 前提条件 {#section_pbc_vbw_ydb .section}
 
-已完成 RDS 实例数据库的准备，可参见[申请外网地址](../cn.zh-CN/快速入门PostgreSQL版/初始化配置/申请外网地址.md#)和 [创建数据库和账号](../cn.zh-CN/快速入门PostgreSQL版/初始化配置/创建数据库和账号.md#)。
+已完成 RDS 实例数据库的准备，可参见[申请外网地址](../../../../intl.zh-CN/快速入门PostgreSQL版/初始化配置/申请外网地址.md#)和[创建数据库和账号](../../../../intl.zh-CN/快速入门PostgreSQL版/初始化配置/创建数据库和账号.md#)。
 
 ## 准备本地数据 {#section_us5_vbw_ydb .section}
 
