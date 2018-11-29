@@ -2,7 +2,7 @@
 
 对于SQL Server 2017版本的实例，您需要通过RDS控制台创建一个初始账号，再通过DMS或客户端创建和管理数据库。
 
-**说明：** 本文仅适用于SQL Server 2017版本的实例。其他SQL Server 版本请参见文档[创建数据库和账号SQL Server 2016/2012版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2016__2012版.md)和[创建数据库和账号SQL Server 2008 R2版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md#)。
+**说明：** 本文仅适用于SQL Server 2017版本的实例。其他SQL Server 版本请参见文档[创建数据库和账号SQL Server 2012/2016版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012__2016版.md)和[创建数据库和账号SQL Server 2008 R2版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md#)。
 
 ## 注意事项 {#section_ash_fph_wfb .section}
 
@@ -22,7 +22,7 @@
 5.  单击**创建初始账号**。
 6.  输入要创建的账号信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64588/154278894732576_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64588/154348442232576_zh-CN.png)
 
     参数说明：
 
@@ -30,19 +30,22 @@
 
 **说明：** test、root等为保留关键字，不能设置为账号名。
 
-    -   **密码**：该账号对应的密码。由大写字母、小写字母、数字、特殊字符中的任意三种组成；特殊字符为!@\#$%^&\*\(\)\_+-=；长度为8~32个字符。
+    -   **密码**：
 
+-   长度为8~32个字符。
+-   由大写字母、小写字母、数字、特殊字符中的任意三种组成。
+-   特殊字符为!@\#$%^&\*\(\)\_+-=
     -   **确认密码**：输入与密码一致的字段，以确保密码正确输入。
 
 7.  单击**确定**。
 8.  单击页面右上角的**登录数据库**，进入[数据管理控制台](https://dms.console.aliyun.com/?token=549cf345-ac05-455c-b3f9-75eadae023fe#/dms/login)的RDS数据库登录页面。
 9.  确保连接地址、端口、数据库用户名和密码填写正确。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64588/154278894732578_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64588/154348442232578_zh-CN.png)
 
     -   参数说明：
 
-        -   1：实例的连接地址和端口信息。可以在实例的**基本信息**或**数据库连接**页面查看。![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64588/154278894732577_zh-CN.png)
+        -   1：实例的连接地址和端口信息。可以在实例的**基本信息**或**数据库连接**页面查看。![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64588/154348442232577_zh-CN.png)
 
         -   2：要访问数据库的账号名称。
 
@@ -54,7 +57,7 @@
 
 11. 若出现将DMS服务器的IP段加入到RDS白名单中的提示，单击**设置白名单**，如下图所示。若需手动添加，请参见[设置白名单](../../../../cn.zh-CN/用户指南/数据安全性/设置白名单.md#)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15427889472774_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7839/15434844232774_zh-CN.png)
 
 12. 成功添加白名单后，单击**登录**。
 13. 成功登录RDS实例后，在页面上方的菜单栏中，选择**SQL操作** \> **SQL窗口** 。
