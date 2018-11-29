@@ -27,6 +27,7 @@ RDS for SQL Server currently supports the following versions:
 -   SQL Server 2008 R2 Enterprise
 -   SQL Server 2012 Web, Standard, and Enterprise
 -   SQL Server 2016 Web, Standard, and Enterprise
+-   SQL Server 2017 Enterprise
 
 ## RDS for PostgreSQL {#section_trb_yw5_tdb .section}
 
@@ -34,7 +35,7 @@ PostgreSQL is the world's most advanced open source database. As the forerunner 
 
 In addition to excellent support for features such as transactions, subqueries, Multi-Version Concurrency Control \(MVCC\), and data integrity check, RDS for PostgreSQL integrates a series of important functions including high availability, backup, and recovery that help ease your O&M burden.
 
-RDS for PostgreSQL currently supports version 9.4.
+RDS for PostgreSQL currently supports versions 9.4 and 10.
 
 ## RDS for PPAS {#section_lzj_zw5_tdb .section}
 
@@ -42,5 +43,5 @@ Postgres Plus Advanced Server \(PPAS\) is a stable, secure, and scalable enterpr
 
 RDS for PPAS provides account management, resource monitoring, backup, recovery, and security control, and more functions, and is continuously updated and improved.
 
-RDS for PPAS currently supports version 9.3.
+RDS for PPAS currently supports versions 9.3 and 10.
 
