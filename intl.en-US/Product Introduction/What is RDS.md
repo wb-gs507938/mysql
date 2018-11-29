@@ -43,5 +43,5 @@ Postgres Plus Advanced Server \(PPAS\) is a stable, secure, and scalable enterpr
 
 RDS for PPAS provides account management, resource monitoring, backup, recovery, and security control, and more functions, and is continuously updated and improved.
 
-RDS for PPAS currently supports versions 9.3 and 10.
+RDS for PPAS currently supports version 10.
 
