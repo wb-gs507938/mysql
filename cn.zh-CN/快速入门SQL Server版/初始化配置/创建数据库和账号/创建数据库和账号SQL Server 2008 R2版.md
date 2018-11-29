@@ -1,6 +1,6 @@
 # 创建数据库和账号SQL Server 2008 R2版 {#concept_n3n_1zz_vdb .concept}
 
-本文仅适用于SQL Server 2008 R2版本的实例。关于如何在SQL Server 2012/2016版本的实例中创建数据库和账号，请参见[创建数据库和账号SQL Server 2012及以上版本](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012及以上版本.md#)。
+本文仅适用于SQL Server 2008 R2版本的实例。关于其他SQL Server版本，请参见[创建数据库和账号SQL Server 2017版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2017版.md)和[创建数据库和账号SQL Server 2012/2016版](cn.zh-CN/快速入门SQL Server版/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2012__2016版.md#)。
 
 ## 创建账号 { .section}
 
@@ -15,15 +15,15 @@
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
-3.  单击目标实例的ID。
+3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中，选择**账号管理**。
 5.  单击**创建账号**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15364960222761_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15434844102761_zh-CN.png)
 
 6.  输入要创建的账号信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15364960222762_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15434844102762_zh-CN.png)
 
     |参数|说明|
     |--|--|
@@ -32,12 +32,17 @@
 
     1.  在**未授权数据库**栏中，选中要授权的数据库。
     2.  单击**授权**，将其添加数据库到**已授权数据库**栏中。
-    3.  您可以设置该账号对于各个数据库的权限，可设置为读写或只读。还可以单击全部设读写或全部设只读进行批量设置。
+    3.  您可以设置该账号对于各个数据库的权限，可设置为**读写**或**只读**。还可以单击**全部设读写**或**全部设只读**进行批量设置。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15364960232763_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15434844102763_zh-CN.png)
 
 |
-    |**密码**|该账号对应的密码，长度为8~32个字符，由大写字母、小写字母、数字、特殊字符中的任意三种组成。|
+    |**密码**| 设置账号密码。要求如下：
+
+     -   长度为8~32个字符。
+    -   由大写字母、小写字母、数字、特殊字符中的任意三种组成。
+    -   特殊字符为!@\#$%^&\*\(\)\_+-=
+ |
     |**确认密码**|输入与密码一致的字段，以确保密码正确输入。|
     |**备注说明**|可以备注该账号的相关信息，便于后续账号管理，最多支持256个字符。|
 
@@ -49,22 +54,24 @@
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
-3.  单击目标实例的ID。
+3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中，选择**数据库管理**。
 5.  单击**创建数据库**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15364960232764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15434844102764_zh-CN.png)
 
 6.  输入要创建的数据库信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15364960232765_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15434844102765_zh-CN.png)
 
     |参数|说明|
     |--|--|
-    |**数据库\(DB\)名称**|长度为2~64个字符，由小写字母、数字、下划线或中划线组成，但开头需为字母，结尾需为字母或数字。|
-    |**支持字符集**|根据需要选择合适的字符集。|
-    |**授权账号**|选中该数据库授权的账号，若尚未创建账号，该值可以为空。|
-    |**账号类型**|选择账号后可见，设置该数据库授予给账号的权限，可选择读写或只读。|
+    |**数据库\(DB\)名称**|填写数据库名称。由小写字母、数字、下划线或中划线组成，以字母开头，以字母或数字结尾，长度为2~64个字符。|
+    |**支持字符集**|选择字符集。如果没有需要的字符集，选择**全部**，并从下拉菜单中选择。|
+    |**授权账号**|选择要授权的账号，并设置账号类型为**读写**、**只读**或**所有者**。如果还没创建账号，可以留空。
+
+|
+    |**账号类型**|选择账号后可见，设置该数据库授予给账号的权限，可选择**读写**或**只读**。|
     |**备注说明**|可以备注该数据库的相关信息，便于后续数据库管理，最多支持256个字符。|
 
 7.  单击**确定**，数据库创建完成。
