@@ -33,7 +33,10 @@
 -   Binlog大小超过500MB或写入超过6小时就会切换到新的Binlog文件继续写入，老的Binlog文件会异步上传。
 -   您可以通过[一键上传 Binlog](https://help.aliyun.com/document_detail/60546.html?spm=a2c4g.11186623.2.6.JGyUIA)功能（免费）将 Binlog 文件上传至 OSS，不影响实例的数据恢复功能，Binlog 也不再占用实例磁盘空间。
 
- **说明：** 基础版暂不支持一键上传Binlog。
+ **说明：** 
+
+-   基础版暂不支持一键上传Binlog。
+-   不支持访问Binlog文件所在的OSS存储空间。
 
  |
 |SQL Server| -   支持全量物理备份和增量物理备份。目前不支持逻辑备份。
@@ -105,7 +108,7 @@
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15433025584105_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15438158624105_zh-CN.png)
 
     **说明：** 
 
