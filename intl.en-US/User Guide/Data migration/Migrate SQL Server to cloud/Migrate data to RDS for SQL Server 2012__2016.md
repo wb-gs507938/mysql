@@ -7,7 +7,7 @@ Applicable versions
 -   Basic series \(single-node\): RDS for SQL Server 2016/2012 Web or Enterprise Edition
 -   High-availability series \(dual-node\): RDS for SQL Server 2016/2012 Standard or Enterprise Edition
 
-For instructions on how to migrate data to RDS for SQL Server 2008 R2 Enterprise Edition \(high-availability series\), see [EN-US\_TP\_7997.md\#](intl.en-US/User Guide/Data migration/Migrate SQL Server to cloud/Migrate data to RDS for SQL Server 2008 R2.md#).
+For instructions on how to migrate data to RDS for SQL Server 2008 R2 Enterprise Edition \(high-availability series\), see [Migrate data to RDS for SQL Server 2008 R2](intl.en-US/User Guide/Data migration/Migrate SQL Server to cloud/Migrate data to RDS for SQL Server 2008 R2.md#).
 
 ## Restrictions {#section_pzt_zsj_zdb .section}
 
@@ -49,7 +49,7 @@ Ensure that the RDS for SQL Server instance has sufficient storage space. Expand
 
 **A database with the same name is not allowed in the target instance.**
 
-You do not need to create a target database in advance. This is different from the requirement stated in [EN-US\_TP\_7997.md\#](intl.en-US/User Guide/Data migration/Migrate SQL Server to cloud/Migrate data to RDS for SQL Server 2008 R2.md#).
+You do not need to create a target database in advance. This is different from the requirement stated in [Migrate data to RDS for SQL Server 2008 R2](intl.en-US/User Guide/Data migration/Migrate SQL Server to cloud/Migrate data to RDS for SQL Server 2008 R2.md#).
 
 If the target RDS instance already has a database whose name is the same as that of a database to be migrated, back up and delete the database in the target RDS instance before creating a migration task.
 
@@ -66,7 +66,7 @@ Create an OSS bucket that is in the same region as the target instance if you do
 1.  Log on to [OSS console](https://oss.console.aliyun.com/).
 2.  Click the **+** sign on the left pane.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392127033677_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392152633677_en-US.png)
 
 3.  Set the bucket name, region, storage class, and ACL permission, and click **OK**. \(Ensure that the bucket is in the same region as the target RDS for SQL Server instance so that the bucket can be selected in subsequent steps.\)
 
@@ -139,11 +139,11 @@ If you require automatic migration, use an OSS API to perform an upload that can
 6.  If you are using the function for the first time, authorize the RDS official service account to access OSS:
     1.  In the **import data** step of the **Import Guide**, click **Authorize**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/15439212706114_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/15439215266114_en-US.png)
 
     2.  Click **Confirm Authorization Policy**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392127033679_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392152633679_en-US.png)
 
 7.  Set the following parameters and click **OK** to generate an OSS backup file upload task.
 
@@ -169,7 +169,7 @@ View migration records as follows:
 
 On the **Backup and Recovery** page, click **Backup Data Upload History**. Migration records of the past week are displayed by default. You can change the query time range as needed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392127133681_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392152633681_en-US.png)
 
 ## Common errors {#section_cgb_fgk_zdb .section}
 
@@ -221,11 +221,11 @@ This error only happens to the RDS for SQL 2008 R2 High-availability Edition ins
 -   Solutions:
     -   Solution 1: Set the download link validity period to a larger value \(at most 18 hours\).
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392127133682_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392152733682_en-US.png)
 
     -   Solution 2: Set the ACL permission of the OSS database backup file to **Public Read**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392127133684_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/154392152733684_en-US.png)
 
         **Note:** The backup file with the Public Read ACL permission can always be downloaded without an expiration date. To prevent security risks, set the ACL permission to **Private** after migrating the file.
 
@@ -248,6 +248,6 @@ This error only happens to the RDS for SQL 2008 R2 High-availability Edition ins
 -   Error cause: If the RDS instance has no superuser account, the migration still succeeds, but the migration task does not know which user to authorize.
 -   Solution:
     1.  Create a superuser account. For details, see [Create accounts and databases \(SQL Server 2012 or 2016\)](https://www.alibabacloud.com/help/doc-detail/43164.htm).
-    2.  Reset the password of the superuser account. For more information, see [EN-US\_TP\_7928.md\#](intl.en-US/User Guide/Account management/Reset the instance password.md#).
+    2.  Reset the password of the superuser account. For more information, see [Reset the instance password](intl.en-US/User Guide/Account management/Reset the instance password.md#).
     3.  Use the superuser account to access the database on the cloud.
 
