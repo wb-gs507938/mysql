@@ -10,13 +10,13 @@
 
 ## 前提条件 {#section_bd4_5gz_5fb .section}
 
--   已对RDS 实例[设置白名单](https://help.aliyun.com/document_detail/90336.html)和[申请外网地址](https://help.aliyun.com/document_detail/90338.html)。
+-   已对RDS 实例[设置白名单](https://help.aliyun.com/document_detail/90336.html)和[申请外网地址](https://help.aliyun.com/document_detail/97740.html)。
 
 ## 操作步骤 {#section_lcm_tqt_vfb .section}
 
 1.  使用远程工具[登录RDS for MariaDB TX实例](https://help.aliyun.com/document_detail/90339.html)，创建空数据库。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/154320194032385_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/154389283232385_zh-CN.png)
 
 2.  登录本地Linux服务器，使用自带的mysqldump工具将本地数据库数据导出为数据文件。
 
@@ -43,6 +43,6 @@
 
 5.  刷新远程工具后查看表，已经有了数据，说明已经迁移成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/154320194032386_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/154389283232386_zh-CN.png)
 
 
