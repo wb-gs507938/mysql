@@ -148,14 +148,26 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     |OSS Bucket|选择备份文件所在的OSS Bucket。|
     |OSS子文件夹名|备份文件所在的子文件夹名字。|
     |OSS文件列表|单击右侧放大镜按钮，可以按照备份文件名前缀模糊查找，会展示文件名、文件大小和更新时间。请选择需要上云的备份文件。|
-    |上云方案|     -   打开数据库（只有一个全量备份文件）：全量上云，指用户仅有一个完全备份文件上云RDS for SQL Server的场景。本操作选择**打开数据库**，此时CreateMigrateTask 中的`BackupMode=FULL`并且`IsOnlineDB = True`。
-    -   不打开数据库（还有差异备份或日志文件）：增量上云，用户有全量备份文件和差异或者日志备份文件，增量上云RDS for SQL Server的场景。默认选中，此时CreateMigrateTask 中的B`ackupMode=UPDF`并且`IsOnlineDB = False`。
+    |上云方案|     -   打开数据库（只有一个全量备份文件）：全量上云，指用户仅有一个完全备份文件上云RDS for SQL Server的场景。本操作选择**打开数据库**。
+
+**说明：** 选择此项将调用API [CreateMigrateTask](../../../../intl.zh-CN/API参考/SQL Server备份文件上云/CreateMigrateTask.md#)，且参数BackupMode=FULL，IsOnlineDB=True。
+
+    -   不打开数据库（还有差异备份或日志文件）：增量上云，用户有全量备份文件和差异或者日志备份文件，增量上云RDS for SQL Server的场景。默认选择此项。
+
+**说明：** 选择此项将调用API [CreateMigrateTask](../../../../intl.zh-CN/API参考/SQL Server备份文件上云/CreateMigrateTask.md#)，且参数BackupMode=UPDF，IsOnlineDB=False。
+
  |
-    |一致性检查方式|     -   异步执行DBCC：在打开数据库的时候系统不做DBCC CheckDB，会在打开数据库任务结束以后，异步执行DBCC CheckDB操作，以此来节约打开数据库操作的时间开销（数据库比较大，DBCC CheckDB非常耗时），减少用户的业务停机时间。如果，您对业务停机时间要求非常敏感，且不关心DBCC CheckDB结果，建议使用异步执行DBCC。此时CreateMigrateTask 中的`CheckDBMode=SyncExecuteDBCheck`
-    -   同步执行DBCC：相对于异步执行DBCC，有的用户非常关心DBCC CheckDB的结果，以此来找出用户线下数据库数据一致性错误。此时，建议您选择同步执行DBCC，影响是会拉长打开数据库的时间。默认选项，此时CreateMigrateTask 中的`CheckDBMode=AsyncExecuteDBCheck`
+    |一致性检查方式|     -   异步执行DBCC：在打开数据库的时候系统不做DBCC CheckDB，会在打开数据库任务结束以后，异步执行DBCC CheckDB操作，以此来节约打开数据库操作的时间开销（数据库比较大，DBCC CheckDB非常耗时），减少用户的业务停机时间。如果，您对业务停机时间要求非常敏感，且不关心DBCC CheckDB结果，建议使用异步执行DBCC。
+
+**说明：** 选择此项将调用API [CreateMigrateTask](../../../../intl.zh-CN/API参考/SQL Server备份文件上云/CreateMigrateTask.md#)，且参数CheckDBMode=SyncExecuteDBCheck。
+
+    -   同步执行DBCC：相对于异步执行DBCC，有的用户非常关心DBCC CheckDB的结果，以此来找出用户线下数据库数据一致性错误。此时，建议您选择同步执行DBCC，影响是会拉长打开数据库的时间。默认选择此项。
+
+**说明：** 选择此项将调用API [CreateMigrateTask](../../../../intl.zh-CN/API参考/SQL Server备份文件上云/CreateMigrateTask.md#)，且参数CheckDBMode=AsyncExecuteDBCheck。
+
  |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/15439031686230_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7998/15439173096230_zh-CN.png)
 
     您可以不断单击刷新按钮，来查看数据上云任务最新状态。如果上云失败，请根据任务描述提示排查错误，可参考本文的常见错误部分。
 
@@ -259,7 +271,7 @@ OSS下载链接过期错误仅针对RDS for SQL Server 2008 R2高可用版本。
 
 -   错误信息：Your RDS doesn’t have any init account yet, please create one and grant permissions on RDS console to this migrated database \(XXX\).
 
--   错误原因：RDS目标实例中，不存在高权限账号，OSS备份数据上云任务不知道需要为哪个用户授权。但是，备份文件已经成功还原到目标实力上，所以任务状态是成功的。
+-   错误原因：RDS目标实例中，不存在高权限账号，OSS备份数据上云任务不知道需要为哪个用户授权。但是，备份文件已经成功还原到目标实例上，所以任务状态是成功的。
 
 -   解决方法：
 
