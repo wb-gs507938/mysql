@@ -7,7 +7,7 @@
 -   RDS for SQL Server 2012/2016/2017实例暂不支持SQL审计功能。
 -   开启SQL审计功能之前的记录无法查看到。
 
-为了更好地提供服务，RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富，详情请参见[ZH-CN\_TP\_41829\_V1.md\#](intl.zh-CN/.md#)
+为了更好地提供服务，RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富，详情请参见[SQL洞察](intl.zh-CN/用户指南/SQL洞察.md#)
 
 ## SQL审计与Binlog日志的区别 {#section_uyq_kr4_ydb .section}
 
@@ -31,7 +31,7 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 4.  在左侧导航栏中单击**数据安全性**。
 5.  选择**SQL审计**页签，单击**开启SQL审计**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154399964621214_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154399989621214_zh-CN.png)
 
 6.  在弹出的确认框中单击**确定**。
 
