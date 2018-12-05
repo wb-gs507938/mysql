@@ -23,14 +23,14 @@ DTS 数据迁移支持 MySQL 的结构迁移、全量迁移和增量迁移。
 
 将本地数据库迁移到 RDS 上有以下限制。
 
--   迁移过程中，不支持 DDL 操作
--   结构迁移不支持 event 的迁移
--   如果使用了对象名映射功能后，依赖这个对象的其他对象可能迁移失败
--   当选择增量迁移时，本地 MySQL 实例需要开启 binlog，且本地库的 binlog\_format 要为 row。如果本地 MySQL 为5.6版本时，它的 binlog\_row\_image 还须设置为 full
+-   迁移过程中，不支持 DDL 操作。
+-   结构迁移不支持 event 的迁移。
+-   如果使用了对象名映射功能后，依赖这个对象的其他对象可能迁移失败。
+-   当选择增量迁移时，本地 MySQL 实例需要开启 binlog，且本地库的 binlog\_format 要为 row。如果本地 MySQL 为5.6版本时，它的 binlog\_row\_image 还须设置为 full。
 
 ## 前提条件 {#section_grd_4sv_ydb .section}
 
-已完成 RDS 实例数据库的准备，可参见[申请外网地址](../cn.zh-CN/快速入门MySQL版/初始化配置/申请外网地址.md#)和 [MySQL 5.7高可用版/5.5/5.6创建数据库和账号](../cn.zh-CN/快速入门MySQL版/初始化配置/创建数据库和账号/MySQL 5.7高可用版/5.5/5.6创建数据库和账号.md#)。
+已完成 RDS 实例数据库的准备，可参见[申请外网地址](../../../../cn.zh-CN/快速入门MySQL版/初始化配置/申请外网地址.md#)和 [创建账号和数据库](../../../../cn.zh-CN/快速入门MySQL版/初始化配置/创建账号和数据库.md#)。
 
 ## 操作步骤 {#section_lwy_4sv_ydb .section}
 
@@ -115,23 +115,20 @@ DTS 数据迁移支持 MySQL 的结构迁移、全量迁移和增量迁移。
 
 数据准备完毕后，即可进入正式的迁移操作。
 
-1.  在 [RDS 管理控制台](https://rds.console.aliyun.com/) 上单击**迁移数据库**，进入 [DTS](http://dts.console.aliyun.com/)，如下图所示。
+1.  进入[DTS管理控制台](http://dts.console.aliyun.com/)。
+2.  在左侧选择**数据迁移**，然后单击 **创建迁移任务**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4263_zh-CN.png)
-
-2.  单击 **创建在线迁移任务**，进入 创建迁移任务 页面，如下图所示。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4264_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/15439875384264_zh-CN.png)
 
 3.  输入任务名称、本地数据库信息和目标数据库信息，单击 **授权白名单并进入下一步**，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4265_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/15439875384265_zh-CN.png)
 
-    -   任务名称：自定义任务名称，可以保持默认值
+    -   任务名称：自定义任务名称，可以保持默认值。
     -   源库信息
         -   实例类型：本地数据库的实例类型，可以选择有公网IP的自建数据库、ECS上的自建数据库、RDS实例、云数据库MongoDB
         -   数据库类型：本地数据库的类型，可以选择 Oracle、MySQL、SQLServer、PostgreSQL、MongoDB
-        -   主机名或 IP 地址：本地数据库的公网地址
+        -   主机名或 IP 地址：本地数据库所在设备的公网地址
         -   端口：本地数据库的公网端口
         -   账号：本地数据库的迁移账号
         -   密码：本地数据库迁移账号对应的密码
@@ -144,7 +141,7 @@ DTS 数据迁移支持 MySQL 的结构迁移、全量迁移和增量迁移。
 
     **说明：** 数据迁移只会将本地数据库的数据（结构）复制一份到目标数据库，并不会对本地数据库数据（结构）造成影响。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4266_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/15439875384266_zh-CN.png)
 
     如果要修改迁移对象在目标数据库上的名字，可以在 *已选择* 列表右侧单击 **编辑**，修改已选择的对象名称，如上图4所示。
 
@@ -152,16 +149,16 @@ DTS 数据迁移支持 MySQL 的结构迁移、全量迁移和增量迁移。
 
 5.  系统显示预检查结果，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4267_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/15439875394267_zh-CN.png)
 
 6.  单击检测结果 为**失败**的检测项后的 **!**，查看失败详细信息，根据失败详细信息完成错误排查。
 7.  错误排查完毕后，在 迁移任务列表页面，选择当前迁移任务，单击 **启动**，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4268_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/15439875394268_zh-CN.png)
 
 8.  系统预检查通过后，单击**确定**，自动进行迁移任务，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/4269_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7977/15439875394269_zh-CN.png)
 
 
 ## 后续操作 {#section_sjb_mtv_ydb .section}
