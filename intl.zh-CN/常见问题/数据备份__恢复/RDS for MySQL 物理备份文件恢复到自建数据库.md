@@ -5,7 +5,7 @@
 **说明：** 
 
 -   通过逻辑备份文件恢复到自建数据库请参见[RDS for MySQL 逻辑备份文件恢复到自建数据库](intl.zh-CN/常见问题/数据备份__恢复/RDS for MySQL 逻辑备份文件恢复到自建数据库.md#)。
--   关于云数据库MySQL版如何备份数据，请参见[备份RDS数据](https://help.aliyun.com/document_detail/26206.html)。
+-   关于云数据库MySQL版如何备份数据，请参见[备份 RDS 数据](../../../../intl.zh-CN/用户指南/备份数据/备份 RDS 数据.md#)。
 
 ## 注意事项 {#section_bd4_5gz_5fb .section}
 
