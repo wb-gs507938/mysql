@@ -26,7 +26,7 @@
 |
 |DbNames|String|是|数据库名，若指定多个数据库，按如下格式：`{"原库名1":"新库名1","原库名2":"新库名2"}`恢复到已有实例该参数必须传入。
 
-。|
+|
 |BackupId|String|否|备份集ID，可通过查询备份列表接口[DescribeBackups](intl.zh-CN/API参考/备份恢复/DescribeBackups.md#)获取。指定此参数时，DBInstanceId参数为可选。
 
 BackupId和RestoreTime两者至少传入一个。
