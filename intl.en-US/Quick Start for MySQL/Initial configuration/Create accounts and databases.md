@@ -28,133 +28,123 @@ RDS for MySQL supports two types of database accounts: superuser accounts and st
 2.  In the upper-left corner of the page, select the region where the instance is located.
 3.  Locate the target instance and click the instance ID.
 4.  In the left-hand navigation pane, select **Accounts**.
-5.  Click Create account.
+5.  Click **Create Account**.
 6.  Set the following parameters.
 
     |Parameter|Description|
     |---------|-----------|
-    |**Database Account**| Fill in the account name. The requirements are as follows:
+    |**Database Account**| Fill in the account name. Requirements are as follows:
 
-     -   Begin with letters and end with letters or numbers;
-    -   Consists of lower case letters, numbers, or underscores;
-    -   The length is 2-256 characters.
- **Note:** If the account name of the High-privilege account you created is the same as that of the existing regular account, the original ordinary account will be replaced with the high-privilege account.
-
+     -   Consists of 2 to 256 characters.
+    -   Begin with a letter and end with a letter or digit.
+    -   Consists of lower-case letters, digits, or underscores.
  |
-    |**Belongs to Current Account**|Select a high-privilege account here.|
-    |**Password**| Set the account password. The requirements are as follows:
+    |**Account Type**|Select **Superuser Account**.|
+    |**Password**| Set the account password. Requirements are as follows:
 
-     -   By the capital letter, the lower case letter, the number, the special character in any three kinds of composition;
-
-Special characters! @\#$%^&\*\(\)\_+-=。
-
-    -   Length is 8 ~ 32 characters.
-
+     -   Consists of 8 to 32 characters.
+    -   Contain at least three of the following types: upper-case letters, lower-case letters, digits, and special characters !@\#$%^&\*\(\)\_+-=
  |
-    |**Confirm password**|Enter the password again.|
-    |**Remarks**|Note the relevant information of this account, so as to facilitate the follow-up account management. Supports a maximum of 256 characters.|
+    |**Re-enter Password**|Enter the password again.|
+    |**Note**|Enter relevant information, with up to 256 characters.|
 
 7.  Click **OK**.
 
-## Reset account privileges {#section_tnt_dth_w2b .section}
+## Reset permissions of the superuser account {#section_tnt_dth_w2b .section}
 
-If there is a problem with the high-privilege account itself, for example, permissions have been unexpectedly recovered \), you can recover through a reset of account permissions.
-
-1.  Log in to the RDS console.
-2.  In the upper-left corner of the page, select the region of the instance.
-3.  Locate the target instance and click the instance id.
-4.  In the left-hand navigation bar, click Account Management.
-5.  Click Reset Account permissions to the right of the High-privilege account.
-6.  Enter the High-privilege account password to reset the account permissions.
-
-## Create a regular account {#section_nym_xr5_q2b .section}
+If the superuser account is abnormal \(for example, permissions are unexpectedly recovered\), you can reset the permissions.
 
 1.  Log in to the RDS console.
-2.  In the upper-left corner of the page, select the region of the instance.
-3.  Locate the target instance and click the instance id.
-4.  In the left-hand navigation bar, click Account Management.
-5.  Click Create account.
+2.  In the upper-left corner of the page, select the region where the instance is located.
+3.  Locate the target instance and click the instance ID.
+4.  In the left-hand navigation pane, click **Accounts**.
+5.  Click **Reset Account Permissions** for the superuser account.
+6.  Enter the superuser account password to reset the account permissions.
+
+## Create a standard account {#section_nym_xr5_q2b .section}
+
+1.  Log in to the RDS console.
+2.  In the upper-left corner of the page, select the region where the instance is located.
+3.  Locate the target instance and click the instance ID.
+4.  In the left-hand navigation bar, click **Accounts**.
+5.  Click **Create Account**.
 6.  Set the following parameters.
 
     |Parameter|Description|
     |---------|-----------|
-    |**Database Account**| Fill in the account name. The requirements are as follows:
+    |**Database Account**| Fill in the account name. Requirements are as follows:
 
-     -   Begin with letters and end with letters or numbers;
-    -   Consists of lower case letters, numbers, or underscores;
-    -   The length is 2-256 characters.
+     -   Consists of 2 to 256 characters.
+    -   Begin with a letter and end with a letter or digit.
+    -   Consists of lower-case letters, digits, or underscores.
  |
-    |**Belongs to Current Account**|Choose a regular account here.|
-    |**Authorization Database**|Grant permissions to one or more databases for this account. This parameter can be left blank, after account creation and account authorization.    1.  Select one or more databases from the left, and click grant to add to the right.
-    2.  In the right-hand box, select read-write, read-only, pant, or DML for a database.
+    |**Account Type**|Select **Standard Account**.|
+    |**Authorized Database**|Grant database permissions to this account. You can also leave this field blank and grant permissions to the account after the account is created.    1.  Select one or more databases from the left, and click **Authorize** to add to the right.
+    2.  In the right-hand box, select **Read/Write**, **Read-only**, **DDL Only**, or **DML Only**.
 
-If you want to set the same permissions for multiple databases in bulk, click the button in the upper-right corner of the right-hand box, if all are set to read and write.
+If you want to set the same permissions for multiple databases at the same time, click the button \(such as **Grant All Read/Write**\) in the upper-right corner of the right-hand box.
 
-**Note:** The button in the upper-right corner changes as you click. For example, when you click Set read and write all, the button becomes read-only in all settings.
+**Note:** The button in the upper-right corner changes as you click.
 
 |
-    |**Password**| Set the account password. The requirements are as follows:
+    |**Password**| Set the account password. Requirements are as follows:
 
-     -   By the capital letter, the lower case letter, the number, the special character in any three kinds of composition;
-
-Special characters! @\#$%^&\*\(\)\_+-=。
-
-    -   Length is 8 ~ 32 characters.
+     -   Consists of 8 to 32 characters.
+    -   Contain at least three of the following types: upper-case letters, lower-case letters, digits, and special characters !@\#$%^&\*\(\)\_+-=
  |
-    |**Confirm password**|Enter the password again.|
-    |**Remarks**|Non-mandatory. Note the relevant information of this account, so as to facilitate the follow-up account management. Supports a maximum of 256 characters.|
+    |**Re-enter Password**|Enter the password again.|
+    |**Note**|Enter relevant information, with up to 256 characters.|
 
 7.  Click **OK**.
 
 ## Create a database {#section_efz_yt5_q2b .section}
 
-Each instance can create up to 500 databases.
+Each instance can have up to 500 databases.
 
 1.  Log in to the RDS console.
-2.  In the upper-left corner of the page, select the region of the instance.
-3.  Locate the target instance and click the instance id.
-4.  Click the required instance to go to its Basic Information page, and then in the left-side navigation pane, click Databases.
-5.  Click Create Database.
+2.  In the upper-left corner of the page, select the region where the instance is located.
+3.  Locate the target instance and click the instance ID.
+4.  In the left-side navigation pane, click **Databases**.
+5.  Click **Create Database**.
 6.  Set the following parameters.
 
     |Parameters|Description|
     |----------|-----------|
-    |**Database \(DB\) name**|     -   Begin with letters and end with letters or numbers;
+    |**Database Name**|     -   Begin with letters and end with letters or numbers;
     -   Contian only lowercase letters, digits, underscores \(\_\), and hyphens \(-\);
     -   The length is 2-256 characters.
     -   Each table name in an instance must be unique.
  |
-    |**Support character set**|Select utv8, GBK, Latin1, or fig.If you need a different character set, select all, and then select the desired character set from the list.
+    |**Supported Character Set**|Select utf8, gbk, latin1, or utf8mb4.If you need a different character set, select **all**, and then select from the list.
 
 |
-    |**Authorized account number**|Select the account that you want to access this database. This parameter can be left blank and the account can be bound after the database has been created.**Note:** The regular account is displayed here only, because the high-privilege account has all the permissions for all databases, no authorization is required.
+    |**Authorized Account**|Select the account that needs to access this database. You can also leave this field blank and set the authorized account after the database is created.**Note:** Only standard accounts are displayed, because the superuser account already has permissions for all databases.
 
 |
-    |**Belongs to Current Account**|Select the permissions that you want to grant to your account: read-write, read-only, pant-only, or DML-only.|
-    |**Remarks**|Non-mandatory. You can enter related information of the database to facilitate subsequent database management. You can enter a maximum of 256 English characters.|
+    |**Remarks**|Enter relevant information, with up to 256 characters.|
 
 7.  Click **OK**.
 
-## List of account privileges {#section_qgv_4q5_tfb .section}
+## Account permissions {#section_qgv_4q5_tfb .section}
 
-|Belongs to Current Account|Authorization type|Permission|
-|--------------------------|------------------|----------|
-|**a high-privilege account.**|-|SELECT|INSERT|UPDATE|DELETE|CREATE|
-|DROP|Reload|Process|References|INDEX|
-|ALTER|Create maid tables|Lock tables|EXECUTE|Replication slave|
-|Replication Client|CREATE VIEW|Show View|Create routine|Alter routine|
-|CREATE USER|Event|Trigger| | |
-|**Ordinary account**|**Read-only**|SELECT|Lock tables|Show View|Process|Replication slave|
-|Replication Client| | | | |
+|Account Type|Permission|Permission|
+|------------|----------|----------|
+|**Superuser account**|-|SELECT|INSERT|UPDATE|DELETE|CREATE|
+|DROP|RELOAD|PROCESS|REFERENCES|INDEX|
+|ALTER|CREATE TEMPORARY TABLES|LOCK TABLES|EXECUTE|REPLICATION SLAVE|
+|REPLICATION CLIENT|CREATE VIEW|SHOW VIEW|CREATE ROUTINE|ALTER ROUTINE|
+|CREATE USER|EVENT|TRIGGER| | |
+|**Standard account**|**Read-only**|SELECT|LOCK TABLES|SHOW VIEW|PROCESS|REPLICATION SLAVE|
+|REPLICATION CLIENT| | | | |
 |**Read/write**|SELECT|INSERT|UPDATE|DELETE|CREATE|
-|DROP|References|INDEX|ALTER|Create maid tables|
-|Lock tables|EXECUTE|CREATE VIEW|Show View|Create routine|
-|Alter routine|Event|Trigger|Process|Replication slave|
-|Replication Client| | | | |
-|**Div only**|CREATE|DROP|INDEX|ALTER|Create maid tables|
-|Lock tables|CREATE VIEW|Show View|Create routine|Alter routine|
-|Process|Replication slave|Replication Client| | |
-|**DML only**|SELECT|INSERT|UPDATE|DELETE|Create maid tables|
-|Lock tables|EXECUTE|Show View|Event|Trigger|
-|Process|Replication slave|Replication Client| | |
+|DROP|REFERENCES|INDEX|ALTER|CREATE TEMPORARY TABLES|
+|LOCK TABLES|EXECUTE|CREATE VIEW|SHOW VIEW|CREATE ROUTINE|
+|ALTER ROUTINE|EVENT|TRIGGER|PROCESS|REPLICATION SLAVE|
+|REPLICATION CLIENT| | | | |
+|**DDL only**|CREATE|DROP|INDEX|ALTER|CREATE TEMPORARY TABLES|
+|LOCK TABLES|CREATE VIEW|SHOW VIEW|CREATE ROUTINE|ALTER ROUTINE|
+|PROCESS|REPLICATION SLAVE|REPLICATION CLIENT| | |
+|**DML only**|SELECT|INSERT|UPDATE|DELETE|CREATE TEMPORARY TABLES|
+|LOCK TABLES|EXECUTE|SHOW VIEW|EVENT|TRIGGER|
+|PROCESS|REPLICATION SLAVE|REPLICATION CLIENT| | |
 
