@@ -1,8 +1,6 @@
 # 备份 RDS 数据 {#concept_l1m_xgn_ydb .concept}
 
-您可以通过设置备份策略调整RDS数据备份和日志备份的周期来实现自动备份，也可以通过手动备份RDS数据。
-
-常见问题及解决办法：
+您可以通过设置备份策略调整RDS数据备份和日志备份的周期来实现自动备份，也可以手动备份RDS数据。
 
 ## 注意事项 {#section_jyb_zgx_wfb .section}
 
@@ -108,7 +106,7 @@
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15438158914105_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15440670494105_zh-CN.png)
 
     **说明：** 
 
