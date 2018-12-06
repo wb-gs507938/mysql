@@ -12,9 +12,9 @@ This document describes the procedure right from purchasing an RDS instance to u
 
 ## Quick Start flowchart {#section_ltp_jy2_vdb .section}
 
-If you use Alibaba Cloud ApsaraDB for RDS for the first time, see [Limits](intl.en-US/Quick Start for MySQL/Limits.md#) and [Instance management interface for MySQL](../../../../intl.en-US/User Guide/Introduction to RDS console/The instance management interface for MySQL.md).
+If you use Alibaba Cloud ApsaraDB for RDS for the first time, see [Limits](intl.en-US/Quick Start for MySQL/Limits.md#) .
 
 The following diagram explains the steps you must follow right from creating an instance to using it.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7813/15338814391776_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7813/15440590831776_en-US.png)
 
