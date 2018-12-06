@@ -6,16 +6,16 @@ This article describes how to create accounts and databases for an RDS for MySQL
 
 RDS for MySQL supports two types of database accounts: superuser accounts and standard accounts. You can manage all your accounts and databases on the console. Refer to the end of the text account permissions list for specific permissions.
 
-|Belongs to Current Account|Description|
-|--------------------------|-----------|
-|**a high-privilege account.**| -   Can only be created and managed through a console or API.
--   Only one high-privilege account can be created in one instance, and all regular accounts and databases can be managed.
+|Account Type|Description|
+|------------|-----------|
+|**Superuser account**| -   Can only be created and managed through the console or API.
+-   Each instance can have only one superuser account, which can be used to manage all databases and standard accounts.
 -   With more privileges open, you can meet the needs of personalized and refined rights management, for example, you can assign query permissions to different tables by user.
 -   Has all the permissions for all databases under the instance.
 -   You can disconnect any account.
 
  |
-|**Ordinary account**| -   You can create and manage from a console, API, or SQL statement.
+|**Standard account**| -   You can create and manage from a console, API, or SQL statement.
 -   An instance can create more than one common account, with a specific number associated with the instance kernel.
 -   You need to manually grant a specific database permission to a regular account.
 -   Regular accounts cannot create and manage other accounts, nor can they be disconnected from other accounts.
@@ -29,7 +29,7 @@ RDS for MySQL supports two types of database accounts: superuser accounts and st
 3.  Locate the target instance and click the instance id.
 4.  In the left-hand navigation bar, select account management.
 5.  Click Create account.
-6.  设置以下参数：
+6.  Set the following parameters.
 
     |Parameter|Description|
     |---------|-----------|
@@ -54,7 +54,7 @@ Special characters! @\#$%^&\*\(\)\_+-=。
     |**Confirm password**|Enter the password again.|
     |**Remarks**|Note the relevant information of this account, so as to facilitate the follow-up account management. Supports a maximum of 256 characters.|
 
-7.  单击 **确定**。
+7.  Click **OK**.
 
 ## Reset account privileges {#section_tnt_dth_w2b .section}
 
@@ -74,7 +74,7 @@ If there is a problem with the high-privilege account itself, for example, permi
 3.  Locate the target instance and click the instance id.
 4.  In the left-hand navigation bar, click Account Management.
 5.  Click Create account.
-6.  设置以下参数：
+6.  Set the following parameters.
 
     |Parameter|Description|
     |---------|-----------|
@@ -104,7 +104,7 @@ Special characters! @\#$%^&\*\(\)\_+-=。
     |**Confirm password**|Enter the password again.|
     |**Remarks**|Non-mandatory. Note the relevant information of this account, so as to facilitate the follow-up account management. Supports a maximum of 256 characters.|
 
-7.  单击 **确定**。
+7.  Click **OK**.
 
 ## Create a database {#section_efz_yt5_q2b .section}
 
@@ -115,7 +115,7 @@ Each instance can create up to 500 databases.
 3.  Locate the target instance and click the instance id.
 4.  Click the required instance to go to its Basic Information page, and then in the left-side navigation pane, click Databases.
 5.  Click Create Database.
-6.  设置以下参数。
+6.  Set the following parameters.
 
     |Parameters|Description|
     |----------|-----------|
@@ -133,7 +133,7 @@ Each instance can create up to 500 databases.
     |**Belongs to Current Account**|Select the permissions that you want to grant to your account: read-write, read-only, pant-only, or DML-only.|
     |**Remarks**|Non-mandatory. You can enter related information of the database to facilitate subsequent database management. You can enter a maximum of 256 English characters.|
 
-7.  单击 **确定**。
+7.  Click **OK**.
 
 ## List of account privileges {#section_qgv_4q5_tfb .section}
 
