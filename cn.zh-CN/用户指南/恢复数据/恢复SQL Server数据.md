@@ -31,11 +31,13 @@
 5.  在页面右上角，单击**数据库恢复**。
 6.  （仅高可用系列需要执行本步骤）选择**恢复到已有实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154330258810029_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154449655310029_zh-CN.png)
 
 7.  设置以下参数，然后单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154330258810031_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154449655310031_zh-CN.png)
+
+    **说明：** 若有相同数据库名存在，需要修改恢复后库名。
 
     |参数|说明|
     |--|--|
@@ -91,7 +93,7 @@
     |**数据库**|     -   **全部**：恢复备份集中的所有数据库。
     -   **部分**：恢复备份集中的部分数据库。如果选择此项，需要将要恢复的数据库添加到右侧。
  |
-    |**系列/可用区/规格/存储空间/网络类型/购买时长**|关于这些参数的说明，请参见[创建实例](../../../../cn.zh-CN/快速入门MySQL版/创建实例.md)。|
+    |**系列/可用区/规格/存储空间/网络类型/购买时长**|关于这些参数的说明，请参见[创建实例](../../../../intl.zh-CN/快速入门MySQL版/创建实例.md)。|
     |**购买量**|设置购买数量，批量创建克隆实例。单次最多可以创建5个克隆实例。|
 
 8.  单击**立即购买**。
@@ -106,7 +108,7 @@
 -   SQL Server 2012/2016 Web版基础系列
 -   SQL Server 2008 R2
 
-具体操作请参见[通过临时实例恢复到主实例](cn.zh-CN/用户指南/恢复数据/通过临时实例恢复SQL Server数据.md)。
+具体操作请参见[通过临时实例恢复到主实例](intl.zh-CN/用户指南/恢复数据/通过临时实例恢复SQL Server数据.md)。
 
 ## 直接覆盖原实例 {#section_ilr_kgn_ydb .section}
 
@@ -133,11 +135,11 @@
 
     在弹出的对话框中，选择**覆盖性恢复实例**，单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154330258810040_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154449655310040_zh-CN.png)
 
 -   对于RDS for SQL Server 2008 R2实例，找到目标备份，单击**覆盖性恢复**，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154330258810049_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154449655310049_zh-CN.png)
 
 7.  在弹出的确认框中，单击**确定**。
 
