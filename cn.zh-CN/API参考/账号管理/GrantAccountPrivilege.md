@@ -4,6 +4,10 @@
 
 该接口用于授权账号访问某个数据库，一个账号可关联一个或多个数据库。如果指定的账号对指定数据库已经具有访问权限，则会直接返回成功。实例状态为运行中，否则操作将失败。
 
+## 前提条件 {#section_ebl_wlf_cgb .section}
+
+该接口适用于MySQL、SQL Server和MariaDB实例。
+
 ## 请求参数 {#section_qzx_w32_12b .section}
 
 |名称|类型|是否必须|描述|
@@ -14,8 +18,9 @@
 |DBName|String|是|设置与该账号关联的数据库名称。|
 |AccountPrivilege|String|是|账号权限：-   ReadOnly：只读；
 -   ReadWrite：读写；
--   DDLOnly：只能执行DDL；
--   DMLOnly：只能执行DML。
+-   DDLOnly（适用于MySQL和MariaDB）：只能执行DDL；
+-   DMLOnly（适用于MySQL和MariaDB）：只能执行DML；
+-   DBOwner（适用于SQL Server）：数据库所有者。
 
 |
 
