@@ -1,6 +1,6 @@
 # RDS for MySQL 逻辑备份文件恢复到自建数据库 {#concept_zql_2c5_vfb .concept}
 
-使用MySQL自带的 mysqldump 工具可以通过binlog日志文件还原数据库，本文将介绍详细的操作步骤。
+使用MySQL自带的 mysqldump 工具可以通过逻辑备份文件恢复数据库，本文将介绍详细的逻辑备份恢复数据库操作步骤。
 
 **说明：** 
 
@@ -11,7 +11,7 @@
 
 本地MySQL数据库安装在64位的Linux系统中，且与云数据库MySQL版的版本相同。本文使用Linux7的操作系统以及MySQL5.7版本为例进行演示。
 
-## 操作步骤 {#section_lcm_tqt_vfb .section}
+## 逻辑备份恢复操作步骤 {#section_lcm_tqt_vfb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
@@ -21,7 +21,7 @@
 6.  在数据备份列表中，找到要下载的逻辑备份，并单击其右侧的**下载**。
 7.  在实例备份文件下载窗口，单击**复制外网地址**，获取数据备份文件外网下载地址。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64382/154399754932292_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64382/154510030332292_zh-CN.png)
 
 8.  登录自建数据库所在Linux系统，执行如下命令下载逻辑备份文件。
 
@@ -63,6 +63,6 @@
 
 13. 登录数据库后查看表，已经有了数据，说明已经迁移成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64382/154399754932293_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64382/154510030332293_zh-CN.png)
 
 
