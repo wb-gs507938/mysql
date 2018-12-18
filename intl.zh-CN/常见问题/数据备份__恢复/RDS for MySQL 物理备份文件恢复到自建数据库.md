@@ -17,7 +17,7 @@
 
 -   操作系统中已安装数据恢复工具Percona XtraBackup。MySQL 5.6及之前的版本需要安装 Percona XtraBackup 2.3。MySQL 5.7版本需要安装 Percona XtraBackup 2.4。可以从Percona XtraBackup官网下载安装，安装指导请参见官方文档 [Percona XtraBackup 2.3](https://www.percona.com/doc/percona-xtrabackup/2.3/installation.html)、[Percona XtraBackup 2.4](https://www.percona.com/doc/percona-xtrabackup/2.4/installation.html)。
 
-## 操作步骤 { .section}
+## 备份恢复操作步骤 { .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com)。
 2.  在页面左上角，选择实例所在地域。
@@ -44,23 +44,35 @@
     **说明：** 
 
     -   -c：启用断点续传模式。
-    -   -O：将下载的结果保存为指定的文件（使用URL中包含的文件名后缀 .tar.gz 或者 .xb.gz）。
+    -   -O：将下载的结果保存为指定的文件（使用URL中包含的文件名后缀 .tar.gz 、.xb.gz 或 \_qp.xb）。
 11. 执行如下命令，解压已下载的数据备份文件。
 
     **说明：** 本文以自定义路径/home/mysql/data为例，您可以根据实际情况将其替换成实际路径。
 
-    目前备份集文件有2种格式，一种是 tar 压缩包 （.tar.gz 后缀），一种是 xbstream 压缩包 （.xb.gz后缀）
+    目前物理备份集文件有3种格式：
 
-    对于 tar 压缩包（.tar.gz），使用命令：
+    -   tar 压缩包 （.tar.gz 后缀）
+    -   xbstream 压缩包 （.xb.gz 后缀）
+    -   xbstream 文件包 \(\_qp.xb 后缀\)
+    对于tar 压缩包 （.tar.gz 后缀），使用命令：
 
     ```
     tar -izxvf <数据备份文件名>.tar.gz -C /home/mysql/data
     ```
 
-    对于 xbstream 压缩包（.xb.gz），使用命令：
+    对于xbstream 压缩包 （.xb.gz 后缀），使用命令：
 
     ```
     gzip -d -c <数据备份文件名>.xb.gz | xbstream -x -v -C /home/mysql/data
+    ```
+
+    对于xbstream 文件包 \(\_qp.xb 后缀\)，使用命令：
+
+    ```
+    ## 解包
+    cat <数据备份文件名>_qp.xb | xbstream -x -v -C /home/mysql/data
+    ## 解压
+    innobackupex --decompress --remove-original /home/mysql/data
     ```
 
     **说明：** -C：指定文件要解压到的目录。可选参数，若不指定就解压到当前目录。
