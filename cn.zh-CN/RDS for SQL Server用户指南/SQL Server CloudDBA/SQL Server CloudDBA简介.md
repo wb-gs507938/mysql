@@ -13,7 +13,7 @@ SQL Server CloudDBA主要包含如下功能：
     -   TOP 10数据库：以表格形式展示空间占用TOP 10的数据库详细信息。
     -   TOP 20数据库：以表格形式展示空间占用TOP 20的数据库详细信息。
 
-        ![空间管理](../DNMYSQ1860058/images/32882_zh-CN.png "空间管理")
+        ![空间管理](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64921/154529620132882_zh-CN.png)
 
 -   性能优化：展示数据库的各类关键信息，由如下几个部分组成。
     -   索引缺失：以图表形式展示实例缺失索引的信息以及提供创建缺失索引的语句。
@@ -22,6 +22,6 @@ SQL Server CloudDBA主要包含如下功能：
     -   TOP SQL：以图表形式从多个维度对SQL语句进行排序展示，可以查询实时的和历史的TOP SQL。
     -   TOP Objects：实时获取用户实例中对象级别（包括存储过程、函数、触发器等）的性能消耗，帮助用户发现TOP性能消耗的对象以及对象中的SQL语句。
 
-        ![性能优化](images/34754_zh-CN.png "性能优化")
+        ![性能优化](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/75752/154529620134754_zh-CN.png)
 
 
