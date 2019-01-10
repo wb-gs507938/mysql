@@ -16,5 +16,5 @@ If you use Alibaba Cloud ApsaraDB for RDS for the first time, see [Limits](intl.
 
 The following diagram explains the steps you must follow right from creating an instance to using it.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7857/15440595362968_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7857/15470851432968_en-US.png)
 
