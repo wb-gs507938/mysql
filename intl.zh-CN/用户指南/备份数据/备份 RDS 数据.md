@@ -4,7 +4,9 @@
 
 ## 注意事项 {#section_jyb_zgx_wfb .section}
 
--   实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，RDS支持您将备份文件转储至OSS，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](intl.zh-CN/用户指南/备份数据/查看备份空间免费额度.md#)。关于备份空间使用量的计费标准，请参见[云数据库 RDS 详细价格信息](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。
+-   实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](intl.zh-CN/用户指南/备份数据/查看备份空间免费额度.md#)。
+-   关于具体的计费方式与收费项，请参见[计费方式与收费项](../../../../../intl.zh-CN/产品定价/计费方式与收费项.md#)。
+-   关于备份空间使用量的计费标准，请参见[云数据库 RDS 详细价格信息](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。
 -   备份期间不要执行DDL操作，避免锁表导致备份失败。
 -   尽量选择业务低峰期进行备份。
 -   若数据量较大，花费的时间可能较长，请耐心等待。
@@ -109,7 +111,7 @@
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15468436374105_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15474522384105_zh-CN.png)
 
     **说明：** 
 
