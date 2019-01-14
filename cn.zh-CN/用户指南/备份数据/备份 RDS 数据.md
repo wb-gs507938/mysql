@@ -71,10 +71,14 @@
 阿里云数据库会执行用户设定的备份策略，自动备份数据库。
 
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
-2.  单击目标实例的ID，进入基本信息页面。
-3.  在菜单中选择 **备份恢复**。
-4.  在 备份恢复页面中选择 **备份设置**，单击 **编辑**。
-5.  在 备份设置页面设置备份规格，单击 **确定**。参数说明如下：
+2.  在页面左上角，选择实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745999637169_zh-CN.png)
+
+3.  单击目标实例的ID，进入基本信息页面。
+4.  在菜单中选择 **备份恢复**。
+5.  在 备份恢复页面中选择 **备份设置**，单击 **编辑**。
+6.  在 备份设置页面设置备份规格，单击 **确定**。参数说明如下：
 
     |参数|说明|
     |--|--|
@@ -108,10 +112,13 @@
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745999637169_zh-CN.png)
+
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15474522384105_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15474599964105_zh-CN.png)
 
     **说明：** 
 
