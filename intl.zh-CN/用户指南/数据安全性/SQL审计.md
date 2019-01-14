@@ -27,11 +27,14 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745701637169_zh-CN.png)
+
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**数据安全性**。
 5.  选择**SQL审计**页签，单击**开启SQL审计**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154476783521214_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154745701621214_zh-CN.png)
 
 6.  在弹出的确认框中单击**确定**。
 
@@ -46,12 +49,15 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745701637169_zh-CN.png)
+
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**数据安全性**。
 5.  选择**SQL审计**页签，单击**导出文件**，将SQL审计内容导出并妥善保存至本地。
 6.  导出文件后单击**关闭SQL审计**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154476783534230_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154745701734230_zh-CN.png)
 
 7.  在弹出的确认框中，单击**确定**。
 
