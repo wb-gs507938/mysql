@@ -116,6 +116,7 @@
 
  |
 |BackupIntranetDownloadURL|String|-|
+|ConsistentTime|String|备份集的一致性时间点。|
 |BackupLocation|String| 备份文件存储在OSS中的位置。
 
  |
