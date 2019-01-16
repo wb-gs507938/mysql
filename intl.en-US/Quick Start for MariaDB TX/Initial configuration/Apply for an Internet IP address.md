@@ -29,35 +29,27 @@ The RDS supports two kinds of addresses: the internal network address and the ex
 
  |
 
-## Apply for outer address { .section}
+## Apply for an Internet IP address { .section}
 
-1.  Login[RDS Management Console](https://rds.console.aliyun.com/).
-2.  In the upper-left corner, select the region where the target instance is located from the region list.
-
-    ![Select a region.](../DNMYSQ1820581/images/36543_en-US.png)
-
+1.  Log in to the [RDS console](https://rds.console.aliyun.com/).
+2.  In the upper-left corner, select the region where the target instance is located.
 3.  Locate the target instance and click its ID.
 4.  In the left-side navigation pane, select **Connection Options**.
-5.  Click**Application for outer network address**.
+5.  Click **Apply for Internet Address**.
+6.  In the displayed dialog box, click **OK**.
 
-    ![](../DNMYSQ1820581/images/32665_en-US.png)
+    The Internet IP address is generated successfully.
 
-6.  In the displayed message , click **OK**.
+7.  \(Optional\) If you want to modify the Internet IP address or port number, click**Modify Connection Address**.
 
-    The outer network address was generated successfully.
+    **Note:** If the network type of the instance is VPC, Internet and intranet address ports cannot be modified.
 
-7.  \(Optional\) If you want to modify the outer network address or port number, click**Modify connection address**, Set the outer network address and port number in the pop-up dialog box, and then click**Determine**.
-
-    **Note:** 
-
-    -   Under a proprietary network, the port of the inside and outside network address cannot be modified.
-    -   Under the classic network, the ports of the inner and outer network addresses are supported for modification.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7817/15476306641805_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7817/15476313621805_en-US.png)
 
 
-## Related APIs {#section_s3y_jcc_kgb .section}
+## Related API {#section_s3y_jcc_kgb .section}
 
-|API|中国站|
-|---|---|
-|[AllocateInstancePublicConnection](../intl.en-US/API Reference/Network management/Apply for an Internet connection string.md#)|中国站|
+|API|Description|
+|---|-----------|
+|[AllocateInstancePublicConnection](../intl.en-US/API Reference/Network management/Apply for an Internet connection string.md#)|Apply for an Internet IP address|
 
