@@ -2,8 +2,6 @@
 
 通过将OSS上的备份文件还原到RDS实例，实现数据上云。
 
-**说明：** 该接口暂不支持SQL Server2017集群版实例。
-
 ## 请求参数 {#section_qzx_w32_12b .section}
 
 |名称|类型|是否必须|描述|
@@ -17,7 +15,7 @@
 |DBName|String|是|数据库名称。|
 |BackupMode|String|是| 迁移上云任务类型，取值为：
 
--   FULL：表示通过全量备份文件执去执行还原操作。
+-   FULL：表示通过全量备份文件去执行还原操作。
 -   UPDF：表示通过增量文件或者日志文件去还原增量部分的数据。
 
  默认值为FULL。
@@ -30,7 +28,7 @@
 
  默认值为True。
 
-**说明：** 目前SQL Server 2008 R2 版本该值恒定为True。
+**说明：** 对于 SQL Server 2008 R2 版本实例，该值恒定为True。
 
  |
 |OSSUrls|String|否| 备份文件所在OSS共享URL地址（Encode编码后的URL）。
@@ -39,7 +37,7 @@
 
  默认值为空。
 
-**说明：** SQL Server 2008 R2 必须传入该参数。
+**说明：** 该参数对于 SQL Server 2008 R2 版本实例是必传参数。
 
  |
 |OssObjectPositions|String|否| OSS的组成部分。取值由3段组成：oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:/autotest\_2008R2\_TestMigration\_FULL.bak
@@ -48,7 +46,10 @@
 -   OSS Bucket名字：rdsmssqlsingapore
 -   OSS上的备份文件Key：/autotest\_2008R2\_TestMigration\_FULL.bak
 
- 默认值为空（兼容 SQL Server 2008 R2）。
+ **说明：** 
+
+-   该参数对于 SQL Server 2008 R2 版本实例是可选参数。
+-   该参数对于 SQL Server 2008 R2 以上版本实例是必传参数。
 
  |
 |MigrateTaskId|String|否|迁移任务ID：-   BackupMode=FULL时，该值为空。（兼容RDS for SQLServer 2008 R2）。
@@ -83,7 +84,7 @@
 |MigrateTaskId|String|迁移任务ID。|
 |BackupMode|String| 迁移上云任务类型，取值为：
 
--   FULL：示通过全量备份文件执去执行还原操作。
+-   FULL：表示通过全量备份文件去执行还原操作。
 -   UPDF：表示通过增量文件或者日志文件去还原增量部分的数据。
 
  默认值为FULL。
