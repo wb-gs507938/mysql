@@ -9,7 +9,7 @@
 ## 注意事项 {#section_kmf_kkp_mgb .section}
 
 -   包年包月实例无法转为按量付费实例。
--   按量付费实例可以转为包年包月实例，请参见[按量付费转包年包月](../../../../../intl.zh-CN/RDS for MySQL 用户指南/计费管理/按量付费转包年包月.md#)。
+-   按量付费实例可以转为包年包月实例，请参见[按量付费转包年包月](../../../../../intl.zh-CN/用户指南/计费管理/按量付费转包年包月.md#)。
 -   同一个主账号，最多可以创建30个按量付费的RDS实例。如需提高此限额，请[提交工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)申请。
 
 ## 操作步骤 {#section_o45_5cf_vdb .section}
@@ -67,7 +67,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154780194836543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154780232036543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](intl.zh-CN/RDS for MySQL 快速入门/连接实例.md)。
 
