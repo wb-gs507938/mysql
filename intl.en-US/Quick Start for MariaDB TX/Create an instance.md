@@ -21,7 +21,7 @@ You can use the RDS console or an API to create an RDS instance. For more inform
         -   Database engine: RDS supports MySQL, SQL Server, PostgreSQL, PPAS, and MariaDB TX. Different database types are supported in different regions.
         -   Version: indicates the database version. The MariaDB TX version is 10.3.
         -   Series: RDS for MariaDB TX instances support the High-availability Edition. For more information, see [../../../../../dita-oss-bucket/SP\_60/DNMYSQ1821992/EN-US\_TP\_7787.md](../../../../../intl.en-US/Product Introduction/Product editions/General introduction to product series.md).
-    -   Network type: RDS supports the classic network and virtual private cloud \(VPC\). For more information, see [Network types](../../../../../intl.en-US/User Guide/Connection management/Set network type.md#).
+    -   Network type: RDS supports only virtual private cloud \(VPC\), which is more secure than traditional classic networks. For more information, see [Network types](../../../../../intl.en-US/User Guide/Connection management/Set network type.md#).
     -   Specifications: indicate the CPU and memory occupied by the instance, the number of connections, and the maximum IOPS. For more information about instance specifications, see [Instance type list](../../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
     -   Storage: indicates space used by data, system files, binlog files, and transaction files.
     -   Subscription time: indicates the duration of a Subscription instance.
